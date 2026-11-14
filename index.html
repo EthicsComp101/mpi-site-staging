@@ -1,0 +1,925 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Modus Ponens Institute</title><meta name="description" content="Explore online philosophy classes, ethics competitions and debate coaching for students. Find a class or an event with MPI."><link rel="canonical" href="https://www.modusponensinstitute.com"><meta property="og:title" content="Modus Ponens Institute"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="r2.css"></head><body><header><a href="index.html">Modus Ponens Institute</a><details><summary>Menu</summary><nav><a href="classes-tutoring.html">Classes</a><a href="tournaments.html">Tournaments</a><a href="event-calendar.html">Calendar</a><a href="fund-your-team.html">Fund Your Team</a><a href="resources.html">Resources</a><a href="about-us.html">Our Team</a><a href="contact-us.html">Contact</a></nav></details></header><main><h1>Modus Ponens Institute</h1><section class="block block-1"><style>@scope (.block-1) {
+  :scope {
+    --ink:#0F1115;
+    --ink-soft:#2A2D33;
+    --bone:#F5EFE3;
+    --paper:#FBF7EE;
+    --rust:#B23A1C;
+    --teal:#1F3A3D;
+    --teal-soft:#2C5052;
+    --gold:#C29642;
+    --rule:#D9CFB8;
+  }
+
+  * { box-sizing:border-box; margin:0; padding:0; }
+  :scope, :scope { margin:0; padding:0; background:#0a1d35; }
+  :scope {
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  a { color:inherit; text-decoration:none; }
+  img { max-width:100%; display:block; }
+
+  .wrap {
+    max-width:1320px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  .eyebrow {
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--rust);
+    display:inline-block;
+  }
+
+  .mpi-hero {
+    --hero-gold:#D4AF37;
+    --navy:#0a1d35;
+    --navy-deep:#061425;
+    --navy-bar:#1a3556;
+    position:relative;
+    width:100%;
+    min-height:clamp(540px, 42vw, 660px);
+    background:var(--navy);
+    color:#fff;
+    overflow:hidden;
+  }
+
+  .mpi-hero .hero-img {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:50% 50%;
+    z-index:0;
+  }
+
+  .mpi-hero .hero-overlay {
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:linear-gradient(
+      to right,
+      rgba(6,20,37,.94) 0%,
+      rgba(10,29,53,.82) 22%,
+      rgba(10,29,53,.45) 50%,
+      rgba(10,29,53,.15) 78%,
+      rgba(10,29,53,.05) 100%
+    );
+  }
+
+  .mpi-hero .hero-content {
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:64px;
+    z-index:10;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    max-width:56%;
+    padding:0 28px 0 max(28px, calc((100% - 1320px) / 2 + 28px));
+  }
+
+  .mpi-hero .hero-photo {
+    position:absolute;
+    z-index:5;
+    top:36px;
+    bottom:100px;
+    right:max(28px, calc((100% - 1320px) / 2 + 28px));
+    width:min(46%, 620px);
+    object-fit:cover;
+    object-position:50% 35%;
+    border-radius:4px;
+    box-shadow:0 12px 36px rgba(0,0,0,.35);
+  }
+  @media (max-width:960px) {
+    .mpi-hero .hero-photo { display:none; }
+  }
+
+  .mpi-hero h1 {
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:400;
+    font-size:clamp(32px,5.2vw,76px);
+    line-height:1;
+    letter-spacing:-.025em;
+    color:#fff;
+    margin:0 0 max(14px,2vw);
+  }
+
+  .mpi-hero .hero-subtitle {
+    font-family:'Fraunces', Georgia, serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(15px,1.7vw,22px);
+    line-height:1.3;
+    color:var(--hero-gold);
+    margin:0 0 max(12px,1.6vw);
+    max-width:26ch;
+  }
+
+  .mpi-hero .hero-:scope {
+    font-size:clamp(13px,1.05vw,15px);
+    line-height:1.65;
+    color:rgba(255,255,255,.85);
+    max-width:36ch;
+    margin:0 0 max(18px,2vw);
+  }
+
+  .mpi-hero .hero-ctas {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+
+  .mpi-hero .cta {
+    display:inline-flex;
+    align-items:center;
+    padding:clamp(10px,1.1vw,15px) clamp(18px,2vw,26px);
+    font-size:clamp(10px,.85vw,11px);
+    font-weight:600;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    transition:all .25s ease;
+    line-height:1;
+  }
+
+  .mpi-hero .cta.gold {
+    background:var(--hero-gold);
+    color:var(--navy-deep);
+    border:1px solid var(--hero-gold);
+  }
+
+  .mpi-hero .cta.gold:hover {
+    background:#e6c25a;
+    border-color:#e6c25a;
+  }
+
+  .mpi-hero .cta.outline {
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.55);
+  }
+
+  .mpi-hero .cta.outline:hover {
+    background:rgba(255,255,255,.18);
+  }
+
+  .mpi-hero .hero-tagline {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:10;
+    background:var(--navy-bar);
+    padding:clamp(12px,1.4vw,18px) clamp(20px,4vw,56px);
+    text-align:center;
+    border-top:1px solid rgba(212,175,55,.25);
+  }
+
+  .mpi-hero .hero-tagline em {
+    font-family:'Fraunces', Georgia, serif;
+    font-style:italic;
+    font-size:clamp(12px,1.1vw,16px);
+    color:var(--hero-gold);
+  }
+
+  .mpi-content {
+    background:var(--paper);
+    color:var(--ink);
+  }
+
+  .section-head {
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:32px;
+    margin-bottom:56px;
+    flex-wrap:wrap;
+  }
+
+  .section-head h2 {
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:400;
+    font-size:clamp(32px,4.5vw,52px);
+    line-height:1.05;
+    letter-spacing:-.015em;
+    margin-top:8px;
+    color:var(--ink);
+  }
+
+  .section-head .meta {
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+
+  .pathways {
+    padding:110px 0;
+  }
+
+  .pathways-grid {
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    min-height:560px;
+  }
+
+  .path-card {
+    background:var(--paper);
+    padding:82px 72px 76px;
+    display:flex;
+    flex-direction:column;
+    transition:background .3s ease;
+    min-height:560px;
+  }
+
+  .path-card:hover {
+    background:var(--bone);
+  }
+
+  .path-card.primary {
+    background:var(--teal);
+    color:var(--bone);
+  }
+
+  .path-card.primary:hover {
+    background:var(--teal-soft);
+  }
+
+  .path-card .num {
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:24px;
+  }
+
+  .path-card.primary .num {
+    color:var(--gold);
+  }
+
+  .path-card h3 {
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:400;
+    font-size:clamp(38px,5vw,64px);
+    line-height:1.02;
+    letter-spacing:-.025em;
+    margin-bottom:28px;
+    color:var(--ink);
+    max-width:9ch;
+  }
+
+  .path-card.primary h3 {
+    color:var(--bone);
+  }
+
+  .path-card p {
+    font-size:18px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    margin-bottom:42px;
+    max-width:48ch;
+  }
+
+  .path-card.primary p {
+    color:rgba(245,239,227,.88);
+  }
+
+  .path-card .path-cta {
+    margin-top:auto;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:18px 34px;
+    align-self:flex-start;
+    transition:all .25s ease;
+  }
+
+  .path-card .path-cta::after {
+    content:"→";
+    transition:transform .25s ease;
+  }
+
+  .path-card .path-cta:hover::after {
+    transform:translateX(4px);
+  }
+
+  .path-card.primary .path-cta {
+    background:var(--gold);
+    color:var(--teal);
+  }
+
+  .path-card.primary .path-cta:hover {
+    background:#e6c25a;
+  }
+
+  .path-card.secondary .path-cta {
+    background:transparent;
+    color:var(--ink);
+    border:1px solid var(--ink);
+  }
+
+  .path-card.secondary .path-cta:hover {
+    background:var(--ink);
+    color:var(--bone);
+  }
+
+  .partners-section {
+    padding:96px 0;
+    background:var(--bone);
+    border-top:1px solid var(--rule);
+  }
+
+  .partners-grid {
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+  }
+  .partners-grid:not(.tier2) {
+    grid-template-columns:repeat(6,1fr);
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+  }
+
+  .partner-card {
+    background:var(--bone);
+    padding:32px 24px 28px;
+    display:flex;
+    flex-direction:column;
+    transition:background .3s ease;
+    min-height:280px;
+  }
+
+  .partner-card:hover {
+    background:var(--paper);
+  }
+
+  .partner-logo {
+    height:48px;
+    display:flex;
+    align-items:center;
+    margin-bottom:22px;
+  }
+
+  .partner-logo img {
+    max-height:44px;
+    max-width:150px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    mix-blend-mode:multiply;
+  }
+
+  .partner-logo img.logo-on-dark {
+    mix-blend-mode:normal;
+    height:44px;
+    background:#0d0d0d;
+    padding:5px;
+    border-radius:8px;
+  }
+
+  .partner-label {
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--rust);
+    margin-bottom:14px;
+  }
+
+  .partner-card h3 {
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:500;
+    font-size:22px;
+    line-height:1.15;
+    letter-spacing:-.01em;
+    color:var(--ink);
+    margin-bottom:12px;
+  }
+
+  .partner-card p {
+    font-size:13.5px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+
+  .partner-card .partner-link {
+    margin-top:auto;
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink);
+    border-bottom:1px solid var(--ink);
+    align-self:flex-start;
+    padding-bottom:3px;
+  }
+
+  .tier-title {
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:500;
+    font-size:22px;
+    color:var(--ink);
+    margin:48px 0 18px;
+  }
+  .partners-grid.tier2 .partner-logo img { max-height:48px; }
+  .partners-grid.tier2 { background:transparent; border:none; }
+  .partners-grid.tier2 .partner-card { border:1px solid var(--rule); }
+
+  .partner-card:hover .partner-link {
+    color:var(--rust);
+    border-color:var(--rust);
+  }
+
+
+  .news-section {
+    padding:0 0 96px;
+    background:var(--bone);
+  }
+
+  .news-section .section-head .meta a {
+    color:var(--ink);
+    border-bottom:1px solid var(--ink);
+    padding-bottom:2px;
+  }
+
+  .news-section .section-head .meta a:hover {
+    color:var(--rust);
+    border-color:var(--rust);
+  }
+
+  .news-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+  }
+
+  .news-card {
+    background:var(--bone);
+    padding:32px 28px 28px;
+    display:flex;
+    flex-direction:column;
+    min-height:250px;
+    transition:background .3s ease;
+  }
+
+  .news-card:hover {
+    background:var(--paper);
+  }
+
+  .news-date {
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--rust);
+    margin-bottom:14px;
+  }
+
+  .news-card h3 {
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:500;
+    font-size:22px;
+    line-height:1.2;
+    letter-spacing:-.01em;
+    color:var(--ink);
+    margin-bottom:12px;
+  }
+
+  .news-card p {
+    font-size:13.5px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+
+  .news-card .news-link {
+    margin-top:auto;
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink);
+    border-bottom:1px solid var(--ink);
+    align-self:flex-start;
+    padding-bottom:3px;
+  }
+
+  .news-card:hover .news-link {
+    color:var(--rust);
+    border-color:var(--rust);
+  }
+
+  @media (max-width:960px) {
+    .news-section {
+      padding:0 0 56px;
+    }
+
+    .news-grid {
+      grid-template-columns:1fr;
+    }
+
+    .news-card {
+      min-height:0;
+    }
+  }
+
+  @media (max-width:960px) {
+    .pathways {
+      padding:64px 0;
+    }
+
+    .pathways-grid {
+      grid-template-columns:1fr;
+      min-height:auto;
+    }
+
+    .path-card {
+      min-height:auto;
+      padding:56px 34px;
+    }
+
+    .partners-section {
+      padding:56px 0;
+    }
+
+    .partners-grid, .partners-grid:not(.tier2) {
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .partners-grid > .partner-card:last-child:nth-child(odd) {
+      grid-column:span 2;
+    }
+  }
+
+  @media (max-width:720px) {
+    .mpi-hero {
+      min-height:0;
+      aspect-ratio:4 / 5;
+    }
+
+    .mpi-hero .hero-img {
+      object-position:60% 50%;
+    }
+
+    .mpi-hero .hero-overlay {
+      background:linear-gradient(
+        to bottom,
+        rgba(6,20,37,.85) 0%,
+        rgba(10,29,53,.75) 60%,
+        rgba(10,29,53,.85) 100%
+      );
+    }
+
+    .mpi-hero .hero-content {
+      max-width:100%;
+      bottom:80px;
+      padding:0 24px;
+    }
+
+    .path-card h3 {
+      max-width:none;
+    }
+  }
+
+  @media (max-width:560px) {
+    .wrap {
+      padding:0 20px;
+    }
+
+    .partners-grid, .partners-grid:not(.tier2) {
+      grid-template-columns:1fr;
+    }
+
+    .partners-grid > .partner-card:last-child:nth-child(odd) {
+      grid-column:auto;
+    }
+
+    .path-card {
+      padding:42px 24px;
+    }
+
+    .path-card p {
+      font-size:16px;
+    }
+  }
+
+
+  .mpi-upcoming { background:#0f2742; color:#fff; border-top:1px solid rgba(255,255,255,.08); }
+  .mpi-upcoming .up-wrap { max-width:1320px; margin:0 auto; padding:22px 28px; display:grid; grid-template-columns:auto 1fr 1fr 1fr; gap:18px; align-items:stretch; }
+  .mpi-upcoming .up-label { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#D4AF37; align-self:center; padding-right:6px; }
+  .mpi-upcoming a.up-item { display:block; padding:14px 18px; border:1px solid rgba(255,255,255,.14); border-radius:4px; transition:border-color .2s, background .2s; }
+  .mpi-upcoming a.up-item:hover { border-color:#D4AF37; background:rgba(255,255,255,.04); }
+  .mpi-upcoming .up-date { font-size:12px; color:#D4AF37; font-weight:600; letter-spacing:.04em; }
+  .mpi-upcoming .up-title { font-size:16px; font-weight:600; margin-top:2px; }
+  .mpi-upcoming .up-sub { font-size:13px; color:rgba(255,255,255,.72); margin-top:2px; }
+  @media (max-width:900px) { .mpi-upcoming .up-wrap { grid-template-columns:1fr; padding:20px; gap:10px; } .mpi-upcoming .up-label { padding:0; } }
+
+
+    .mpi-visits { padding:56px 0; background:#fff; }
+    .mpi-visits .v-grid { max-width:1100px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:1fr 1.1fr; gap:40px; align-items:center; }
+    .mpi-visits img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px; display:block; }
+    .mpi-visits h3 { font-family:'Fraunces', Georgia, serif; font-size:32px; line-height:1.2; color:#0a1d35; margin:0 0 14px; font-weight:600; }
+    .mpi-visits p { font-size:17px; line-height:1.65; color:#2A2D33; margin:0 0 20px; }
+    .mpi-visits a.v-cta { display:inline-block; background:#0a1d35; color:#fff; text-decoration:none; padding:12px 22px; border-radius:4px; font-weight:600; font-size:15px; }
+    .mpi-visits a.v-cta:hover { background:#1a3556; }
+    @media (max-width:900px) { .mpi-visits { padding:36px 0; } .mpi-visits .v-grid { grid-template-columns:1fr; gap:20px; } .mpi-visits h3 { font-size:26px; } }
+  
+.mpi-quotes{padding:36px 0;background:#f6f7f9;text-align:center}.mpi-quotes .q-wrap{max-width:820px;margin:0 auto;padding:0 24px}.mpi-quotes h3{font-family:'Fraunces',Georgia,serif;font-size:26px;line-height:1.2;color:#0a1d35;margin:0 0 18px;font-weight:600}.mpi-quotes .q-stage{display:grid}.mpi-quotes figure{grid-area:1/1;margin:0;opacity:0;animation:mpiq 30s infinite}.mpi-quotes figure:nth-child(1){animation-delay:0s}.mpi-quotes figure:nth-child(2){animation-delay:6s}.mpi-quotes figure:nth-child(3){animation-delay:12s}.mpi-quotes figure:nth-child(4){animation-delay:18s}.mpi-quotes figure:nth-child(5){animation-delay:24s}.mpi-quotes figure:first-child{opacity:1}@keyframes mpiq{0%{opacity:0}3%{opacity:1}17%{opacity:1}20%{opacity:0}100%{opacity:0}}.mpi-quotes blockquote{margin:0 0 10px;font-family:'Fraunces',Georgia,serif;font-size:21px;line-height:1.45;color:#1d2330}.mpi-quotes figcaption{font-size:14px;line-height:1.4;color:#5f6368}.mpi-quotes figcaption strong{color:#B23A1C}@media (prefers-reduced-motion:reduce){.mpi-quotes figure{animation:none}.mpi-quotes figure:not(:first-child){display:none}}@media (max-width:600px){.mpi-quotes{padding:28px 0}.mpi-quotes h3{font-size:22px}.mpi-quotes blockquote{font-size:18px}}}</style><section class="mpi-hero">
+
+  <div class="hero-overlay"></div>
+
+  <img class="hero-photo" src="images/c099aae23a4c3590.webp" alt="MPI coach leading an ethics workshop with students at a school in Arizona" width="1240" height="927" loading="lazy">
+
+  <div class="hero-content">
+    <h2>Think deeply.<br>Speak clearly.</h2>
+
+    <p class="hero-subtitle">
+      Live philosophy classes, camps, and competitions that teach students to think clearly and reason well.
+    </p>
+
+    <p class="hero-body">
+      We teach philosophy, ethics, and logic to students worldwide, from first principles through to international competition.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="services-4.html" class="cta gold" target="_top">
+        Explore Classes
+      </a>
+
+      <a href="https://calendar.app.google/k1Nzoj6ggB2SNCXn7" class="cta outline" target="_blank" rel="noopener">
+        Schedule a Free Consultation
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-tagline">
+    <em>Empowering the next generation to reason better, speak better, and do better.</em>
+  </div>
+</section>
+
+
+
+<section class="mpi-upcoming" aria-label="Coming up">
+  <div class="up-wrap">
+    <div class="up-label">Coming up</div>
+    <a class="up-item" href="https://www.globalaidebates.com/" target="_blank" rel="noopener">
+      <div class="up-date">Entries close 21 November</div>
+      <div class="up-title">Global AI Debates</div>
+      <div class="up-sub">Ages 7–18, online: record a speech or write a team essay on AI ethics</div>
+    </a>
+    <a class="up-item" href="https://superdebate.org/events/boston-debate-showcase-2026" target="_blank" rel="noopener">
+      <div class="up-date">Tuesday 17 November · Boston</div>
+      <div class="up-title">Boston Debate Showcase</div>
+      <div class="up-sub">MIT professors debate the AI race with China, live at Laugh Boston</div>
+    </a>
+    <a class="up-item" href="event-calendar.html" target="_top">
+      <div class="up-date">Saturday 6 March 2027 · Online</div>
+      <div class="up-title">TKEthics Spring Invitational</div>
+      <div class="up-sub">Team ethics competition for ages 10–18. Early bird until 6 January</div>
+    </a>
+  </div>
+</section>
+
+<div class="mpi-content">
+
+  <section class="pathways">
+    <div class="wrap">
+      <div class="pathways-grid">
+        <article class="path-card primary aos-init" data-aos="fade-up">
+          <h3>Philosophy classes</h3>
+
+          <p>
+            Live online courses in philosophy, ethics, and logic, from four-day camps to ongoing classes.
+            Students read classic and contemporary arguments, learn how to analyze them carefully, and
+            practice building clear arguments of their own in small, discussion-based groups.
+          </p>
+
+          <a href="services-4.html" class="path-cta" target="_top">
+            Explore classes
+          </a>
+        </article>
+
+        <article class="path-card secondary aos-init" data-aos="fade-up" data-aos-delay="100">
+          <h3>Tournaments</h3>
+
+          <p>
+            Ethics Olympiads, TKEthics Invitationals, and Global AI Debates for students ready to test
+            their reasoning in public. Teams compete online with students around the world, receive judge
+            feedback, and may qualify for international finals.
+          </p>
+          <img src="images/90255fbe9a584358.webp" alt="Ethics Olympiad" style="display:block;height:24px;width:auto;max-width:100%;margin:4px 0 14px" width="477" height="84" loading="lazy">
+
+          <a href="tournaments.html" class="path-cta" target="_top">
+            See competitions
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mpi-visits" aria-label="School visits">
+    <div class="v-grid">
+      <img src="images/bab3450da76f73dd.webp" alt="Students discussing an ethics case at our in-person event in Arizona" loading="lazy" width="960" height="720">
+      <div>
+        <h3>Want to host an ethics bowl at your school? We'll come and help.</h3>
+        <p>We visit schools to teach philosophy and ethics, help teachers start ethics teams, and help run ethics competitions. In person, or on Zoom.</p>
+        <a class="v-cta" href="school-visits.html" target="_top">School visits</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mpi-quotes"><div class="q-wrap"><h3>What teachers say about the Ethics Olympiad</h3><img src="images/90255fbe9a584358.webp" alt="Ethics Olympiad" style="display:block;height:30px;width:auto;max-width:90%;margin:6px auto 18px" width="477" height="84" loading="lazy"><div class="q-stage"><figure><blockquote>“Many of our students said this is the most meaningful extracurricular learning experience they have had.”</blockquote><figcaption><strong>Aliesha Simmons</strong> · Selwyn School, Auckland, NZ</figcaption></figure><figure><blockquote>“A great competition, well organised and run. For a first time participant it could not have been easier.”</blockquote><figcaption><strong>Craig Morrison</strong> · Scots College, Wellington, NZ</figcaption></figure><figure><blockquote>“I can’t emphasise enough the positive feedback that the silver medal has had on participating students.”</blockquote><figcaption><strong>Dr David Turner</strong> · Hornsby Girls High School, NSW</figcaption></figure><figure><blockquote>“The nature of this event being collaborative yet competitive is wonderful and so needed in our world.”</blockquote><figcaption><strong>Glenda McCarthy</strong> · Centralian Senior College, NT</figcaption></figure><figure><blockquote>“The program has gone from strength to strength, with our senior teams winning gold in Victoria.”</blockquote><figcaption><strong>Meg Scott</strong> · St Leonard’s College, VIC</figcaption></figure></div></div></section>
+<section class="partners-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Partners</h2>
+        </div>
+
+      </div>
+
+      <div class="partners-grid">
+
+        <a href="https://ethicsolympiad.org/" class="partner-card aos-init" data-aos="fade-up" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="images/26fbecfdb4d71128.webp" loading="lazy" alt="Ethics Olympiad" width="320" height="56">
+          </div>
+
+          <span class="partner-label">Official licensee</span>
+
+          <h3>Ethics Olympiad</h3>
+
+          <p>
+            MPI is an official licensee of the Ethics Olympiad competitions, running the Pan American, Pan Atlantic and European Ethics Olympiads.
+          </p>
+
+          <span class="partner-link">ethicsolympiad.org →</span>
+        </a>
+
+        <a href="https://futureoflife.org/" class="partner-card aos-init" data-aos="fade-up" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="images/b102d672ccb02d5a.webp" loading="lazy" alt="Future of Life Institute" width="173" height="120">
+          </div>
+
+          <span class="partner-label">Grant funder</span>
+
+          <h3>Future of Life Institute</h3>
+
+          <p>
+            AI safety research and education, co-founded by Dr. Max Tegmark of MIT. Backs Global AI Debates with a $10,000 grant.
+          </p>
+
+          <span class="partner-link">futureoflife.org →</span>
+        </a>
+
+        <a href="https://www.marcsandersfoundation.org/" class="partner-card aos-init" data-aos="fade-up" data-aos-delay="50" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="images/993c8f1fc74dbe20.webp" loading="lazy" alt="Marc Sanders Foundation" width="600" height="400">
+          </div>
+
+          <span class="partner-label">Sponsor</span>
+
+          <h3>Marc Sanders Foundation</h3>
+
+          <p>
+            Sponsors our Case Writing Prize and supports philosophy education in schools.
+          </p>
+
+          <span class="partner-link">marcsandersfoundation.org →</span>
+        </a>
+
+        <a href="https://philosium.com/" class="partner-card aos-init" data-aos="fade-up" data-aos-delay="100" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="images/085c2f7df74d9fa2.webp" loading="lazy" alt="Philosium" width="600" height="400">
+          </div>
+
+          <span class="partner-label">Network</span>
+
+          <h3>Philosium</h3>
+
+          <p>
+            Global network of young philosophers across six continents and 60+ countries. Partner in making philosophy accessible.
+          </p>
+
+          <span class="partner-link">philosium.com →</span>
+        </a>
+
+        <a href="https://www.tkethics.org/" class="partner-card aos-init" data-aos="fade-up" data-aos-delay="150" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="images/e4adb309c288568c.webp" loading="lazy" alt="TKEthics" width="600" height="400">
+          </div>
+
+          <span class="partner-label">Co-organizer</span>
+
+          <h3>TKEthics</h3>
+
+          <p>
+            Worldwide ethics invitationals and host of the International Grand Final.
+          </p>
+
+          <span class="partner-link">tkethics.org →</span>
+        </a>
+
+        <a href="https://superdebate.org/" class="partner-card aos-init" data-aos="fade-up" data-aos-delay="200" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="images/6c97e5e4df1a3335.webp" loading="lazy" alt="SuperDebate" class="logo-on-dark" width="600" height="400">
+          </div>
+
+          <span class="partner-label">Debate partner</span>
+
+          <h3>SuperDebate</h3>
+
+          <p>
+            Public debate nights, local debate clubs and online debate for everyone. Co-hosts SuperDebate Boston with MPI.
+          </p>
+
+          <span class="partner-link">superdebate.org →</span>
+        </a>
+
+      </div>
+
+      <h3 class="tier-title">Model UN partners</h3>
+      <div class="partners-grid tier2">
+        <a href="https://ksmun.kr" class="partner-card" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="data:image/jpeg;base64,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" loading="lazy" alt="KSMUN" width="600" height="400">
+          </div>
+          <span class="partner-label">Event partner</span>
+          <h3>KSMUN</h3>
+          <p>
+            Korea Students Model United Nations, Seoul (21–22 Nov 2026). We share each other’s events with our students and delegates.
+          </p>
+          <span class="partner-link">ksmun.kr →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Newsletter</h2>
+        </div>
+
+        <span class="meta"><a href="newsletters.html" target="_top">See all →</a></span>
+      </div>
+
+      <!-- Filled with the 3 newest Newsletters posts by the Home page code; these are the fallback. -->
+      <div class="news-grid" id="newsGrid">
+        <a href="post/september-2026-newsletter-international-final-and-novice-results.html" class="news-card" target="_top">
+          <span class="news-date">September 4, 2026</span>
+          <h3>September 2026 Newsletter: International Final and Novice Results</h3>
+          <p>Congratulations to our 2026 TKEthics International Grand Final and first-ever Novice Invitational medalists, plus the Fall Invitational early-bird deadline.</p>
+          <span class="news-link">Read →</span>
+        </a>
+
+        <a href="post/august-2026-newsletter-a-look-back-at-shanghai-summer-camps-fall-events.html" class="news-card" target="_top">
+          <span class="news-date">August 8, 2026</span>
+          <h3>August 2026 Newsletter: A Look Back at Shanghai, Summer Camps &amp; Fall Events</h3>
+          <p>Our July in Shanghai teaching AI, ethics and debate, last places in the summer philosophy camps, and the fall 2026 event line-up.</p>
+          <span class="news-link">Read →</span>
+        </a>
+
+        <a href="post/july-2026-newsletter-china-coding-ethics-and-debate-camps-online-philosophy-camps.html" class="news-card" target="_top">
+          <span class="news-date">July 10, 2026</span>
+          <h3>July 2026 Newsletter: China Coding-Ethics and Debate Camps, Online Philosophy Camps</h3>
+          <p>Tech for Good AI Innovation Camp and GE-Elite Public Forum debate camp in Shanghai, plus our August online philosophy camps.</p>
+          <span class="news-link">Read →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</section>
+<img class="native-image" src="images/c7980e681a8176a4.webp" width="1280" height="900" loading="lazy" alt="">
+
+</main><footer><a href="contact-us.html">Contact Us</a> · <a href="support-us.html">Support Us</a></footer></body></html>
