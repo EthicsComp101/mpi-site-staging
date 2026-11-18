@@ -50,7 +50,7 @@ h1{font:500 clamp(42px,6.3vw,92px)/.97 var(--serif);letter-spacing:-.025em;margi
 .proof .f .op{font-style:normal;font-family:var(--mono);font-size:.55em;transform:translateY(-.1em)}
 .proof .g{grid-column:2;margin:6px 0 0;font-size:17px;line-height:1.35;color:var(--body);max-width:25em}
 .proof .j{grid-column:2;margin-top:6px;color:var(--mute)}
-.proof li.bar{padding-bottom:18px}
+.proof li.bar{padding-bottom:18px;height:auto;background:none;margin:0}
 .proof li.bar::after{content:"";position:absolute;left:0;bottom:0;width:62%;height:3px;background:var(--ink)}
 .proof li.c{padding-top:18px}
 .proof .f,.proof .n{transition:color .15s}
