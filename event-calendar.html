@@ -972,7 +972,13 @@ const mainEvents = [
   { id:"eo-eu-27", title:"Senior European Ethics Olympiad 2027", type:"olympiad", date:"2027-03-18", time:"8:00 AM UK / 9:00 AM CET", eligibility:"UK, European and African school-based teams, ages 14-18", description:"Regional Ethics Olympiad for schools in the UK, Europe and Africa.", hasDeadlines:true, customDeadlines:{ earlyBird:"2027-01-18", regular:"2027-02-28" }, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-senior-european-ethics-olympiad-1782283791861" },
   { id:"eo-pan-am-27", title:"Pan American Ethics Olympiad 2027", type:"olympiad", date:"2027-04-03", time:"10:00 AM ET", eligibility:"All Americas school-based teams (USA, Canada, Central & South America), ages 14-18", description:"Regional Ethics Olympiad for schools across the Americas.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/pan-american-ethics-olympiad-2027" },
   { id:"tke-grand-final-27", title:"TKEthics Grand Final 2027", type:"tke", date:"2027-08-28", time:"6:00 PM ET / 6:00 AM BJ", eligibility:"Qualifying TKEthics teams only", description:"Culminating final for teams that qualified through 2026-27 TKE Invitationals.", hasDeadlines:false, fees:"", showFeeWaiver:false },
-  { id:"tke-novice-27", title:"TKEthics Invitational Novice 2027", type:"tke", date:"2027-08-28", time:"6:00 PM ET", eligibility:"Worldwide. Newcomers only.", description:"Dedicated newcomer event. Same general format as 2026 Novice.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/tkethics-invitational-novice-2027" }
+  { id:"tke-novice-27", title:"TKEthics Invitational Novice 2027", type:"tke", date:"2027-08-28", time:"6:00 PM ET", eligibility:"Worldwide. Newcomers only.", description:"Dedicated newcomer event. Same general format as 2026 Novice.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/tkethics-invitational-novice-2027" },
+  { id:"eo-ms-final-27", title:"International Middle School Ethics Olympiad Final 2027", type:"olympiad", date:"2027-02-17", time:"Date set by the Ethics Olympiad; hosted from Australia, online", eligibility:"School-based teams that qualified through a 2026 Middle School Ethics Olympiad, including our Pan Atlantic event", description:"The international final for middle school teams, run by the Ethics Olympiad. Medallists from the 2026 Pan Atlantic Middle School Ethics Olympiad qualify.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
+  { id:"eo-senior-asia-27", title:"Senior Ethics Olympiad 2027: Asia heats", type:"olympiad", date:"2027-05-04", time:"India and Singapore: Tue 4 May · China, Hong Kong and Japan: Wed 5 May · South Korea and South East Asia: Mon 31 May 2027", eligibility:"School-based teams in Asia, ages 15-18, 1-2 teams per school", description:"Run by the Ethics Olympiad in Australia. Pick the heat for your country; some dates fill up early.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/senior-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
+  { id:"eo-senior-anz-27", title:"Senior Ethics Olympiad 2027: Australia and New Zealand heats", type:"olympiad", date:"2027-05-03", time:"State and regional heats from Mon 3 May to Mon 31 May 2027", eligibility:"School-based teams in Australia and New Zealand, ages 15-18, 1-2 teams per school", description:"Run by the Ethics Olympiad. Several heats per state; many are already full, so register early.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/senior-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
+  { id:"eo-junior-27", title:"Junior School Ethics Olympiad 2027", type:"olympiad", date:"2027-06-08", time:"Online, about 4.5 hours. June dates (8-18 June) and September dates (7-15 September 2027)", eligibility:"School-based teams, ages 9-11", description:"Run online by the Ethics Olympiad in Australia. Registration closes as each date fills.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/junior-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
+  { id:"eo-ms-asia-27", title:"Middle School Ethics Olympiad 2027: Asia heats", type:"olympiad", date:"2027-11-10", time:"China and Hong Kong: Wed 10 Nov · India and Singapore: Mon 15 Nov · South Korea and South East Asia: Wed 24 Nov 2027", eligibility:"School-based teams in Asia, ages 11-14, 1-2 teams per school", description:"Run by the Ethics Olympiad in Australia. Pick the heat for your country.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/middle-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
+  { id:"eo-ms-anz-27", title:"Middle School Ethics Olympiad 2027: Australia and New Zealand heats", type:"olympiad", date:"2027-11-01", time:"State and regional heats from Mon 1 Nov to Tue 30 Nov 2027", eligibility:"School-based teams in Australia and New Zealand, ages 11-14, 1-2 teams per school", description:"Run by the Ethics Olympiad. Several heats per state; some are already full.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/middle-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false }
 ];
 
 // 6 collapsed regions with genuinely distinct event buckets
@@ -981,42 +987,42 @@ const regions = {
     name: "Americas",
     perfect: ["uwc-inv-26","eo-pan-am-27","tke-fall-26","tke-spring-27","tke-novice-27","ms-pan-atlantic-26","case-writing-26","arizona-26","boston-showcase-26","gad-fall-26"],
     open: [],
-    qualifying: ["tke-grand-final-27"],
+    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-eu-27"]
   },
   europe: {
     name: "Europe, UK & Ireland",
     perfect: ["uwc-inv-26","eo-eu-27","ms-pan-atlantic-26","case-writing-26","gad-fall-26"],
     open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26"],
-    qualifying: ["tke-grand-final-27"],
+    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-pan-am-27"]
   },
   africa: {
     name: "Africa & Middle East",
     perfect: ["uwc-inv-26","ms-pan-atlantic-26","eo-eu-27","case-writing-26","gad-fall-26"],
     open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26"],
-    qualifying: ["tke-grand-final-27"],
+    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-pan-am-27"]
   },
   eastasia: {
     name: "East Asia",
-    perfect: ["uwc-inv-26","case-writing-26","tke-fall-26","tke-spring-27","tke-novice-27","gad-fall-26"],
-    open: ["arizona-26","boston-showcase-26"],
-    qualifying: ["tke-grand-final-27"],
+    perfect: ["uwc-inv-26","case-writing-26","tke-fall-26","tke-spring-27","tke-novice-27","gad-fall-26","eo-senior-asia-27","eo-ms-asia-27"],
+    open: ["arizona-26","boston-showcase-26","eo-junior-27"],
+    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
   },
   southasia: {
     name: "South & Southeast Asia",
-    perfect: ["uwc-inv-26","case-writing-26","gad-fall-26"],
-    open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26"],
-    qualifying: ["tke-grand-final-27"],
+    perfect: ["uwc-inv-26","case-writing-26","gad-fall-26","eo-senior-asia-27","eo-ms-asia-27"],
+    open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26","eo-junior-27"],
+    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
   },
   oceania: {
     name: "Australia & New Zealand",
-    perfect: ["uwc-inv-26","case-writing-26","gad-fall-26"],
+    perfect: ["uwc-inv-26","case-writing-26","gad-fall-26","eo-senior-anz-27","eo-ms-anz-27","eo-junior-27"],
     open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26"],
-    qualifying: ["tke-grand-final-27"],
+    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
   }
 };
