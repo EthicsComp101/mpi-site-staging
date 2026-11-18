@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Modus Ponens Institute — Direction B: Bold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Archivo+Narrow:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e1320;--red:#c8202a;--paper:#ffffff;--grey:#eef0f3;--muted:#5b6170}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 Archivo,system-ui,sans-serif}
+a{color:inherit}.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.cond{font-family:"Archivo Narrow",Archivo,sans-serif;text-transform:uppercase;letter-spacing:.02em}
+header{position:absolute;inset:0 0 auto 0;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;height:88px}
+.nav .logo{background:#fff;padding:8px 12px;border-radius:4px;display:block}.nav img{height:40px;display:block}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:500;font-size:15px}
+.nav ul a{color:#fff;text-decoration:none;opacity:.9}.nav ul a:hover{opacity:1}
+.nav .cta{background:var(--red);padding:10px 16px;border-radius:4px;opacity:1}
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;background:#0e1320}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.42;filter:saturate(.85)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,19,32,.25) 0%,rgba(14,19,32,.85) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:72px;width:100%}
+.hero h1{font-family:"Archivo Narrow",Archivo,sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(48px,8.4vw,124px);line-height:.92;letter-spacing:-.01em;margin:0 0 26px;max-width:11ch}
+.hero p{font-size:20px;max-width:34em;margin:0 0 32px;color:#e6e8ee}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:16px 26px;border-radius:4px;font-size:16px}
+.btn.ghost{background:transparent;border:2px solid #fff;margin-left:12px;padding:14px 24px}
+/* numbers strip */
+.stats{background:var(--red);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:30px;padding-bottom:30px}
+.stats b{display:block;font-family:"Archivo Narrow",sans-serif;font-size:40px;line-height:1}
+.stats span{font-size:14px;opacity:.9}
+/* cards */
+section{padding:96px 0}
+h2.big{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;font-size:clamp(36px,5vw,64px);line-height:.95;margin:0 0 40px;max-width:16ch}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border-radius:6px;text-decoration:none;color:#fff;background:#0e1320}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover img{transform:scale(1.04)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(14,19,32,.92))}
+.card div{position:absolute;left:24px;right:24px;bottom:24px;z-index:2}
+.card h3{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;font-size:32px;line-height:1;margin:0 0 10px}
+.card p{margin:0;font-size:15px;color:#dfe2ea}
+/* events */
+.events{background:var(--grey)}
+.evs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ev{background:#fff;border-radius:6px;padding:28px;text-decoration:none;display:flex;flex-direction:column;gap:10px;border-top:6px solid var(--ink)}
+.ev.hot{border-top-color:var(--red)}
+.ev time{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;font-size:15px;color:var(--red)}
+.ev h3{font-size:24px;line-height:1.15;margin:0}.ev p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.ev span{font-weight:700;font-size:15px}
+/* quote */
+.q{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--ink);color:#fff}
+.q img{width:100%;height:100%;object-fit:cover;display:block;min-height:420px}
+.q div{padding:72px 64px;display:flex;flex-direction:column;justify-content:center}
+.q blockquote{margin:0;font-size:clamp(24px,2.6vw,34px);line-height:1.25;font-weight:500}
+.q cite{font-style:normal;margin-top:22px;color:#aab0bf;font-size:15px}
+/* free */
+.free{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+.free h2{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;font-size:44px;line-height:1;margin:0 0 10px}
+.free p{margin:0;color:var(--muted);max-width:40em}
+.btn.dark{background:var(--ink)}
+footer{background:var(--ink);color:#aab0bf;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-top:44px;padding-bottom:44px}
+footer a{color:#fff;text-decoration:none;margin-right:20px}
+@media(max-width:900px){
+ .nav ul{display:none}.hero{min-height:78vh}.btn.ghost{margin:12px 0 0 0}
+ .stats .wrap{grid-template-columns:repeat(2,1fr)}.stats b{font-size:28px}
+ .cards,.evs{grid-template-columns:1fr}.card{aspect-ratio:4/5}
+ .q{grid-template-columns:1fr}.q div{padding:44px 24px}.q img{min-height:260px}
+ section{padding:64px 0}.wrap{padding-left:18px;padding-right:18px}
+}
+.badge{position:fixed;left:16px;bottom:16px;background:#c8202a;color:#fff;font:700 12px Archivo,sans-serif;padding:8px 12px;border-radius:6px;z-index:9}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="../../index.html"><img src="../../images/bcc7608efd78f765.webp" alt="Modus Ponens Institute"></a>
+  <ul><li><a href="../../classes-tutoring.html">Classes</a></li><li><a href="../../tournaments.html">Competitions</a></li><li><a href="../../school-visits.html">Schools</a></li><li><a href="../../resources.html">Resources</a></li><li><a class="cta" href="../../tournaments.html">Compete</a></li></ul>
+</div></header>
+
+<main>
+<section class="hero" style="padding:0">
+  <img src="../../images/home/competitions.webp" alt="Students on stage receiving trophies at an ethics competition">
+  <div class="wrap">
+    <h1>Think deeply. Speak clearly.</h1>
+    <p>Philosophy classes and international ethics competitions for school students, online and around the world.</p>
+    <a class="btn" href="../../tournaments.html">Find a competition</a><a class="btn ghost" href="../../classes-tutoring.html">Join a class</a>
+  </div>
+</section>
+
+<div class="stats"><div class="wrap">
+  <div><b>3</b><span>international competition series</span></div>
+  <div><b>Ages 7–18</b><span>from first class to international final</span></div>
+  <div><b>Online</b><span>and in schools around the world</span></div>
+  <div><b>Free</b><span>lecture, handbook and course</span></div>
+</div></div>
+
+<section><div class="wrap">
+  <h2 class="big">Pick your way in</h2>
+  <div class="cards">
+    <a class="card" href="../../tournaments.html"><img src="../../images/8f905f78affa8b4f.webp" alt="Students holding trophies"><div><h3>Compete</h3><p>Ethics Olympiads, TKEthics Invitationals and Global AI Debates, with judge feedback and international finals.</p></div></a>
+    <a class="card" href="../../classes-tutoring.html"><img src="../../images/c1a6480d00842a60.webp" alt="A coach working with two students"><div><h3>Learn</h3><p>Small philosophy, ethics and logic classes on Zoom, taught by graduate philosophers.</p></div></a>
+    <a class="card" href="../../school-visits.html"><img src="../../images/bab3450da76f73dd.webp" alt="Students discussing around desks"><div><h3>Bring it to school</h3><p>School visits, teacher support and ethics team training, in person or on Zoom.</p></div></a>
+  </div>
+</div></section>
+
+<section class="events"><div class="wrap">
+  <h2 class="big">Coming up</h2>
+  <div class="evs">
+    <a class="ev hot" href="https://globalaidebates.com/" target="_blank" rel="noopener"><time>Entries close 21 Nov</time><h3>Global AI Debates</h3><p>Ages 7–18, online: record a speech or write a team essay on AI ethics.</p><span>Enter now →</span></a>
+    <a class="ev" href="../../event-calendar.html"><time>Sat 6 Mar 2027</time><h3>TKEthics Spring Invitational</h3><p>Team ethics competition for ages 10–18. Early bird until 6 January.</p><span>Details →</span></a>
+    <a class="ev" href="../../event-calendar.html"><time>Spring 2027</time><h3>Senior Ethics Olympiads</h3><p>European and Pan American qualifiers for the International Final.</p><span>Details →</span></a>
+  </div>
+</div></section>
+
+<div class="q">
+  <img src="../../images/2847c4fd26386efc.webp" alt="A big group of camp students">
+  <div><blockquote>“The nature of this event being collaborative yet competitive is wonderful and so needed in our world.”</blockquote><cite>Glenda McCarthy, teacher</cite></div>
+</div>
+
+<section><div class="wrap free">
+  <div><h2>New to ethics?</h2><p>A free nine-minute course on the three lenses for any ethics case: consequentialism, deontology and virtue ethics.</p></div>
+  <a class="btn dark" href="../../ethical-theories.html">Watch free</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div>Teaching philosophy for the sake of the good life.</div>
+  <div><a href="../../about-us.html">Our team</a><a href="../../newsletters.html">Newsletter</a><a href="../../contact-us.html">Contact</a><a href="../../support-us.html">Donate</a></div>
+</div></footer>
+<div class="badge">Design B · Bold</div>
+</body>
+</html>
