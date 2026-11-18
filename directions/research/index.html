@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>MPI website: design deep dive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap">
+<style>
+:root{--ink:#111214;--mute:#5c6066;--line:#d9dbde;--red:#c8102e;--tint:#f4f5f6;--gut:18px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:#fff;color:var(--ink);font:400 18px/1.55 "IBM Plex Sans",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--red)}
+.mono{font:400 12.5px/1.4 "IBM Plex Mono",monospace;letter-spacing:.02em;color:var(--mute)}
+.shell{max-width:1240px;margin:0 auto;padding:0 var(--gut);display:grid;grid-template-columns:220px minmax(0,1fr);column-gap:64px}
+.toc{position:sticky;top:0;align-self:start;padding:28px 0;height:100vh;display:flex;flex-direction:column;gap:2px;border-right:1px solid var(--line)}
+.toc b{font:500 26px/1 Newsreader,serif;letter-spacing:.06em;margin-bottom:22px}
+.toc b i{color:var(--red)}
+.toc a{font:400 13px/1.3 "IBM Plex Mono",monospace;text-decoration:none;padding:7px 0;color:var(--mute)}
+.toc a:hover{color:var(--red)}
+main{padding:56px 0 120px;min-width:0}
+h1{font:500 clamp(44px,6.6vw,92px)/.96 Newsreader,serif;letter-spacing:-.028em;margin:0 0 26px;text-wrap:balance;max-width:11em}
+.intro{font:400 clamp(21px,2.1vw,26px)/1.4 Newsreader,serif;max-width:31em;margin:0 0 18px}
+h2{font:500 clamp(32px,4vw,52px)/1.02 Newsreader,serif;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}
+h3{font:500 26px/1.12 Newsreader,serif;letter-spacing:-.01em;margin:0 0 8px}
+p{margin:0 0 16px;max-width:38em}
+section{border-top:3px solid var(--ink);margin-top:88px;padding-top:22px}
+.sub{color:var(--mute);margin-bottom:34px}
+
+/* concept previews */
+.live{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:40px 0 0}
+.live a{text-decoration:none;display:block}
+.frame{border:1px solid var(--ink);aspect-ratio:16/11;overflow:hidden;position:relative;background:var(--tint)}
+.frame iframe{position:absolute;left:0;top:0;width:1280px;height:880px;border:0;transform-origin:0 0;pointer-events:none}
+.live b{display:block;font:500 23px/1.1 Newsreader,serif;margin:12px 0 3px}
+.live span{font:400 13px/1.4 "IBM Plex Mono",monospace;color:var(--mute)}
+.live a:hover b{color:var(--red)}
+.live a:hover .frame{box-shadow:5px 5px 0 var(--ink)}
+
+/* lists of sources */
+.src{list-style:none;margin:0;padding:0;counter-reset:s}
+.src li{display:grid;grid-template-columns:44px minmax(0,5fr) minmax(0,7fr);gap:6px 24px;padding:18px 0;border-top:1px solid var(--line);counter-increment:s}
+.src li::before{content:counter(s,decimal-leading-zero);font:400 12.5px/1.9 "IBM Plex Mono",monospace;color:var(--red)}
+.src h3{font-size:23px;margin:0 0 2px}
+.src h3 a{text-decoration:none}
+.src h3 a::after{content:" ↗";font:400 .6em "IBM Plex Mono",monospace;color:var(--mute)}
+.src .k{font:400 12.5px/1.4 "IBM Plex Mono",monospace;color:var(--mute)}
+.src p{margin:0;font-size:16.5px;line-height:1.5}
+.src p b{font-weight:600}
+.chip{display:flex;height:8px;width:120px;margin-top:10px;border:1px solid var(--ink)}
+.chip i{flex:1}
+
+/* diagnosis */
+.diag{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;counter-reset:d;margin-top:30px}
+.diag div{border-top:1px solid var(--line);padding:18px 0 14px;counter-increment:d}
+.diag h3{font-size:22px}
+.diag h3::before{content:counter(d) ". ";color:var(--red);font-style:italic}
+.diag p{font-size:16.5px;margin:0}
+
+/* rules */
+.rules{list-style:none;margin:26px 0 0;padding:0;counter-reset:r}
+.rules li{display:grid;grid-template-columns:64px minmax(0,1fr);border-top:1px solid var(--ink);padding:16px 0 18px;counter-increment:r}
+.rules li::before{content:counter(r);font:italic 400 44px/.9 Newsreader,serif;color:var(--red)}
+.rules b{display:block;font:500 25px/1.12 Newsreader,serif;margin-bottom:4px}
+.rules span{font-size:16.5px;color:#2e3136;max-width:40em;display:block}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;margin-top:40px}
+.two div{background:var(--tint);padding:22px 24px 10px}
+.two h3{font-size:22px}
+.two ul{margin:10px 0 14px;padding-left:20px;font-size:16.5px}
+.two li{margin-bottom:5px}
+
+/* concepts */
+.con{border-top:1px solid var(--ink);padding:30px 0 40px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:14px 48px}
+.con .n{font:italic 400 76px/.8 Newsreader,serif;color:var(--red);margin:0 0 14px}
+.con h3{font-size:clamp(32px,3.6vw,46px);letter-spacing:-.02em;margin-bottom:10px}
+.con .idea{font:400 20px/1.42 Newsreader,serif;max-width:none}
+.con .built{display:inline-block;font:500 14px/1 "IBM Plex Sans",sans-serif;background:var(--ink);color:#fff;text-decoration:none;padding:14px 18px;margin-top:8px}
+.con .built:hover{background:var(--red);color:#fff}
+.con .not{display:inline-block;font:400 12.5px/1 "IBM Plex Mono",monospace;border:1px solid var(--ink);padding:10px 12px;margin-top:8px}
+dl{margin:0;display:grid;grid-template-columns:118px minmax(0,1fr);font-size:16.5px;line-height:1.5}
+dt{font:400 12.5px/1.9 "IBM Plex Mono",monospace;color:var(--mute);border-top:1px solid var(--line);padding:11px 0}
+dd{margin:0;border-top:1px solid var(--line);padding:11px 0}
+.sw{display:inline-flex;gap:4px;vertical-align:-2px;margin-right:8px}
+.sw i{width:15px;height:15px;border:1px solid var(--ink);display:block}
+.ask{background:var(--ink);color:#fff;padding:34px 36px 26px;margin-top:88px}
+.ask h2{font-size:clamp(28px,3vw,38px)}
+.ask p{color:#d6d8dc}
+.ask a:hover{color:#fff}
+
+@media (max-width:900px){
+  .shell{display:block}
+  .toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--ink);padding:18px 0 14px;flex-direction:row;flex-wrap:wrap;gap:2px 16px;align-items:baseline}
+  .toc b{margin:0 8px 0 0;width:100%}
+  .toc a{padding:4px 0}
+  main{padding-top:36px}
+  section{margin-top:60px}
+  .live{grid-template-columns:minmax(0,1fr)}
+  .src li{grid-template-columns:34px minmax(0,1fr)}
+  .src li p{grid-column:2}
+  .diag,.two{grid-template-columns:minmax(0,1fr)}
+  .rules li{grid-template-columns:44px minmax(0,1fr)}
+  .con{grid-template-columns:minmax(0,1fr)}
+  dl{grid-template-columns:minmax(0,1fr)}
+  dt{padding-bottom:0}
+  dd{border-top:0;padding-top:0}
+  .ask{padding:26px 20px 16px;margin-top:60px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <b>M<i>P</i>I</b>
+    <a href="#top">Start</a>
+    <a href="#diagnosis">1. What went wrong</a>
+    <a href="#sites">2. Ten sites to learn from</a>
+    <a href="#principles">3. Ten sources on craft</a>
+    <a href="#rules">4. Our rules</a>
+    <a href="#concepts">5. Four concepts</a>
+    <a href="#next">6. What to tell me</a>
+  </nav>
+
+  <main id="top">
+    <h1>Why round one felt generic, and four ideas that are not</h1>
+    <p class="intro">Archie, you said the three designs looked nearly identical and none tried anything clever. You were right. This page explains why, shows what well-made sites do differently, and proposes four concepts that mix the Academic and Bold directions you liked. Three of them are built as real homepages you can open now.</p>
+    <p class="mono">18 November 2026 · preview only, not indexed</p>
+
+    <div class="live">
+      <a href="../v2-1/"><div class="frame"><iframe src="../v2-1/" loading="lazy" title="Concept 1 preview" tabindex="-1"></iframe></div><b>1. The Proof</b><span>Open the homepage →</span></a>
+      <a href="../v2-2/"><div class="frame"><iframe src="../v2-2/" loading="lazy" title="Concept 2 preview" tabindex="-1"></iframe></div><b>2. The Question</b><span>Open the homepage →</span></a>
+      <a href="../v2-3/"><div class="frame"><iframe src="../v2-3/" loading="lazy" title="Concept 3 preview" tabindex="-1"></iframe></div><b>3. The Annotated Page</b><span>Open the homepage →</span></a>
+    </div>
+
+    <section id="diagnosis">
+      <h2>What went wrong in round one</h2>
+      <p class="sub">The same six problems show up on the current site and in designs A, B and C.</p>
+      <div class="diag">
+        <div><h3>One skeleton, three paint jobs</h3><p>A, B and C all run in the same order: menu, headline beside a photo, three boxes, a quote, a list of events. Only the fonts and colours changed. A different design needs a different structure, not a different coat of paint.</p></div>
+        <div><h3>Nothing only MPI could have</h3><p>Swap the logo and any of them could belong to a tutoring company or a debate league. None of them uses the most distinctive thing you own: a name that is a rule of logic.</p></div>
+        <div><h3>Every choice was the default</h3><p>Rounded cards with soft shadows, small labels above every heading, a centred headline, navy and gold. Each is harmless alone. Together they are exactly what a template or an AI produces when nobody makes a decision.</p></div>
+        <div><h3>Too many typefaces, none with a job</h3><p>The current homepage loads five font families. Good sites use one or two and give each a clear role, so the type itself becomes the look.</p></div>
+        <div><h3>Small photos stretched large</h3><p>Your photos are phone pictures about 1,000 pixels wide. Design B blew one up to fill the screen and darkened it, which made it blurry and gloomy. Small photos need to stay small or be treated.</p></div>
+        <div><h3>Bold meant loud, not confident</h3><p>B's capitals over a dark photo and its red strip of numbers are the standard sports-site kit. Boldness that works comes from one big, clear decision, such as a single colour or a huge word, with calm around it.</p></div>
+      </div>
+    </section>
+
+    <section id="sites">
+      <h2>Ten sites to learn from</h2>
+      <p class="sub">I visited each one on 18 November. The coloured strip shows the palette each site lives on. Note how few colours there are.</p>
+      <ol class="src">
+        <li><div><h3><a href="https://fitzcarraldoeditions.com/" target="_blank" rel="noopener">Fitzcarraldo Editions</a></h3><span class="k">Publisher</span><div class="chip"><i style="background:#fff"></i><i style="background:#0b2f9f"></i><i style="background:#111"></i></div></div><p><b>Restraint as a brand.</b> One serif, one blue, white. Every book cover follows the same rule, so the whole site feels like a single object. Proof that you can be recognisable with almost nothing.</p></li>
+        <li><div><h3><a href="https://yalereview.org/" target="_blank" rel="noopener">The Yale Review</a></h3><span class="k">Literary journal, identity by Pentagram</span><div class="chip"><i style="background:#fff"></i><i style="background:#0a7fc2"></i><i style="background:#d9d56b"></i><i style="background:#111"></i></div></div><p><b>Academic and bold at once.</b> An outlined, engineered-looking title sits over classic reading type, held together by thin blue rules. Portraits are printed in one flat colour with a graphic shape behind them, which makes ordinary photos look deliberate.</p></li>
+        <li><div><h3><a href="https://longnow.org/" target="_blank" rel="noopener">The Long Now Foundation</a></h3><span class="k">Institute</span><div class="chip"><i style="background:#1a1030"></i><i style="background:#ff3d7f"></i><i style="background:#fff"></i></div></div><p><b>The idea is drawn, not described.</b> Instead of a paragraph about long-term thinking, the page shows three timelines: now, nowadays, the long now. You understand the organisation from a diagram in five seconds.</p></li>
+        <li><div><h3><a href="https://worksinprogress.co/" target="_blank" rel="noopener">Works in Progress</a></h3><span class="k">Ideas magazine</span><div class="chip"><i style="background:#fff7f3"></i><i style="background:#353a9a"></i><i style="background:#f6cf5f"></i><i style="background:#111"></i></div></div><p><b>Typewriter labels with a bookish serif.</b> Small typewriter-style text for facts (author, topic), a warm serif for titles, and solid colour slabs sitting on the corner of each image. Scholarly, but with punch.</p></li>
+        <li><div><h3><a href="https://asteriskmag.com/" target="_blank" rel="noopener">Asterisk</a></h3><span class="k">Magazine</span><div class="chip"><i style="background:#f4eedd"></i><i style="background:#f0486f"></i><i style="background:#111"></i></div></div><p><b>One split screen, one hot colour.</b> A huge botanical image on the left, a solid pink panel on the right with a few lines of text. Nothing else. The courage is in what was left out.</p></li>
+        <li><div><h3><a href="https://www.gsd.harvard.edu/" target="_blank" rel="noopener">Harvard Graduate School of Design</a></h3><span class="k">University school</span><div class="chip"><i style="background:#fff"></i><i style="background:#e6e6df"></i><i style="background:#ffe600"></i><i style="background:#22e03a"></i><i style="background:#111"></i></div></div><p><b>A university that does not look like one.</b> Technical lettering, rounded label tags in highlighter colours, pale grey bands. It shows a serious institution can be playful without losing authority.</p></li>
+        <li><div><h3><a href="https://press.stripe.com/" target="_blank" rel="noopener">Stripe Press</a></h3><span class="k">Publisher</span><div class="chip"><i style="background:#e4e2dc"></i><i style="background:#111"></i></div></div><p><b>Titles are the navigation.</b> Book titles run across the top in very large italic serif, with tiny bracketed labels around them. The contrast between enormous and tiny type does all the work. No boxes at all.</p></li>
+        <li><div><h3><a href="https://www.pentagram.com/" target="_blank" rel="noopener">Pentagram: Poetry Foundation identity</a></h3><span class="k">Design studio, currently featured on their homepage</span><div class="chip"><i style="background:#efe9d9"></i><i style="background:#e8452c"></i><i style="background:#f2a81d"></i><i style="background:#2b2b2b"></i></div></div><p><b>The subject becomes the graphic system.</b> Poets' own words are used as the building blocks of posters, covers and pages. The lesson for MPI: make the graphics out of what you teach, which is arguments.</p></li>
+        <li><div><h3><a href="https://brilliant.org/" target="_blank" rel="noopener">Brilliant</a></h3><span class="k">Education brand</span><div class="chip"><i style="background:#f3f2f0"></i><i style="background:#2bd24f"></i><i style="background:#3b5bff"></i><i style="background:#111"></i></div></div><p><b>Shows the learning itself.</b> No stock photos of smiling students. The page is a row of real puzzles you could solve. Visitors see what a lesson feels like before reading a word about it.</p></li>
+        <li><div><h3><a href="https://www.hayfestival.com/" target="_blank" rel="noopener">Hay Festival</a></h3><span class="k">Event brand</span><div class="chip"><i style="background:#fff"></i><i style="background:#00a39a"></i><i style="background:#111"></i></div></div><p><b>One colour ties mixed photos together.</b> Event photos are never consistent, so every picture gets the same teal caption bar underneath. A cheap, effective way to make snapshots look like a set.</p></li>
+      </ol>
+    </section>
+
+    <section id="principles">
+      <h2>Ten sources on craft</h2>
+      <p class="sub">What designers and researchers say separates a made site from a template, and what I took from each.</p>
+      <ol class="src">
+        <li><div><h3><a href="https://practicaltypography.com/typography-in-ten-minutes.html" target="_blank" rel="noopener">Typography in Ten Minutes</a></h3><span class="k">Matthew Butterick</span></div><p>Get the reading text right before anything else: 15 to 25 pixels on screen, line spacing of 120 to 145 per cent, and 45 to 90 characters per line. Most of how good a page looks comes from this.</p></li>
+        <li><div><h3><a href="https://webtypography.net/" target="_blank" rel="noopener">The Elements of Typographic Style Applied to the Web</a></h3><span class="k">Richard Rutter, after Robert Bringhurst</span></div><p>The classic book of typographic rules translated for websites. The details matter: proper quotation marks, small capitals for abbreviations, a consistent scale of sizes.</p></li>
+        <li><div><h3><a href="https://ia.net/topics/the-web-is-all-about-typography-period" target="_blank" rel="noopener">Web Design is 95% Typography</a></h3><span class="k">Oliver Reichenstein, iA</span></div><p>Nearly everything on a website is words, so the design is mostly the handling of words: spacing, white space and restrained colour. Treat text as the interface, not as filler between pictures.</p></li>
+        <li><div><h3><a href="https://frankchimero.com/blog/2015/the-webs-grain/" target="_blank" rel="noopener">The Web's Grain</a></h3><span class="k">Frank Chimero</span></div><p>A web page has no fixed edges. Do not draw a box and cram things into it. Arrange the content first and let the page take its shape from that, so it works on a phone and a wide screen alike.</p></li>
+        <li><div><h3><a href="https://www.rit.edu/vignellicenter/sites/rit.edu.vignellicenter/files/documents/The%20Vignelli%20Canon.pdf" target="_blank" rel="noopener">The Vignelli Canon</a></h3><span class="k">Massimo Vignelli (free PDF)</span></div><p>Discipline: a few good typefaces, a grid chosen for the job, and consistency everywhere. Design is deciding what to leave out and then sticking to it.</p></li>
+        <li><div><h3><a href="https://www.smashingmagazine.com/2019/11/smashing-podcast-episode-1" target="_blank" rel="noopener">What Is Art Direction?</a></h3><span class="k">Andy Clarke, Smashing Podcast</span></div><p>Art direction means the layout itself helps tell the story, as magazine designers have always done. Ask what the page is saying, then let that decide the structure, instead of pouring content into a standard layout.</p></li>
+        <li><div><h3><a href="https://www.learnui.design/blog/7-rules-for-creating-gorgeous-ui-part-1.html" target="_blank" rel="noopener">7 Rules for Creating Gorgeous UI</a></h3><span class="k">Erik Kennedy</span></div><p>Design in black and white first and add colour last, sparingly. Double the white space you think you need. Cramped pages look unfinished however good the parts are.</p></li>
+        <li><div><h3><a href="https://claude.com/blog/improving-frontend-design-through-skills" target="_blank" rel="noopener">Improving Frontend Design Through Skills</a></h3><span class="k">Anthropic</span></div><p>Explains why AI-made sites look alike: without direction, a model picks the most common choice every time. The cure is to commit to distinctive type, one dominant colour with sharp accents, and one well-planned moment of movement.</p></li>
+        <li><div><h3><a href="https://prg.sh/ramblings/Why-Your-AI-Keeps-Building-the-Same-Purple-Gradient-Website" target="_blank" rel="noopener">Why Your AI Keeps Building the Same Purple Gradient Website</a></h3><span class="k">prg.sh</span></div><p>A list of the tell-tale signs: the Inter typeface, purple gradients, three boxes with icons, flat backgrounds, the same fade-in on everything. Useful as a checklist of what to ban.</p></li>
+        <li><div><h3><a href="https://emilkowal.ski/ui/7-practical-animation-tips" target="_blank" rel="noopener">7 Practical Animation Tips</a></h3><span class="k">Emil Kowalski</span></div><p>Movement should be quick and quiet: under 0.3 seconds, starting fast and easing to a stop, and buttons should shrink very slightly when pressed. If people notice the animation, it is too much.</p></li>
+      </ol>
+    </section>
+
+    <section id="rules">
+      <h2>Our rules, from those twenty sources</h2>
+      <p class="sub">Ten rules we can check any page against. The three built concepts follow all of them.</p>
+      <ol class="rules">
+        <li><div><b>One idea, visible on the first screen, that only MPI could use.</b><span>If a competitor could copy the page by changing the logo, it has no idea yet.</span></div></li>
+        <li><div><b>Two typefaces at most, each with a job.</b><span>One for headings and one for reading or labels. The type is the look.</span></div></li>
+        <li><div><b>Reading text first.</b><span>17 to 21 pixels, lines of 45 to 90 characters, generous line spacing. Set this before designing anything else.</span></div></li>
+        <li><div><b>Very big or normal, nothing in between.</b><span>Headlines at least three or four times the size of the text. Medium-sized everything is what makes a page look like a template.</span></div></li>
+        <li><div><b>One loud colour, used the same way every time.</b><span>Black, white and one colour beat a palette of five. A second colour is allowed only if it has its own job.</span></div></li>
+        <li><div><b>Lines and alignment, not boxes.</b><span>No rounded cards, no soft shadows. Thin rules and things lining up do the organising.</span></div></li>
+        <li><div><b>Small photos stay small, or get a treatment.</b><span>Print them in one colour, crop them tight, or frame them like plates in a book. Never stretch one across the whole screen.</span></div></li>
+        <li><div><b>One moment of movement, then stillness.</b><span>Something happens once as the page opens. After that, things only move when you touch them, and quickly.</span></div></li>
+        <li><div><b>Built from the content out.</b><span>The phone version is not a squashed desktop. Each page is arranged so it reads well at any width, with no sideways scrolling.</span></div></li>
+        <li><div><b>Plain words.</b><span>Headings say what the section is. No small labels above headings, no slogans as section titles, no prices, no invented numbers. White background throughout.</span></div></li>
+      </ol>
+      <div class="two">
+        <div><h3>Worth stealing</h3><ul><li>Typewriter-style labels beside a classic serif</li><li>A split screen with one solid colour panel</li><li>A diagram that explains the organisation</li><li>Photos printed in one ink</li><li>Enormous words used as the menu</li><li>Rounded label tags, used sparingly</li></ul></div>
+        <div><h3>Banned</h3><ul><li>Purple or blue gradients, glass and blur effects</li><li>Three boxes with icons</li><li>Centred headline with two buttons under it</li><li>Stock photos and emoji as icons</li><li>Numbers that count up, and fade-ins on every section</li><li>Capital letters over a darkened photo</li></ul></div>
+      </div>
+    </section>
+
+    <section id="concepts">
+      <h2>Four concepts</h2>
+      <p class="sub">Each one mixes Academic and Bold in a different proportion, and each has a different structure, not just different fonts. All four keep your plain headline and real wording.</p>
+
+      <article class="con">
+        <div>
+          <p class="n">1</p>
+          <h3>The Proof</h3>
+          <p class="idea">Your name is a rule of logic, so the homepage is laid out as a logical proof. The first screen shows modus ponens itself: if P then Q; P; therefore Q, with the red italic P from your logo as the P. Below it, the page continues as numbered lines down one long black rule, the way a logician writes out an argument.</p>
+          <a class="built" href="../v2-1/">Open concept 1 →</a>
+        </div>
+        <dl>
+          <dt>Mix</dt><dd>Academic in manner, bold in scale. The most "MPI" of the four.</dd>
+          <dt>Type</dt><dd>Newsreader, a bookish serif, for headings and the big italic P and Q. IBM Plex Mono, a typewriter face, for line numbers and labels. IBM Plex Sans for reading.</dd>
+          <dt>Colour</dt><dd><span class="sw"><i style="background:#fff"></i><i style="background:#111214"></i><i style="background:#c8102e"></i></span>White, black and your logo red. Red is used only for P and for things you can click.</dd>
+          <dt>Photos</dt><dd>Small black-and-white squares labelled Fig. 1 to 4, like figures in a paper. They turn to colour when you point at them.</dd>
+          <dt>Signature</dt><dd>The "Where to start" section is written as if-then statements: <em>If you are</em> a student or parent → classes, camps and tutoring. The arrow stretches when you point at a row. Pointing at the conclusion of the proof lights up the two premises it depends on. The footer ends with the small square logicians put at the end of a proof.</dd>
+          <dt>Borrows from</dt><dd>Long Now (draw the idea), Works in Progress (typewriter labels with serif), Pentagram's Poetry Foundation (the subject becomes the graphics), Fitzcarraldo (one colour).</dd>
+        </dl>
+      </article>
+
+      <article class="con">
+        <div>
+          <p class="n">2</p>
+          <h3>The Question</h3>
+          <p class="idea">Philosophy starts with a question you cannot leave alone. Half of the first screen is a solid blue panel asking one: "Is it ever right to lie?" with two big buttons, Yes and No. Pick a side and the panel changes colour and asks for your reason, then points you to classes and competitions. Visitors do a tiny piece of philosophy before they read about it.</p>
+          <a class="built" href="../v2-2/">Open concept 2 →</a>
+        </div>
+        <dl>
+          <dt>Mix</dt><dd>Bold first, with an academic voice in the italics. This is design B's energy done properly.</dd>
+          <dt>Type</dt><dd>Archivo, a heavy sans that can be squeezed narrow for giant words, with Source Serif italic for the questions and quotes.</dd>
+          <dt>Colour</dt><dd><span class="sw"><i style="background:#fff"></i><i style="background:#1b3cff"></i><i style="background:#ff3d1f"></i><i style="background:#ffd400"></i></span>White with solid blocks of strong blue and orange-red, and yellow kept for highlights only.</dd>
+          <dt>Photos</dt><dd>Printed in a single ink with a fine dot pattern, like a poster, in a strip of five tall crops. This hides the low resolution and makes mixed snapshots look like one set.</dd>
+          <dt>Signature</dt><dd>The Yes/No question, with five questions to cycle through. Then "Classes", "Competitions", "Schools" and "Free resources" as giant words that fill with colour and widen when you point at them. Events appear as two ticket stubs with huge dates.</dd>
+          <dt>Borrows from</dt><dd>Asterisk (split screen, one hot colour), Brilliant (show the learning itself), Yale Review (one-colour photos), Stripe Press (giant words as navigation), Harvard GSD (rounded tags).</dd>
+        </dl>
+      </article>
+
+      <article class="con">
+        <div>
+          <p class="n">3</p>
+          <h3>The Annotated Page</h3>
+          <p class="idea">The homepage is a page from a well-made scholarly book that someone has gone through with a highlighter. Your one-sentence description is set large with a green drop capital, three phrases are highlighted in yellow and numbered, and the numbered notes in the margin are the way in for students, schools and competitors. Photos sit in the margins as framed plates.</p>
+          <a class="built" href="../v2-3/">Open concept 3 →</a>
+        </div>
+        <dl>
+          <dt>Mix</dt><dd>Academic first, made bold by very large type and the highlighter. This is design A with an idea behind it.</dd>
+          <dt>Type</dt><dd>EB Garamond, a classic book face, for nearly everything, with Schibsted Grotesk, a plain sans, for the small margin notes.</dd>
+          <dt>Colour</dt><dd><span class="sw"><i style="background:#fff"></i><i style="background:#16201c"></i><i style="background:#0d5540"></i><i style="background:#ffe65a"></i></span>White, ink, a deep library green, and highlighter yellow.</dd>
+          <dt>Photos</dt><dd>Kept small and in natural colour, each in a thin black frame with a caption: Plate I, Plate II, Plate III. Small photos look intentional this way.</dd>
+          <dt>Signature</dt><dd>The highlighter draws itself across the three phrases as the page opens. Point at a phrase and its margin note lights up, and the other way round. Dates hang in the left margin beside events and news, partners are set like a book index with dotted leaders, and the free lecture comes with an empty theory grid.</dd>
+          <dt>Borrows from</dt><dd>Fitzcarraldo (restraint), Yale Review (rules and classic type), Works in Progress (labels), Butterick and Rutter (book typography).</dd>
+        </dl>
+      </article>
+
+      <article class="con">
+        <div>
+          <p class="n">4</p>
+          <h3>The Draw</h3>
+          <p class="idea">Your own heading says "from first class to international final". That is a tournament draw. The homepage is one big bracket: lines run from first class, to team, to regional Olympiad, to the International Final, and every section hangs off a stage of the draw. It puts competitions first and treats philosophy as something you can win at.</p>
+          <span class="not">Not built yet. Say the word and I will build it.</span>
+        </div>
+        <dl>
+          <dt>Mix</dt><dd>Bold and sporty in structure, academic in detail. Best if competitions are the main thing you want to sell.</dd>
+          <dt>Type</dt><dd>Bricolage Grotesque, a characterful heavy sans, for stage names and scores, with Spectral, a quiet serif, for reading.</dd>
+          <dt>Colour</dt><dd><span class="sw"><i style="background:#fff"></i><i style="background:#101010"></i><i style="background:#ffd400"></i></span>White, black and one signal yellow, like a scoreboard.</dd>
+          <dt>Photos</dt><dd>Black-and-white team photos sitting on solid yellow blocks, each pinned to a stage of the draw, with a caption bar underneath as Hay Festival does.</dd>
+          <dt>Signature</dt><dd>The bracket lines draw themselves as you scroll, and the next deadline sits in the top bar as a live countdown styled like your official match timer.</dd>
+          <dt>Borrows from</dt><dd>Hay Festival (caption bars), Harvard GSD (tags and bands), Long Now (a diagram that explains you), Brilliant (clarity for young readers).</dd>
+        </dl>
+      </article>
+    </section>
+
+    <div class="ask" id="next">
+      <h2>What to tell me</h2>
+      <p>Open the three built homepages on your phone and on a computer. Then tell Claude which one feels most like MPI and what bothers you about it. You can also mix them, for example the proof from concept 1 with the colour of concept 2.</p>
+      <p>All three use your real wording and photos. Nothing here touches the live site. Round one is still at <a href="../">/directions/</a> for comparison.</p>
+    </div>
+  </main>
+</div>
+<script>
+(function(){function fit(){document.querySelectorAll('.frame').forEach(function(f){var i=f.querySelector('iframe');if(i)i.style.transform='scale('+(f.clientWidth/1280)+')';});}
+fit();addEventListener('resize',fit);})();
+</script>
+</body>
+</html>
