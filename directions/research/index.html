@@ -110,25 +110,6 @@ dd{margin:0;border-top:1px solid var(--line);padding:11px 0}
   .ask{padding:26px 20px 16px;margin-top:60px}
 }
 </style>
-<script>
-(function (s, e, n, d, er) {
-s['Sender'] = er;
-s[er] = s[er] || function () {
-(s[er].q = s[er].q || []).push(arguments)
-}, s[er].l = 1 * new Date();
-s[er].on = function(event, callback) {
-s[er].listeners = s[er].listeners || {};
-(s[er].listeners[event] = s[er].listeners[event] || []).push(callback);
-};
-var a = e.createElement(n),
-m = e.getElementsByTagName(n)[0];
-a.async = 1;
-a.src = d;
-m.parentNode.insertBefore(a, m)
-})(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-sender('c4e6f63fa28992')
-</script>
-<script>if(/(^|\.)modusponensinstitute\.com$/.test(location.hostname)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id=G-JLTK4SM9ZF';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-JLTK4SM9ZF');}</script>
 </head>
 <body>
 <div class="shell">
@@ -306,21 +287,5 @@ sender('c4e6f63fa28992')
 (function(){function fit(){document.querySelectorAll('.frame').forEach(function(f){var i=f.querySelector('iframe');if(i)i.style.transform='scale('+(f.clientWidth/1280)+')';});}
 fit();addEventListener('resize',fit);})();
 </script>
-<div id="mpi-nl-pop" class="mpi-nl-pop" hidden role="dialog" aria-modal="true" aria-label="Join our mailing list">
-<div class="mpi-nl-box"><button type="button" class="mpi-nl-x" aria-label="Close">&times;</button>
-<div style="text-align:left" class="sender-form-field" data-sender-form-id="b2klZM"></div></div></div>
-<style>.mpi-nl-pop{position:fixed;inset:0;background:rgba(20,20,30,.55);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px}
-.mpi-nl-pop[hidden]{display:none}.mpi-nl-box{background:#fff;border-radius:14px;max-width:460px;width:100%;padding:28px 24px 20px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25);max-height:90vh;overflow:auto}
-.mpi-nl-box h2{margin:0 0 6px;font-size:1.5rem}.mpi-nl-box p{margin:0 0 12px;color:#444}
-.mpi-nl-x{position:absolute;top:8px;right:12px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:#555}</style>
-<script>(function(){var K='mpiNlPop',D=14*864e5,p=document.getElementById('mpi-nl-pop');if(!p)return;
-function seen(){try{return Date.now()-(+localStorage.getItem(K)||0)<D}catch(e){return false}}
-function mark(){try{localStorage.setItem(K,Date.now())}catch(e){}}
-function show(){if(seen()||!p.hidden)return;p.hidden=false;mark();document.removeEventListener('mouseout',exit)}
-function hide(){p.hidden=true}
-function exit(e){if(!e.relatedTarget&&e.clientY<10)show()}
-p.addEventListener('click',function(e){if(e.target===p||e.target.classList.contains('mpi-nl-x'))hide()});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});
-if(!seen()){setTimeout(show,25000);document.addEventListener('mouseout',exit)}})();</script>
 </body>
 </html>
