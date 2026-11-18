@@ -379,3 +379,6 @@ footer{background:var(--ink);color:#fff}
   .stack{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
   .vids{grid-template-columns:minmax(0,1fr)}
 }
+
+/* safety net for paused animations */
+.anim-done .proof li,.anim-done .proof li.bar::after{animation:none!important;opacity:1;transform:none}

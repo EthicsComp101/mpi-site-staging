@@ -185,6 +185,8 @@ function openHash(){var id=location.hash.slice(1);if(!id)return;var el=document.
 var d=el.closest('details');var any=false;while(d){if(!d.open){d.open=true;any=true}d=d.parentElement.closest('details')}
 if(el.tagName==='DETAILS'&&el.classList.contains('hb')===false&&!el.open)el.open=true;if(any)el.scrollIntoView()}
 addEventListener('hashchange',openHash);openHash();
+// safety net: never leave the proof invisible if animations are paused or throttled
+setTimeout(function(){document.documentElement.classList.add('anim-done')},1800);
 </script>
 </body>
 </html>
