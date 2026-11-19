@@ -1418,7 +1418,7 @@ function renderAllEvents() {
 
 buildCountrySearch();
 buildLegend();
-renderAllEvents();
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderAllEvents); else renderAllEvents();
 initMap();
 renderSelection(DEFAULT_COUNTRY);
 })();</script>
