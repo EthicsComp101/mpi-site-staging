@@ -557,7 +557,7 @@ sender('c4e6f63fa28992')
     </div></div>
         <div class="map-note">
           <span>Click any country to see its event pathway.</span>
-          <span>The Winter Case Writing Prize opens in December, with submissions due 27 February 2027.</span>
+          <span>The Winter Case Writing Prize opens in December, with submissions due 28 February 2027.</span>
         </div>
       </div>
     </section>
@@ -571,7 +571,7 @@ sender('c4e6f63fa28992')
             <div class="region-pill" id="selected-country-region" style="background: rgba(139, 16, 22, 0.094); color: rgb(139, 16, 22); border-color: rgba(139, 16, 22, 0.25);">MPI grouping: Americas</div>
           </div>
         </div>
-        <p class="panel-intro" id="panel-intro">Events are grouped by the MPI region this country belongs to. The Winter Case Writing Prize opens in December (submissions due 27 February 2027).</p>
+        <p class="panel-intro" id="panel-intro">Events are grouped by the MPI region this country belongs to. The Winter Case Writing Prize opens in December (submissions due 28 February 2027).</p>
         <div class="counts" id="counts">
     <div class="count-card perfect"><strong>8</strong><span>Perfect fit</span><small>Best match for this country</small></div>
     <div class="count-card open"><strong>0</strong><span>Still open</span><small>Eligible, but less convenient</small></div>
@@ -954,7 +954,8 @@ const TAGS = {
   final: "Int'l Final",
   "case-writing": "Case Writing",
   "in-person": "In-Person",
-  "ai-debates": "AI Debates"
+  "ai-debates": "AI Debates",
+  training: "Training Day"
 };
 
 // 6 collapsed regions — each one genuinely distinct in event eligibility
@@ -977,7 +978,12 @@ const REGION_LABELS = {
 };
 
 const mainEvents = [
-  { id:"case-writing-26", title:"Marc Sanders Case Writing Prize (Winter 2027)", type:"case-writing", date:"2027-02-27", time:"Opens in December · submissions due Feb 27, 2027 · online", eligibility:"Worldwide, students aged 10-22", description:"Write a 300-600 word ethics case on technology or AI, with 3 discussion questions. Up to three winning cases go into the TKEthics Invitational case set, and the prize pools are shared among the winners and their schools.", hasDeadlines:false, fees:"", openNow:false, submitLink:false, eventPage:"https://www.tkethics.org/tournaments/marc-sanders-case-writing-prize", showInvitation:false, showFeeWaiver:false },
+  { id:"training-senior-27", title:"Senior Training Day 2027", type:"training", date:"2027-01-16", time:"Sat 16 Jan 2027, 9:00 AM ET, about 6 hours, online", eligibility:"High school students, ages 14-18 (Grades 9-12)", description:"An online preparation day ahead of the spring Ethics Olympiads and the TKEthics Invitational: lectures plus judge-led breakout rooms where students discuss cases in small groups.", hasDeadlines:false, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-senior-training-day-1795128408142", showInvitation:false, showFeeWaiver:false },
+  { id:"training-junior-27", title:"Junior Training Day 2027", type:"training", date:"2027-01-23", time:"Sat 23 Jan 2027, 9:00 AM ET, about 6 hours, online. Runs alongside the Middle School Training Day.", eligibility:"Junior teams, ages 9-11", description:"An online preparation day ahead of the spring Junior Pan Atlantic Ethics Olympiad: lectures plus judge-led breakout rooms where students discuss cases in small groups.", hasDeadlines:false, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-junior-training-day-1795128615031", showInvitation:false, showFeeWaiver:false },
+  { id:"training-ms-27", title:"Middle School Training Day 2027", type:"training", date:"2027-01-23", time:"Sat 23 Jan 2027, 9:00 AM ET, about 6 hours, online. Runs alongside the Junior Training Day.", eligibility:"Middle school teams, ages 10-14", description:"An online preparation day ahead of the spring Middle School TKEthics Invitational: lectures plus judge-led breakout rooms where students discuss cases in small groups.", hasDeadlines:false, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-middle-school-training-day-1795128732570", showInvitation:false, showFeeWaiver:false },
+  { id:"tke-ms-inv-27", title:"TKEthics Middle School Invitational 2027", type:"tke", date:"2027-04-10", time:"Sat 10 Apr 2027, 10:00 AM ET, about 6 hours, online", eligibility:"Middle school students, ages 10-14", description:"For middle school students who want to compete in ethics, or just practise their critical thinking. Qualifier for the 2027 TKEthics International Grand Final.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-tkethics-middle-school-invitational-1794751084906" },
+  { id:"eo-junior-pan-atlantic-27", title:"Junior Pan Atlantic Ethics Olympiad 2027", type:"olympiad", date:"2027-04-17", time:"Sat 17 Apr 2027, 10:00 AM ET, online", eligibility:"Junior teams, ages 9-11, from Atlantic-facing regions", description:"Junior Ethics Olympiad spanning both sides of the Atlantic.", hasDeadlines:true, fees:"" },
+  { id:"case-writing-26", title:"Marc Sanders Case Writing Prize (Winter 2027)", type:"case-writing", date:"2027-02-28", time:"Opens in December · submissions due Feb 28, 2027 · online", eligibility:"Worldwide, students aged 10-22", description:"Write a 300-600 word ethics case on technology or AI, with 3 discussion questions. Up to three winning cases go into the TKEthics Invitational case set, and the prize pools are shared among the winners and their schools.", hasDeadlines:false, fees:"", openNow:false, submitLink:false, eventPage:"https://www.tkethics.org/tournaments/marc-sanders-case-writing-prize", showInvitation:false, showFeeWaiver:false },
   { id:"arizona-26", title:"Arizona In-Person Tournament", type:"in-person", date:"2026-10-10", time:"Full-day Saturday event from 8:00 AM Arizona time. Optional Friday afternoon training session on Oct 9.", eligibility:"Grades 8-12. Open to anyone who can attend in person.", description:"MPI's in-person expansion pilot in Arizona: a full-day Saturday tournament with an optional training session the Friday before.", hasDeadlines:true, customDeadlines:{ earlyBird:"2026-09-18", regular:"2026-09-30" }, fees:"", registerLink:"https://www.tkethics.org/tournaments/arizona-in-person-tournament-2026" },
   { id:"tke-fall-26", title:"TKEthics Invitational Fall 2026", type:"tke", date:"2026-11-07", time:"6:00 PM - 12:15 AM ET / 7:00 AM BJ", eligibility:"Worldwide, ages 13-18", description:"Same 6 cases as the Novice event plus 2 from the Case Writing Competition. Qualifier for the TKE Grand Final.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/tkethics-invitational-fall-2026" },
   { id:"ms-pan-atlantic-26", title:"Middle School Pan Atlantic Ethics Olympiad", type:"olympiad", date:"2026-11-14", time:"10:00 AM ET", eligibility:"Middle school teams from Atlantic-facing regions", description:"Middle school Ethics Olympiad spanning both sides of the Atlantic.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/middle-school-pan-atlantic-ethics-olympiad-2026" },
@@ -987,8 +993,7 @@ const mainEvents = [
   { id:"tke-spring-27", title:"TKEthics Invitational Spring 2027", type:"tke", date:"2027-03-06", time:"6:00 PM - 11:45 PM ET / 7:00 AM BJ", eligibility:"Worldwide, ages 13-18", description:"Spring TKE Invitational. Qualifier for the 2027 TKE Grand Final.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/tkethics-invitational-spring-2027" },
   { id:"eo-eu-27", title:"Senior European Ethics Olympiad 2027", type:"olympiad", date:"2027-03-18", time:"8:00 AM UK / 9:00 AM CET", eligibility:"UK, European and African school-based teams, ages 14-18", description:"Regional Ethics Olympiad for schools in the UK, Europe and Africa.", hasDeadlines:true, customDeadlines:{ earlyBird:"2027-01-18", regular:"2027-02-28" }, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-senior-european-ethics-olympiad-1782283791861" },
   { id:"eo-pan-am-27", title:"Pan American Ethics Olympiad 2027", type:"olympiad", date:"2027-04-03", time:"10:00 AM ET", eligibility:"All Americas school-based teams (USA, Canada, Central & South America), ages 14-18", description:"Regional Ethics Olympiad for schools across the Americas.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/pan-american-ethics-olympiad-2027" },
-  { id:"tke-grand-final-27", title:"TKEthics Grand Final 2027", type:"tke", date:"2027-08-28", time:"6:00 PM ET / 6:00 AM BJ", eligibility:"Qualifying TKEthics teams only", description:"Culminating final for teams that qualified through 2026-27 TKE Invitationals.", hasDeadlines:false, fees:"", showFeeWaiver:false },
-  { id:"tke-novice-27", title:"TKEthics Invitational Novice 2027", type:"tke", date:"2027-08-28", time:"6:00 PM ET", eligibility:"Worldwide. Newcomers only.", description:"Dedicated newcomer event. Same general format as 2026 Novice.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/tkethics-invitational-novice-2027" },
+  { id:"tke-grand-final-27", title:"TKEthics International Grand Final 2027", type:"tke", date:"2027-08-28", time:"6:00 PM ET / 6:00 AM BJ", eligibility:"Qualifying TKEthics teams only", description:"Culminating final for teams that qualified through 2026-27 TKE Invitationals.", hasDeadlines:false, fees:"", showFeeWaiver:false },
   { id:"eo-ms-final-27", title:"International Middle School Ethics Olympiad Final 2027", type:"olympiad", date:"2027-02-17", time:"Date set by the Ethics Olympiad; hosted from Australia, online", eligibility:"School-based teams that qualified through a 2026 Middle School Ethics Olympiad, including our Pan Atlantic event", description:"The international final for middle school teams, run by the Ethics Olympiad. Medallists from the 2026 Pan Atlantic Middle School Ethics Olympiad qualify.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
   { id:"eo-senior-asia-27", title:"Senior Ethics Olympiad 2027: Asia heats", type:"olympiad", date:"2027-05-04", time:"India and Singapore: Tue 4 May · China, Hong Kong and Japan: Wed 5 May · South Korea and South East Asia: Mon 31 May 2027", eligibility:"School-based teams in Asia, ages 15-18, 1-2 teams per school", description:"Run by the Ethics Olympiad in Australia. Pick the heat for your country; some dates fill up early.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/senior-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
   { id:"eo-senior-anz-27", title:"Senior Ethics Olympiad 2027: Australia and New Zealand heats", type:"olympiad", date:"2027-05-03", time:"State and regional heats from Mon 3 May to Mon 31 May 2027", eligibility:"School-based teams in Australia and New Zealand, ages 15-18, 1-2 teams per school", description:"Run by the Ethics Olympiad. Several heats per state; many are already full, so register early.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/senior-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
@@ -1001,45 +1006,45 @@ const mainEvents = [
 const regions = {
   americas: {
     name: "Americas",
-    perfect: ["uwc-inv-26","eo-pan-am-27","tke-fall-26","tke-spring-27","tke-novice-27","ms-pan-atlantic-26","case-writing-26","arizona-26","boston-showcase-26","gad-fall-26"],
+    perfect: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","eo-junior-pan-atlantic-27","uwc-inv-26","eo-pan-am-27","tke-fall-26","tke-spring-27","ms-pan-atlantic-26","case-writing-26","arizona-26","boston-showcase-26","gad-fall-26"],
     open: [],
     qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-eu-27"]
   },
   europe: {
     name: "Europe, UK & Ireland",
-    perfect: ["uwc-inv-26","eo-eu-27","ms-pan-atlantic-26","case-writing-26","gad-fall-26"],
-    open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26"],
+    perfect: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","eo-junior-pan-atlantic-27","uwc-inv-26","eo-eu-27","ms-pan-atlantic-26","case-writing-26","gad-fall-26"],
+    open: ["tke-fall-26","tke-spring-27","arizona-26","boston-showcase-26"],
     qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-pan-am-27"]
   },
   africa: {
     name: "Africa & Middle East",
-    perfect: ["uwc-inv-26","ms-pan-atlantic-26","eo-eu-27","case-writing-26","gad-fall-26"],
-    open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26"],
+    perfect: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","eo-junior-pan-atlantic-27","uwc-inv-26","ms-pan-atlantic-26","eo-eu-27","case-writing-26","gad-fall-26"],
+    open: ["tke-fall-26","tke-spring-27","arizona-26","boston-showcase-26"],
     qualifying: ["tke-grand-final-27","eo-ms-final-27"],
     none: ["eo-pan-am-27"]
   },
   eastasia: {
     name: "East Asia",
-    perfect: ["uwc-inv-26","case-writing-26","tke-fall-26","tke-spring-27","tke-novice-27","gad-fall-26","eo-senior-asia-27","eo-ms-asia-27"],
-    open: ["arizona-26","boston-showcase-26","eo-junior-27"],
+    perfect: ["uwc-inv-26","case-writing-26","tke-fall-26","tke-spring-27","gad-fall-26","eo-senior-asia-27","eo-ms-asia-27"],
+    open: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","arizona-26","boston-showcase-26","eo-junior-27"],
     qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
+    none: ["eo-junior-pan-atlantic-27","eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
   },
   southasia: {
     name: "South & Southeast Asia",
     perfect: ["uwc-inv-26","case-writing-26","gad-fall-26","eo-senior-asia-27","eo-ms-asia-27"],
-    open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26","eo-junior-27"],
+    open: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","tke-fall-26","tke-spring-27","arizona-26","boston-showcase-26","eo-junior-27"],
     qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
+    none: ["eo-junior-pan-atlantic-27","eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
   },
   oceania: {
     name: "Australia & New Zealand",
     perfect: ["uwc-inv-26","case-writing-26","gad-fall-26","eo-senior-anz-27","eo-ms-anz-27","eo-junior-27"],
-    open: ["tke-fall-26","tke-spring-27","tke-novice-27","arizona-26","boston-showcase-26"],
+    open: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","tke-fall-26","tke-spring-27","arizona-26","boston-showcase-26"],
     qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
+    none: ["eo-junior-pan-atlantic-27","eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
   }
 };
 
@@ -1342,7 +1347,7 @@ function renderSelection(countryCode) {
   pill.style.color       = regionColour;
   pill.style.borderColor = `${regionColour}40`;
 
-  document.getElementById("panel-intro").textContent = "Events are grouped by the MPI region this country belongs to. The Winter Case Writing Prize opens in December (submissions due 27 February 2027).";
+  document.getElementById("panel-intro").textContent = "Events are grouped by the MPI region this country belongs to. The Winter Case Writing Prize opens in December (submissions due 28 February 2027).";
 
   renderCounts(buckets);
   document.getElementById("results-panel").innerHTML = `
