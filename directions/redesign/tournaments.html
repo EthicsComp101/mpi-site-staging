@@ -243,7 +243,7 @@ function exit(e){if(!e.relatedTarget&&e.clientY<10)show()}
 p.addEventListener('click',function(e){if(e.target===p||e.target.classList.contains('mpi-nl-x'))hide()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});
 var o=document.getElementById('nl-open');if(o)o.addEventListener('click',function(){p.hidden=false});
-if(!seen()){setTimeout(show,25000);document.addEventListener('mouseout',exit)}})();
+if(!seen()){setTimeout(show,5000);document.addEventListener('mouseout',exit)}})();
 // the conclusion of the proof lights up its premises
 (function(){var p=document.getElementById('proof'),c=document.getElementById('concl');if(!p||!c)return;
 c.addEventListener('mouseenter',function(){p.classList.add('dep')});c.addEventListener('mouseleave',function(){p.classList.remove('dep')})})();

@@ -485,5 +485,5 @@ function hide(){p.hidden=true}
 function exit(e){if(!e.relatedTarget&&e.clientY<10)show()}
 p.addEventListener('click',function(e){if(e.target===p||e.target.classList.contains('mpi-nl-x'))hide()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});
-if(!seen()){setTimeout(show,25000);document.addEventListener('mouseout',exit)}})();</script>
+if(!seen()){setTimeout(show,5000);document.addEventListener('mouseout',exit)}})();</script>
 </body></html>
