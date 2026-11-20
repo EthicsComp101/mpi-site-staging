@@ -5,3 +5,19 @@
 @media(max-width:1000px){.site-header{height:90px}.site-logo img{width:145px;max-width:100%}.footer-sponsor{max-width:100%;margin-top:35px}}
 .block img{height:auto}.block .hero-photo{height:calc(100% - 136px)}
 .block .hero-photo{height:auto}
+/* 20nov nav+pathway */
+.site-navigation .nav-cta>a{background:#B23A1C;color:#fff;padding:10px 16px;border-radius:8px;font-weight:600}
+.site-navigation .nav-cta>a:hover{background:#8f2e16}
+@media(max-width:1100px){.site-navigation .nav-cta>a{display:inline-flex;align-items:center;margin-top:8px}}
+.pw-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:pw}
+.pw-steps li{counter-increment:pw}
+.pw-steps a{display:flex;flex-direction:column;height:100%;box-sizing:border-box;padding:24px 22px 22px;border:1px solid #E4DED0;border-radius:14px;background:#fff;text-decoration:none;color:#0F1115;transition:border-color .15s,transform .15s}
+.pw-steps a:hover{border-color:#0F1115;transform:translateY(-2px)}
+.pw-steps a::before{content:counter(pw);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#B23A1C;color:#fff;font:600 17px/1 Inter,sans-serif;margin-bottom:16px}
+.pw-steps h3{font:500 22px/1.2 Fraunces,Georgia,serif;margin:0 0 8px}
+.pw-steps p{margin:0 0 14px;color:#3A3D44;font-size:15.5px;line-height:1.55;flex:1}
+.pw-steps .rv-cta{font-weight:600;font-size:14.5px}
+.pw-lede{max-width:44em;color:#3A3D44;font-size:17px;line-height:1.6;margin:0 0 30px}
+.pw-help{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.pw-steps,.pw-help{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.pw-steps,.pw-help{grid-template-columns:1fr}}
