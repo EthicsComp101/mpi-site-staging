@@ -31,25 +31,49 @@ if (filters) {
   const count = document.querySelector("#result-count");
   const heading = document.querySelector("#events-heading");
   const empty = document.querySelector("#no-results");
+  const { country, age, kind, past } = filters.elements;
+  const normaliseCountry = (name) => name
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/’/g, "'");
+  const countries = new Map(Array.from(country.list.options, (option) => [
+    normaliseCountry(option.value),
+    option,
+  ]));
+  countries.set("uk", countries.get("united kingdom"));
+  countries.set("usa", countries.get("united states"));
+  countries.set("us", countries.get("united states"));
 
   function filterEvents() {
-    const { region, age, kind, past } = filters.elements;
+    const query = normaliseCountry(country.value);
+    const selectedCountry = countries.get(query);
     const selectedAge = Number(age.value);
     const today = todayISO();
     let visible = 0;
     events.forEach((event) => {
       const regions = event.dataset.regions.split(" ");
-      const matchesRegion = !region.value || regions.includes("worldwide") || regions.includes(region.value);
+      const matchesCountry = !selectedCountry ||
+        regions.includes("worldwide") || regions.includes(selectedCountry.dataset.region);
       // A missing age is unconfirmed. Keep the listing and let the organiser clarify.
       const matchesAge = !selectedAge || !event.dataset.min ||
         (selectedAge >= Number(event.dataset.min) && selectedAge <= Number(event.dataset.max));
       const matchesKind = !kind.value || event.dataset.kind === kind.value;
       const matchesDate = past.checked || event.dataset.date >= today;
-      event.hidden = !(matchesRegion && matchesAge && matchesKind && matchesDate);
+      event.hidden = !(matchesCountry && matchesAge && matchesKind && matchesDate);
       if (!event.hidden) visible += 1;
     });
     heading.textContent = past.checked ? "All events" : "Upcoming events";
-    count.textContent = visible === 1 ? "1 event" : `${visible} events`;
+    let result = visible === 1 ? "1 event" : `${visible} events`;
+    if (selectedCountry) {
+      result += selectedCountry.dataset.region
+        ? ` for ${selectedCountry.value}`
+        : ` for ${selectedCountry.value} · Worldwide events only`;
+    } else if (query) {
+      result += " · Choose a country from the suggestions to filter.";
+    }
+    if (count.textContent !== result) count.textContent = result;
     empty.hidden = visible > 0;
   }
 
@@ -65,6 +89,7 @@ if (filters) {
     event.scrollIntoView({ block: "start" });
   }
 
+  country.addEventListener("input", filterEvents);
   filters.addEventListener("change", filterEvents);
   filters.addEventListener("reset", () => requestAnimationFrame(filterEvents));
   filters.addEventListener("submit", (event) => event.preventDefault());

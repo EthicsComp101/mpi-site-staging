@@ -17,7 +17,7 @@ body.mpi-design { margin: 0; background: var(--paper); color: var(--ink); font: 
 img { display: block; max-width: 100%; height: auto; }
 a { text-underline-offset: .2em; }
 .mpi-text-link:hover { color: var(--rust-dark); }
-a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible {
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
   outline: 3px solid #275c93; outline-offset: 4px;
 }
 button, select { font: inherit; }
@@ -112,7 +112,7 @@ figcaption { color: var(--muted); font-size: .78rem; margin-top: .75rem; }
 .mpi-preview-note a { margin-left: .4rem; }
 .mpi-filters { display: grid; grid-template-columns: 1.45fr 1fr 1.25fr auto; align-items: end; gap: 14px; border-block: 1px solid var(--edge); padding: 19px 0; }
 .mpi-filters label { display: grid; gap: 6px; font-size: .85rem; font-weight: 650; }
-.mpi-filters select { width: 100%; min-height: 46px; padding: .55rem .65rem; color: var(--ink); background: #fff; border: 1px solid var(--edge); border-radius: 4px; }
+.mpi-filters :is(select, input[type="search"]) { width: 100%; min-height: 46px; padding: .55rem .65rem; color: var(--ink); background: #fff; border: 1px solid var(--edge); border-radius: 4px; font: inherit; }
 .mpi-reset { min-height: 46px; padding: .5rem .8rem; border: 1px solid var(--edge); border-radius: 4px; background: #fff; color: var(--rust); font-weight: 650; cursor: pointer; }
 .mpi-reset:hover { border-color: var(--rust); }
 .mpi-finder { padding-bottom: 70px; }
@@ -244,6 +244,16 @@ figcaption { color: var(--muted); font-size: .78rem; margin-top: .75rem; }
 .mpi-finder .mpi-actions { margin-top: 8px; }
 .mpi-finder .mpi-event-detail p + p { margin-top: .65em; }
 .mpi-finder .mpi-event-detail > p + div { margin-top: .75em; }
+.mpi-partners { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 24px; list-style: none; margin: 24px 0 0; padding: 0; }
+#partners .mpi-prose a { color: var(--rust); }
+.mpi-partners li { border-top: 1px solid var(--line); }
+.mpi-partner { display: grid; justify-items: start; gap: 2px; min-height: 133px; padding: 14px 0; color: var(--ink); text-decoration: none; }
+.mpi-partner:hover strong { color: var(--rust); text-decoration: underline; }
+.mpi-partner-mark { display: flex; align-items: center; height: 58px; max-width: 100%; margin-bottom: 7px; }
+.mpi-partner-mark img { width: auto; max-width: min(160px, 100%); max-height: 56px; object-fit: contain; }
+.mpi-partner-mark-dark { background: var(--ink); padding: 4px 10px; }
+.mpi-partner-mark-dark img { max-height: 48px; }
+.mpi-partner > span:last-child { font-size: .82rem; color: var(--muted); }
 .mpi-mobile-only { display: none; }
 @media (max-width: 960px) {
   .mpi-design .rv-wrap { width: calc(100% - 56px); }
@@ -261,6 +271,7 @@ figcaption { color: var(--muted); font-size: .78rem; margin-top: .75rem; }
 @media (max-width: 820px) {
   .mpi-design .mpi-filters .mpi-reset { grid-column: 1; }
   .mpi-design .mpi-filters .mpi-show-past { grid-column: 2; min-height: 46px; }
+  .mpi-partners { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
 }
 @media (max-width: 435px) {
   .mpi-design .mpi-event-row, .mpi-design .mpi-event-summary { grid-template-columns: 62px minmax(0, 1fr); }

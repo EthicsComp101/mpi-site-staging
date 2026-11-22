@@ -5,7 +5,7 @@ Prepared 21 November 2026 for review before porting. The redesign is on the loca
 ## What to review
 
 - Start on Home and try **Start a team** and **Find an event**. Homepage and competition-list events come from the same calendar, and the events link straight to their details.
-- Check the calendar with the age and region of a real team. Compare the organiser’s details before registering. Archived events are available with **Include past events**.
+- Check the calendar with the country and age of a real team. Compare the organiser’s details before registering. Archived events are available with **Include past events**.
 - On Resources, open the handbook, find a case set and start the match timer. Review entry details and sample work on Case Writing Prize.
 - Check Classes and Tutoring, Junior Ethics, Past Results and Fund Your Team. The last page labels saved grant information so it can be checked with each funder.
 - On Tournament Day, participants can reach the day-of instructions and timer. The public page links to MPI contact for organiser access. The previous embedded organiser tool is excluded from this draft.

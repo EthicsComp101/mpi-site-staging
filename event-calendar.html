@@ -63,19 +63,226 @@ sender('c4e6f63fa28992')
 
     <div class="mpi-wrap mpi-subhead">
       <h1>Event Calendar</h1>
-      <p class="mpi-lede">Filter by school region and student age. Open an event for times, eligibility and registration.</p>
+      <p class="mpi-lede">Choose your school’s country and a student age. Open an event for times, eligibility and registration.</p>
     </div>
     <section class="mpi-wrap mpi-finder" id="calendar" aria-labelledby="events-heading">
       <form class="mpi-filters" aria-label="Filter events">
-        <label>School region
-          <select name="region">
-            <option value="">All regions</option>
-            <option value="americas">Americas</option>
-            <option value="europe">Europe, UK and Ireland</option>
-            <option value="africa">Africa and Middle East</option>
-            <option value="eastasia">East Asia</option><option value="southasia">South and Southeast Asia</option>
-            <option value="oceania">Australia and New Zealand</option>
-          </select>
+        <label>School country
+          <input type="search" id="country-search" name="country" list="country-list" placeholder="Search countries" autocomplete="off">
+          <datalist id="country-list">
+            <option value="Afghanistan" data-region="southasia"></option>
+            <option value="Albania" data-region="europe"></option>
+            <option value="Algeria" data-region="africa"></option>
+            <option value="Andorra" data-region="europe"></option>
+            <option value="Angola" data-region="africa"></option>
+            <option value="Antigua &amp; Barbuda" data-region="americas"></option>
+            <option value="Argentina" data-region="americas"></option>
+            <option value="Armenia" data-region="europe"></option>
+            <option value="Aruba" data-region="americas"></option>
+            <option value="Australia" data-region="oceania"></option>
+            <option value="Austria" data-region="europe"></option>
+            <option value="Azerbaijan" data-region="europe"></option>
+            <option value="Bahamas" data-region="americas"></option>
+            <option value="Bahrain" data-region="africa"></option>
+            <option value="Bangladesh" data-region="southasia"></option>
+            <option value="Barbados" data-region="americas"></option>
+            <option value="Belarus" data-region="europe"></option>
+            <option value="Belgium" data-region="europe"></option>
+            <option value="Belize" data-region="americas"></option>
+            <option value="Benin" data-region="africa"></option>
+            <option value="Bermuda" data-region="americas"></option>
+            <option value="Bhutan" data-region="southasia"></option>
+            <option value="Bolivia" data-region="americas"></option>
+            <option value="Bosnia and Herzegovina" data-region="europe"></option>
+            <option value="Botswana" data-region="africa"></option>
+            <option value="Brazil" data-region="americas"></option>
+            <option value="British Virgin Islands" data-region="americas"></option>
+            <option value="Brunei" data-region="southasia"></option>
+            <option value="Bulgaria" data-region="europe"></option>
+            <option value="Burkina Faso" data-region="africa"></option>
+            <option value="Burundi" data-region="africa"></option>
+            <option value="Cambodia" data-region="southasia"></option>
+            <option value="Cameroon" data-region="africa"></option>
+            <option value="Canada" data-region="americas"></option>
+            <option value="Cape Verde" data-region="africa"></option>
+            <option value="Caribbean Netherlands" data-region="americas"></option>
+            <option value="Cayman Islands" data-region="americas"></option>
+            <option value="Central African Republic" data-region="africa"></option>
+            <option value="Chad" data-region="africa"></option>
+            <option value="Chile" data-region="americas"></option>
+            <option value="China" data-region="eastasia"></option>
+            <option value="Colombia" data-region="americas"></option>
+            <option value="Comoros" data-region="africa"></option>
+            <option value="Congo" data-region="africa"></option>
+            <option value="Costa Rica" data-region="americas"></option>
+            <option value="Cote d'Ivoire" data-region="africa"></option>
+            <option value="Croatia" data-region="europe"></option>
+            <option value="Cuba" data-region="americas"></option>
+            <option value="Curaçao" data-region="americas"></option>
+            <option value="Cyprus" data-region="europe"></option>
+            <option value="Czech Republic" data-region="europe"></option>
+            <option value="Denmark" data-region="europe"></option>
+            <option value="Djibouti" data-region="africa"></option>
+            <option value="Dominica" data-region="americas"></option>
+            <option value="Dominican Republic" data-region="americas"></option>
+            <option value="DR Congo" data-region="africa"></option>
+            <option value="Ecuador" data-region="americas"></option>
+            <option value="Egypt" data-region="africa"></option>
+            <option value="El Salvador" data-region="americas"></option>
+            <option value="Equatorial Guinea" data-region="africa"></option>
+            <option value="Eritrea" data-region="africa"></option>
+            <option value="Estonia" data-region="europe"></option>
+            <option value="Eswatini" data-region="africa"></option>
+            <option value="Ethiopia" data-region="africa"></option>
+            <option value="Falkland Islands" data-region="americas"></option>
+            <option value="Faroe Islands" data-region="europe"></option>
+            <option value="Fiji" data-region="oceania"></option>
+            <option value="Finland" data-region="europe"></option>
+            <option value="France" data-region="europe"></option>
+            <option value="French Guiana" data-region="americas"></option>
+            <option value="Gabon" data-region="africa"></option>
+            <option value="Gambia" data-region="africa"></option>
+            <option value="Georgia" data-region="europe"></option>
+            <option value="Germany" data-region="europe"></option>
+            <option value="Ghana" data-region="africa"></option>
+            <option value="Gibraltar" data-region="europe"></option>
+            <option value="Greece" data-region="europe"></option>
+            <option value="Greenland" data-region="americas"></option>
+            <option value="Grenada" data-region="americas"></option>
+            <option value="Guadeloupe" data-region="americas"></option>
+            <option value="Guatemala" data-region="americas"></option>
+            <option value="Guinea" data-region="africa"></option>
+            <option value="Guinea-Bissau" data-region="africa"></option>
+            <option value="Guyana" data-region="americas"></option>
+            <option value="Haiti" data-region="americas"></option>
+            <option value="Honduras" data-region="americas"></option>
+            <option value="Hong Kong SAR China" data-region="eastasia"></option>
+            <option value="Hungary" data-region="europe"></option>
+            <option value="Iceland" data-region="europe"></option>
+            <option value="India" data-region="southasia"></option>
+            <option value="Indonesia" data-region="southasia"></option>
+            <option value="Iran" data-region="africa"></option>
+            <option value="Iraq" data-region="africa"></option>
+            <option value="Ireland" data-region="europe"></option>
+            <option value="Israel" data-region="africa"></option>
+            <option value="Italy" data-region="europe"></option>
+            <option value="Jamaica" data-region="americas"></option>
+            <option value="Japan" data-region="eastasia"></option>
+            <option value="Jordan" data-region="africa"></option>
+            <option value="Kazakhstan" data-region="europe"></option>
+            <option value="Kenya" data-region="africa"></option>
+            <option value="Kosovo" data-region="europe"></option>
+            <option value="Kuwait" data-region="africa"></option>
+            <option value="Kyrgyzstan" data-region="europe"></option>
+            <option value="Laos" data-region="southasia"></option>
+            <option value="Latvia" data-region="europe"></option>
+            <option value="Lebanon" data-region="africa"></option>
+            <option value="Lesotho" data-region="africa"></option>
+            <option value="Liberia" data-region="africa"></option>
+            <option value="Libya" data-region="africa"></option>
+            <option value="Liechtenstein" data-region="europe"></option>
+            <option value="Lithuania" data-region="europe"></option>
+            <option value="Luxembourg" data-region="europe"></option>
+            <option value="Macao SAR China" data-region="eastasia"></option>
+            <option value="Madagascar" data-region="africa"></option>
+            <option value="Malawi" data-region="africa"></option>
+            <option value="Malaysia" data-region="southasia"></option>
+            <option value="Mali" data-region="africa"></option>
+            <option value="Malta" data-region="europe"></option>
+            <option value="Martinique" data-region="americas"></option>
+            <option value="Mauritania" data-region="africa"></option>
+            <option value="Mauritius" data-region="africa"></option>
+            <option value="Mexico" data-region="americas"></option>
+            <option value="Moldova" data-region="europe"></option>
+            <option value="Monaco" data-region="europe"></option>
+            <option value="Mongolia" data-region="eastasia"></option>
+            <option value="Montenegro" data-region="europe"></option>
+            <option value="Montserrat" data-region="americas"></option>
+            <option value="Morocco" data-region="africa"></option>
+            <option value="Mozambique" data-region="africa"></option>
+            <option value="Myanmar" data-region="southasia"></option>
+            <option value="Namibia" data-region="africa"></option>
+            <option value="Nepal" data-region="southasia"></option>
+            <option value="Netherlands" data-region="europe"></option>
+            <option value="New Caledonia" data-region="oceania"></option>
+            <option value="New Zealand" data-region="oceania"></option>
+            <option value="Nicaragua" data-region="americas"></option>
+            <option value="Niger" data-region="africa"></option>
+            <option value="Nigeria" data-region="africa"></option>
+            <option value="North Korea" data-region="eastasia"></option>
+            <option value="North Macedonia" data-region="europe"></option>
+            <option value="Norway" data-region="europe"></option>
+            <option value="Oman" data-region="africa"></option>
+            <option value="Pakistan" data-region="southasia"></option>
+            <option value="Palestine" data-region="africa"></option>
+            <option value="Panama" data-region="americas"></option>
+            <option value="Papua New Guinea" data-region="oceania"></option>
+            <option value="Paraguay" data-region="americas"></option>
+            <option value="Peru" data-region="americas"></option>
+            <option value="Philippines" data-region="southasia"></option>
+            <option value="Poland" data-region="europe"></option>
+            <option value="Portugal" data-region="europe"></option>
+            <option value="Puerto Rico" data-region="americas"></option>
+            <option value="Qatar" data-region="africa"></option>
+            <option value="Romania" data-region="europe"></option>
+            <option value="Russia" data-region="eastasia"></option>
+            <option value="Rwanda" data-region="africa"></option>
+            <option value="San Marino" data-region="europe"></option>
+            <option value="São Tomé &amp; Príncipe" data-region="africa"></option>
+            <option value="Saudi Arabia" data-region="africa"></option>
+            <option value="Senegal" data-region="africa"></option>
+            <option value="Serbia" data-region="europe"></option>
+            <option value="Seychelles" data-region="africa"></option>
+            <option value="Sierra Leone" data-region="africa"></option>
+            <option value="Singapore" data-region="southasia"></option>
+            <option value="Sint Maarten" data-region="americas"></option>
+            <option value="Slovakia" data-region="europe"></option>
+            <option value="Slovenia" data-region="europe"></option>
+            <option value="Solomon Islands" data-region="oceania"></option>
+            <option value="Somalia" data-region="africa"></option>
+            <option value="South Africa" data-region="africa"></option>
+            <option value="South Korea" data-region="eastasia"></option>
+            <option value="South Sudan" data-region="africa"></option>
+            <option value="Spain" data-region="europe"></option>
+            <option value="Sri Lanka" data-region="southasia"></option>
+            <option value="St. Barthélemy" data-region="americas"></option>
+            <option value="St. Kitts &amp; Nevis" data-region="americas"></option>
+            <option value="St. Lucia" data-region="americas"></option>
+            <option value="St. Martin" data-region="americas"></option>
+            <option value="St. Vincent &amp; Grenadines" data-region="americas"></option>
+            <option value="Sudan" data-region="africa"></option>
+            <option value="Suriname" data-region="americas"></option>
+            <option value="Sweden" data-region="europe"></option>
+            <option value="Switzerland" data-region="europe"></option>
+            <option value="Syria" data-region="africa"></option>
+            <option value="Taiwan" data-region="eastasia"></option>
+            <option value="Tajikistan" data-region="europe"></option>
+            <option value="Tanzania" data-region="africa"></option>
+            <option value="Thailand" data-region="southasia"></option>
+            <option value="Timor-Leste" data-region="southasia"></option>
+            <option value="Togo" data-region="africa"></option>
+            <option value="Trinidad and Tobago" data-region="americas"></option>
+            <option value="Tunisia" data-region="africa"></option>
+            <option value="Turkey" data-region="africa"></option>
+            <option value="Turkmenistan" data-region="europe"></option>
+            <option value="Turks &amp; Caicos Islands" data-region="americas"></option>
+            <option value="U.S. Virgin Islands" data-region="americas"></option>
+            <option value="Uganda" data-region="africa"></option>
+            <option value="Ukraine" data-region="europe"></option>
+            <option value="United Arab Emirates" data-region="africa"></option>
+            <option value="United Kingdom" data-region="europe"></option>
+            <option value="United States" data-region="americas"></option>
+            <option value="Uruguay" data-region="americas"></option>
+            <option value="Uzbekistan" data-region="europe"></option>
+            <option value="Vanuatu" data-region="oceania"></option>
+            <option value="Vatican City" data-region="europe"></option>
+            <option value="Venezuela" data-region="americas"></option>
+            <option value="Vietnam" data-region="southasia"></option>
+            <option value="Western Sahara" data-region="africa"></option>
+            <option value="Yemen" data-region="africa"></option>
+            <option value="Zambia" data-region="africa"></option>
+            <option value="Zimbabwe" data-region="africa"></option>
+          </datalist>
         </label>
         <label>Student age
           <select name="age">
