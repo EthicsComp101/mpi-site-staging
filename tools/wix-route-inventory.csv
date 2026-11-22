@@ -1,0 +1,88 @@
+Wix URL,Sitemap,Local file,Route type,Redirect destination,Cutover handoff
+https://www.modusponensinstitute.com/blog,pages-sitemap,blog.html,Page,,
+https://www.modusponensinstitute.com/blog/categories/newsletters,blog-categories-sitemap,blog/categories/newsletters.html,Redirect,../../newsletters.html,
+https://www.modusponensinstitute.com/blog/categories/guides,blog-categories-sitemap,blog/categories/guides.html,Redirect,../../resources.html,
+https://www.modusponensinstitute.com/post/november-2025-newsletter-tkethics-fall-invitational-highlights,blog-posts-sitemap,post/november-2025-newsletter-tkethics-fall-invitational-highlights.html,Page,,
+https://www.modusponensinstitute.com/post/september-2026-newsletter-international-final-and-novice-results,blog-posts-sitemap,post/september-2026-newsletter-international-final-and-novice-results.html,Page,,
+https://www.modusponensinstitute.com/post/july-2026-newsletter-china-coding-ethics-and-debate-camps-online-philosophy-camps,blog-posts-sitemap,post/july-2026-newsletter-china-coding-ethics-and-debate-camps-online-philosophy-camps.html,Page,,
+https://www.modusponensinstitute.com/post/june-2026-newsletter-prediction-markets-philosophy-camps-and-a-china-trip,blog-posts-sitemap,post/june-2026-newsletter-prediction-markets-philosophy-camps-and-a-china-trip.html,Page,,
+https://www.modusponensinstitute.com/post/april-2026-newsletter-european-olympiad-results-and-a-10k-grant-from-the-future-of-life-institute,blog-posts-sitemap,post/april-2026-newsletter-european-olympiad-results-and-a-10k-grant-from-the-future-of-life-institute.html,Page,,
+https://www.modusponensinstitute.com/post/february-2026-newsletter-tkethics-registration-extended-meet-the-judges,blog-posts-sitemap,post/february-2026-newsletter-tkethics-registration-extended-meet-the-judges.html,Page,,
+https://www.modusponensinstitute.com/post/march-2026-newsletter-tkethics-spring-results-and-a-15-000-grant,blog-posts-sitemap,post/march-2026-newsletter-tkethics-spring-results-and-a-15-000-grant.html,Page,,
+https://www.modusponensinstitute.com/post/october-2026-newsletter-last-call-for-november-and-a-record-case-prize,blog-posts-sitemap,post/october-2026-newsletter-last-call-for-november-and-a-record-case-prize.html,Page,,
+https://www.modusponensinstitute.com/post/december-2025-newsletter-middle-school-results-strategy-tips-2026-invitations,blog-posts-sitemap,post/december-2025-newsletter-middle-school-results-strategy-tips-2026-invitations.html,Page,,
+https://www.modusponensinstitute.com/post/august-2026-newsletter-a-look-back-at-shanghai-summer-camps-fall-events,blog-posts-sitemap,post/august-2026-newsletter-a-look-back-at-shanghai-summer-camps-fall-events.html,Page,,
+https://www.modusponensinstitute.com/post/january-2026-newsletter-spring-competitions-in-person-events-philosophy-teaching,blog-posts-sitemap,post/january-2026-newsletter-spring-competitions-in-person-events-philosophy-teaching.html,Page,,
+https://www.modusponensinstitute.com/post/october-2025-newsletter-competition-deadlines-approach,blog-posts-sitemap,post/october-2025-newsletter-competition-deadlines-approach.html,Page,,
+https://www.modusponensinstitute.com/post/may-2026-newsletter-global-ai-debates-winners-upcoming-tournaments-philosophy-camps,blog-posts-sitemap,post/may-2026-newsletter-global-ai-debates-winners-upcoming-tournaments-philosophy-camps.html,Page,,
+https://www.modusponensinstitute.com/post/september-2025-newsletter-tkethics-grand-final-results-and-more,blog-posts-sitemap,post/september-2025-newsletter-tkethics-grand-final-results-and-more.html,Page,,
+https://www.modusponensinstitute.com/service-page/ethics-competition-preparation,booking-services-sitemap,service-page/ethics-competition-preparation.html,Redirect,../classes-tutoring.html,Class enquiry bridge. Confirm the existing Wix booking/payment handoff before cutover.
+https://www.modusponensinstitute.com/service-page/international-philosophy-olympiad-ipo-preparation,booking-services-sitemap,service-page/international-philosophy-olympiad-ipo-preparation.html,Redirect,../classes-tutoring.html,Class enquiry bridge. Confirm the existing Wix booking/payment handoff before cutover.
+https://www.modusponensinstitute.com/event-details-registration/2022-canadian-ethics-olympiad,event-pages-sitemap,event-details-registration/2022-canadian-ethics-olympiad.html,Redirect,../tournaments.html,
+https://www.modusponensinstitute.com/event-details-registration/2024-panam-olympiad-eastern-and-western,event-pages-sitemap,event-details-registration/2024-panam-olympiad-eastern-and-western.html,Redirect,../tournaments.html,
+https://www.modusponensinstitute.com/contact-us,pages-sitemap,contact-us.html,Page,,
+https://www.modusponensinstitute.com/philosophy-classes-for-teens,pages-sitemap,philosophy-classes-for-teens.html,Page,,
+https://www.modusponensinstitute.com/junior-ethics,pages-sitemap,junior-ethics.html,Page,,
+https://www.modusponensinstitute.com/book-online,pages-sitemap,book-online.html,Redirect,classes-tutoring.html,Class enquiry bridge. Confirm the Wix service URLs that should stay bookable.
+https://www.modusponensinstitute.com/faq,pages-sitemap,faq.html,Page,,
+https://www.modusponensinstitute.com/past-results,pages-sitemap,past-results.html,Page,,
+https://www.modusponensinstitute.com/case-competition,pages-sitemap,case-competition.html,Page,,
+https://www.modusponensinstitute.com/newsletters,pages-sitemap,newsletters.html,Page,,
+https://www.modusponensinstitute.com/history,pages-sitemap,history.html,Page,,
+https://www.modusponensinstitute.com/school-visits,pages-sitemap,school-visits.html,Page,,
+https://www.modusponensinstitute.com/scholarships,pages-sitemap,scholarships.html,Page,,
+https://www.modusponensinstitute.com/raise-money,pages-sitemap,raise-money.html,Page,,
+https://www.modusponensinstitute.com/john-locke-essay-competition,pages-sitemap,john-locke-essay-competition.html,Page,,
+https://www.modusponensinstitute.com/classes,pages-sitemap,classes.html,Page,,
+https://www.modusponensinstitute.com/case-sets,pages-sitemap,case-sets.html,Page,,
+https://www.modusponensinstitute.com/resources,pages-sitemap,resources.html,Page,,
+https://www.modusponensinstitute.com,pages-sitemap,index.html,Page,,
+https://www.modusponensinstitute.com/ethics-bowl-coaching,pages-sitemap,ethics-bowl-coaching.html,Page,,
+https://www.modusponensinstitute.com/event-calendar,pages-sitemap,event-calendar.html,Page,,
+https://www.modusponensinstitute.com/public-forum-debate-coaching,pages-sitemap,public-forum-debate-coaching.html,Page,,
+https://www.modusponensinstitute.com/about-us,pages-sitemap,about-us.html,Page,,
+https://www.modusponensinstitute.com/rules,pages-sitemap,rules.html,Page,,
+https://www.modusponensinstitute.com/classes-tutoring,pages-sitemap,classes-tutoring.html,Page,,
+https://www.modusponensinstitute.com/logic-tutor-online,pages-sitemap,logic-tutor-online.html,Page,,
+https://www.modusponensinstitute.com/ai-ethics-course-for-teens,pages-sitemap,ai-ethics-course-for-teens.html,Page,,
+https://www.modusponensinstitute.com/ethics-course-for-high-school-students,pages-sitemap,ethics-course-for-high-school-students.html,Page,,
+https://www.modusponensinstitute.com/gallery,pages-sitemap,gallery.html,Page,,
+https://www.modusponensinstitute.com/tournament-day,pages-sitemap,tournament-day.html,Page,,
+https://www.modusponensinstitute.com/about-6,pages-sitemap,about-6.html,Page,,
+https://www.modusponensinstitute.com/fund-your-team,pages-sitemap,fund-your-team.html,Page,,
+https://www.modusponensinstitute.com/judges,pages-sitemap,judges.html,Page,,
+https://www.modusponensinstitute.com/tournaments,pages-sitemap,tournaments.html,Page,,
+https://www.modusponensinstitute.com/membership,pages-sitemap,membership.html,Redirect,classes-tutoring.html,Classes landing page. Check whether any members still require Wix sign-in.
+https://www.modusponensinstitute.com/ethical-principles,pages-sitemap,ethical-principles.html,Page,,
+https://www.modusponensinstitute.com/ethical-theories,pages-sitemap,ethical-theories.html,Page,,
+https://www.modusponensinstitute.com/support-us,pages-sitemap,support-us.html,Page,,
+https://www.modusponensinstitute.com/copy-of-home,pages-sitemap,copy-of-home.html,Redirect,index.html,
+https://www.modusponensinstitute.com/judging-criteria,pages-sitemap,judging-criteria.html,Page,,
+https://www.modusponensinstitute.com/build-a-team-page,pages-sitemap,build-a-team-page.html,Page,,
+https://www.modusponensinstitute.com/homeschool,pages-sitemap,homeschool.html,Page,,
+https://www.modusponensinstitute.com/pricing-plans/plans-pricing,pricing-plans-sitemap,pricing-plans/plans-pricing.html,Redirect,../classes-tutoring.html,Classes landing page. Check active plans and any billing continuity.
+https://www.modusponensinstitute.com/category/all-products,store-categories-sitemap,category/all-products.html,Redirect,../classes-tutoring.html,
+https://www.modusponensinstitute.com/registration,Wix Redirect Manager,registration.html,Redirect,tournaments.html,Wix destination: /register.
+https://www.modusponensinstitute.com/plans-pricing,Wix Redirect Manager,plans-pricing.html,Redirect,pricing-plans/plans-pricing.html,Wix destination: /pricing-plans/plans-pricing.
+https://www.modusponensinstitute.com/copy-2-of-tournament-payment-2-teams,Wix Redirect Manager,copy-2-of-tournament-payment-2-teams.html,Redirect,tournaments.html,Wix destination: /tournament-payment-3teams.
+https://www.modusponensinstitute.com/services-4,Wix Redirect Manager,services-4.html,Redirect,classes-tutoring.html,Wix destination: /classes-tutoring.
+https://www.modusponensinstitute.com/copy-of-tournament-payment-3-teams,Wix Redirect Manager,copy-of-tournament-payment-3-teams.html,Redirect,tournaments.html,Wix destination: /tournament-payment-4-teams.
+https://www.modusponensinstitute.com/copy-of-tournament-payment-4-teams,Wix Redirect Manager,copy-of-tournament-payment-4-teams.html,Redirect,tournaments.html,Wix destination: /tournament-payment-5-teams.
+https://www.modusponensinstitute.com/copy-of-olympiads,Wix Redirect Manager,copy-of-olympiads.html,Redirect,https://globalaidebates.com/,Wix destination: /globalaidebates.
+https://www.modusponensinstitute.com/history-of-the-ethics-olympiad,Wix Redirect Manager,history-of-the-ethics-olympiad.html,Redirect,history.html,Wix destination: /history.
+https://www.modusponensinstitute.com/general-7,Wix Redirect Manager,general-7.html,Redirect,tournaments.html,Wix destination: /registration.
+https://www.modusponensinstitute.com/blank,Wix Redirect Manager,blank.html,Redirect,case-sets.html,Wix destination: /case-sets.
+https://www.modusponensinstitute.com/copy-of-registration,Wix Redirect Manager,copy-of-registration.html,Redirect,tournaments.html,Wix destination: /tournament-payment.
+https://www.modusponensinstitute.com/about-4,Wix Redirect Manager,about-4.html,Redirect,support-us.html,Wix destination: /sponsors.
+https://www.modusponensinstitute.com/general-clean,Wix Redirect Manager,general-clean.html,Redirect,resources.html,Wix destination: /resources.
+https://www.modusponensinstitute.com/about,Wix Redirect Manager,about.html,Redirect,rules.html,Wix destination: /rules.
+https://www.modusponensinstitute.com/plans-pricing/payment,Wix Redirect Manager,plans-pricing/payment.html,Redirect,../pricing-plans/plans-pricing.html,Wix destination: /pricing-plans/payment. Group redirect. Test additional active checkout suffixes before cutover.
+https://www.modusponensinstitute.com/contact,Wix Redirect Manager,contact.html,Redirect,contact-us.html,Wix destination: /contact-us.
+https://www.modusponensinstitute.com/copy-of-upcoming-tournaments,Wix Redirect Manager,copy-of-upcoming-tournaments.html,Redirect,event-calendar.html,Wix destination: /calendar.
+https://www.modusponensinstitute.com/general-4,Wix Redirect Manager,general-4.html,Redirect,membership.html,Wix destination: /membership.
+https://www.modusponensinstitute.com/services-5,Wix Redirect Manager,services-5.html,Redirect,classes.html,Wix destination: /classes.
+https://www.modusponensinstitute.com/copy-of-tournament-payment-1-team,Wix Redirect Manager,copy-of-tournament-payment-1-team.html,Redirect,tournaments.html,Wix destination: /tournament-payment-2teams.
+https://www.modusponensinstitute.com/coming-soon-01,Wix Redirect Manager,coming-soon-01.html,Redirect,event-calendar.html,Wix destination: /upcoming-tournaments.
+https://www.modusponensinstitute.com/team-4,Wix Redirect Manager,team-4.html,Redirect,about-us.html,Wix destination: /about-us.
+https://www.modusponensinstitute.com/john-lock-essay-competition,Wix Redirect Manager,john-lock-essay-competition.html,Redirect,john-locke-essay-competition.html,Wix destination: /john-locke-essay-competition.
+https://www.modusponensinstitute.com/general-5,Wix Redirect Manager,general-5.html,Redirect,resources.html,Wix destination: /curriculum.

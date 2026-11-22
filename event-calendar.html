@@ -50,1386 +50,314 @@ m.parentNode.insertBefore(a, m)
 sender('c4e6f63fa28992')
 </script>
 <script>if(/(^|\.)modusponensinstitute\.com$/.test(location.hostname)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id=G-JLTK4SM9ZF';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-JLTK4SM9ZF');}</script>
-</head><body><header class="site-header"><a class="site-logo" href="index.html"><img src="images/d4255378427afeea.webp" width="182" height="78" alt="Modus Ponens Institute"></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span></button><nav id="site-navigation" class="site-navigation" aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li class="nav-group"><a href="tournaments.html">Ethics Competitions</a><button class="sub-toggle" aria-label="Show Ethics Competitions links" aria-expanded="false">&#8964;</button><ul><li><a href="index.html#what-is-it">What is an ethics competition?</a></li><li><a href="event-calendar.html">Event Calendar</a></li><li><a href="tournaments.html#choose">Which competition?</a></li><li><a href="rules.html">How it works: the rules</a></li><li><a href="case-sets.html">Case Sets</a></li><li><a href="resources.html">Resources and Handbook</a></li><li><a href="fund-your-team.html">Fund Your Team</a></li><li><a href="scholarships.html">Scholarships</a></li><li><a href="past-results.html">Past Results</a></li><li><a href="faq.html">FAQ</a></li><li><a href="junior-ethics.html">Junior Ethics</a></li><li><a href="case-competition.html">Case Writing Prize</a></li><li><a href="https://globalaidebates.com/" target="_blank" rel="noopener">Global AI Debates</a></li></ul></li><li class="nav-group"><a href="classes-tutoring.html">Classes and Tutoring</a><button class="sub-toggle" aria-label="Show Classes and Tutoring links" aria-expanded="false">&#8964;</button><ul><li><a href="classes.html">Classes</a></li><li><a href="school-visits.html">School Visits</a></li><li><a href="homeschool.html">Homeschool</a></li><li><a href="ethical-theories.html">Ethics Video Course</a></li><li><a href="john-locke-essay-competition.html">John Locke</a></li></ul></li><li class="nav-group"><a href="judges.html">Get Involved</a><button class="sub-toggle" aria-label="Show Get Involved links" aria-expanded="false">&#8964;</button><ul><li><a href="judges.html">Judge with us</a></li><li><a href="support-us.html">Support Us</a></li><li><a href="newsletters.html">Newsletters</a></li></ul></li><li class="nav-group"><a href="about-us.html">About</a><button class="sub-toggle" aria-label="Show About links" aria-expanded="false">&#8964;</button><ul><li><a href="about-us.html">Our Team</a></li><li><a href="history.html">Our History</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact-us.html">Contact Us</a></li></ul></li><li class="nav-cta"><a href="event-calendar.html">Find an event</a></li></ul></nav></header><main><h1>Ethics Competition Calendar</h1><section class="rv-hero ec-hero">
-  <div class="rv-wrap">
-    <span class="ec-badge"><img src="images/90255fbe9a584358.webp" alt="Ethics Olympiad" width="477" height="84">Official Ethics Olympiad licensee</span><br>
-    <span class="rv-eyebrow">MPI global events</span>
-    <h2 class="rv-h1">Event Calendar</h2>
-    <p class="rv-lede">Pick a country on the map or search for it to see its events, with full details and direct links. Or scroll down for a simple list of every upcoming event.</p>
-    <ol class="ec-steps"><li><b>1</b>Choose your country</li><li><b>2</b>See the events that suit you best</li><li><b>3</b>Open an event for dates, deadlines and registration</li></ol>
-    <nav class="rv-jump" aria-label="On this page"><a href="#calendar">Find your events</a><a href="#all-events">See all events as a list</a><a href="#more">Prepare and fund your team</a></nav>
+<link rel="stylesheet" href="mpi-design.css">
+<script src="mpi-design.js" defer></script>
+</head><body class="mpi-design mpi-modern"><a class="mpi-skip" href="#main">Skip to content</a>
+<header class="mpi-header"><div class="mpi-wrap mpi-header-inner">
+<a class="mpi-brand" href="index.html"><img src="images/d4255378427afeea.webp" width="182" height="78" alt="Modus Ponens Institute home"></a>
+<button class="mpi-menu-toggle" type="button" aria-controls="mpi-nav" aria-expanded="false">Menu</button>
+<nav class="mpi-site-nav" id="mpi-nav" aria-label="Main navigation"><a href="tournaments.html">Ethics Competitions</a><a href="resources.html">Resources</a><a href="case-competition.html">Case Writing Prize</a><a href="classes-tutoring.html">Classes</a><a href="about-us.html">About</a><a href="event-calendar.html" aria-current="page" class="mpi-button">Find an event</a></nav>
+</div></header>
+<main id="main" tabindex="-1">
+
+
+    <div class="mpi-wrap mpi-subhead">
+      <h1>Event Calendar</h1>
+      <p class="mpi-lede">Filter by school region and student age. Open an event for times, eligibility and registration.</p>
+    </div>
+    <section class="mpi-wrap mpi-finder" id="calendar" aria-labelledby="events-heading">
+      <form class="mpi-filters" aria-label="Filter events">
+        <label>School region
+          <select name="region">
+            <option value="">All regions</option>
+            <option value="americas">Americas</option>
+            <option value="europe">Europe, UK and Ireland</option>
+            <option value="africa">Africa and Middle East</option>
+            <option value="eastasia">East Asia</option><option value="southasia">South and Southeast Asia</option>
+            <option value="oceania">Australia and New Zealand</option>
+          </select>
+        </label>
+        <label>Student age
+          <select name="age">
+            <option value="">Any age</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+          </select>
+        </label>
+        <label>Event type
+          <select name="kind">
+            <option value="">All types</option>
+            <option value="competition">Competitions</option>
+            <option value="training">Training</option>
+            <option value="final">Finals</option><option value="case writing">Case writing</option><option value="in person">In person</option>
+          </select>
+        </label>
+        <button class="mpi-reset" type="reset">Clear filters</button>
+        <label class="mpi-show-past"><input type="checkbox" name="past"> Include past events</label>
+      </form>
+      <span id="ec-list"></span><h2 id="events-heading">Upcoming events</h2>
+      <p id="result-count" class="mpi-result-count" role="status">22 events</p>
+      <div class="mpi-row-list" id="all-events">
+<details class="mpi-event" id="arizona-26" data-date="2026-10-10" data-kind="in person" data-regions="worldwide">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2026-10-10" aria-label="10 October 2026"><b>10</b><small>Oct</small><small>2026</small></time>
+    <span><span class="mpi-event-title">Arizona In-Person Tournament</span><span class="mpi-event-meta">Grades 8-12. Open to anyone who can attend in person.</span></span>
+    <span class="mpi-event-type">In person</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>MPI&#x27;s in-person expansion pilot in Arizona: a full-day Saturday tournament with an optional training session the Friday before.</p><dl><dt>Time</dt><dd>Full-day Saturday event from 8:00 AM Arizona time. Optional Friday afternoon training session on Oct 9.</dd><dt>Eligibility</dt><dd>Grades 8-12. Open to anyone who can attend in person.</dd><dt>Listed registration deadline</dt><dd>30 September 2026</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/arizona-in-person-tournament-2026">Organiser details <span aria-hidden="true">→</span></a></div>
   </div>
-</section>
-<section class="block block-1" id="calendar"><style>@scope (.block-1) {
-  :scope {
-    --bg: #f6f1e8;
-    --paper: rgba(255, 252, 247, 0.94);
-    --paper-strong: #fffdf9;
-    --ink: #1e1a16;
-    --muted: #6f6558;
-    --line: rgba(97, 82, 61, 0.15);
-    --accent: #8b1016;
-    --accent-deep: #5f0d11;
-    --green: #2f6e48;
-    --gold: #b1852d;
-    --slate: #62708d;
-    --red-soft: #b44d4d;
-    --sea-top: #dce9f1;
-    --sea-bottom: #cfdbe5;
-    --shadow: 0 24px 54px rgba(44, 32, 17, 0.12);
-
-    --region-americas:  #8b1016;
-    --region-europe:    #3a6186;
-    --region-africa:    #2f7a55;
-    --region-eastasia:  #2a7d7d;
-    --region-southasia: #7b5ea7;
-    --region-oceania:   #b05a7a;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :scope {
-    font-family: "Inter", sans-serif;
-    background: #FFFFFF;
-    color: var(--ink);
-    padding: 18px;
-    line-height: 1.45;
-  }
-
-  .wrap { max-width: 1380px; margin: 0 auto; }
-
-  .app-shell {
-    display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(360px, 0.9fr);
-    gap: 18px;
-    align-items: start;
-  }
-
-  .map-card, .panel {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 24px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-  }
-
-  .map-toolbar {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    align-items: center;
-    padding: 18px 22px 14px;
-    border-bottom: 1px solid var(--line);
-    flex-wrap: wrap;
-  }
-
-  .map-title { min-width: 0; }
-
-  .eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-
-  .map-title h2 {
-    font-family: "Fraunces", serif;
-    font-size: clamp(26px, 3vw, 38px);
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-  }
-
-  .map-title p { margin-top: 6px; color: var(--muted); font-size: 13px; }
-
-  .country-search {
-    width: min(100%, 320px);
-    background: rgba(255,255,255,0.84);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 10px 14px;
-  }
-
-  .country-search label {
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-weight: 700;
-    color: var(--muted);
-    margin-bottom: 5px;
-  }
-
-  .country-search input {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: transparent;
-    color: var(--ink);
-    font: inherit;
-    font-size: 14px;
-  }
-
-  .map-stage { padding: 16px 16px 18px; }
-
-  #map {
-    height: 720px;
-    width: 100%;
-    border-radius: 20px;
-    border: 1px solid rgba(90, 107, 127, 0.14);
-    background: linear-gradient(180deg, var(--sea-top), var(--sea-bottom));
-    overflow: hidden;
-  }
-
-  /* Hover is purely visual. It never changes a country's stored fill colour. */
-  #map path[data-code] {
-    transition: filter 0.12s ease;
-  }
-
-  #map path[data-code]:hover {
-    filter: brightness(1.18);
-  }
-
-  #map path[data-code].is-selected {
-    filter: brightness(0.72) saturate(1.25);
-    stroke: #fffdf9 !important;
-    stroke-width: 3 !important;
-  }
-
-  #map path[data-code].is-selected:hover {
-    filter: brightness(0.82) saturate(1.25);
-  }
-
-  .map-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    padding: 12px 6px 0;
-  }
-
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    color: var(--muted);
-    font-weight: 500;
-  }
-
-  .legend-swatch {
-    width: 12px;
-    height: 12px;
-    border-radius: 3px;
-    flex: 0 0 auto;
-    opacity: 0.9;
-  }
-
-  .map-note {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 6px 0;
-    color: var(--muted);
-    font-size: 12px;
-    flex-wrap: wrap;
-  }
-
-  .panel {
-    position: sticky;
-    top: 18px;
-    max-height: calc(100vh - 36px);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .panel-head {
-    padding: 20px 22px 16px;
-    border-bottom: 1px solid var(--line);
-    background: linear-gradient(180deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
-  }
-
-  .selected-country { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
-
-  .selected-country h2 {
-    font-family: "Fraunces", serif;
-    font-size: 28px;
-    line-height: 1.03;
-    letter-spacing: -0.03em;
-  }
-
-  .region-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 10px;
-    border-radius: 999px;
-    padding: 8px 12px;
-    font-size: 12px;
-    font-weight: 600;
-    transition: background 0.2s, color 0.2s, border-color 0.2s;
-    border: 1px solid transparent;
-  }
-
-  .panel-intro { margin-top: 12px; color: var(--muted); font-size: 13px; }
-
-  .counts {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 8px;
-    margin-top: 16px;
-  }
-
-  .count-card {
-    background: rgba(255,255,255,0.76);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 10px 10px 12px;
-  }
-
-  .count-card strong { display: block; font-size: 22px; line-height: 1; margin-bottom: 5px; }
-  .count-card span { color: var(--muted); font-size: 11px; }
-  .count-card small { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.35; }
-  .count-card.perfect strong { color: var(--green); }
-  .count-card.open strong { color: var(--gold); }
-  .count-card.qualifying strong { color: var(--slate); }
-  .count-card.none strong { color: var(--red-soft); }
-
-  .panel-body { padding: 16px 18px 18px; overflow: auto; }
-
-  .bucket {
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: rgba(255,255,255,0.72);
-    overflow: hidden;
-  }
-
-  .bucket + .bucket { margin-top: 12px; }
-
-  .bucket-toggle {
-    width: 100%;
-    background: transparent;
-    border: 0;
-    padding: 15px 16px;
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    align-items: center;
-    cursor: pointer;
-    text-align: left;
-    color: inherit;
-  }
-
-  .bucket-left { display: flex; gap: 12px; align-items: start; }
-
-  .bucket-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    flex: 0 0 auto;
-  }
-
-  .bucket.perfect .bucket-icon { background: var(--green); }
-  .bucket.open .bucket-icon { background: var(--gold); }
-  .bucket.qualifying .bucket-icon { background: var(--slate); }
-  .bucket.none .bucket-icon { background: var(--red-soft); }
-
-  .bucket-title { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
-  .bucket-sub { font-size: 12px; color: var(--muted); }
-
-  .bucket-count {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-size: 12px;
-    color: var(--muted);
-    white-space: nowrap;
-  }
-
-  .bucket-chevron { font-size: 16px; transition: transform 0.16s ease; }
-  .bucket.opened .bucket-chevron { transform: rotate(90deg); }
-
-  .bucket-content { display: none; padding: 0 14px 14px; }
-  .bucket.opened .bucket-content { display: block; }
-
-  .empty { padding: 2px 4px 6px; color: var(--muted); font-size: 12px; font-style: italic; }
-
-  .event-card {
-    border: 1px solid rgba(96, 82, 63, 0.12);
-    border-left: 4px solid var(--accent-card, #888);
-    background: var(--paper-strong);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .event-card + .event-card { margin-top: 10px; }
-  .event-card.olympiad { --accent-card: var(--accent); }
-  .event-card.tke { --accent-card: #d0a22d; }
-  .event-card.final { --accent-card: #b58b3f; }
-  .event-card.case-writing { --accent-card: #3e7b57; }
-  .event-card.in-person { --accent-card: #855235; }
-  .event-card.ai-debates { --accent-card: var(--slate); }
-
-  .event-toggle {
-    width: 100%;
-    border: 0;
-    background: transparent;
-    padding: 14px 14px 13px;
-    cursor: pointer;
-    text-align: left;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 12px;
-    align-items: start;
-    color: inherit;
-  }
-
-  .date-chip {
-    min-width: 58px;
-    border-radius: 14px;
-    background: rgba(30, 26, 22, 0.04);
-    padding: 9px 8px 8px;
-    text-align: center;
-  }
-
-  .date-chip .month {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    font-weight: 700;
-  }
-
-  .date-chip .day { display: block; font-size: 24px; line-height: 1; font-weight: 700; margin-top: 4px; }
-
-  .event-meta .tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 6px;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .event-meta .title { font-size: 15px; font-weight: 700; line-height: 1.25; margin-bottom: 4px; }
-  .event-meta .subline { color: var(--muted); font-size: 12px; line-height: 1.45; }
-
-  .event-caret { font-size: 18px; color: var(--muted); transition: transform 0.16s ease; padding-top: 8px; }
-  .event-card.expanded .event-caret { transform: rotate(90deg); }
-
-  .event-expand {
-    display: none;
-    border-top: 1px solid rgba(96, 82, 63, 0.12);
-    padding: 14px;
-    background: rgba(255,255,255,0.74);
-  }
-
-  .event-card.expanded .event-expand { display: block; }
-  .event-expand .details { margin:10px 0 2px; font-size:13px; line-height:1.5; color: var(--ink); }
-  .event-expand .details p { margin:0 0 8px; }
-  .event-expand .details a { color: inherit; text-decoration: underline; }
-
-  .detail-grid {
-    display: grid;
-    grid-template-columns: 108px 1fr;
-    gap: 6px 12px;
-    font-size: 12px;
-    margin-bottom: 14px;
-  }
-
-  .detail-grid .label { color: var(--muted); font-weight: 600; }
-  .detail-grid .value { color: var(--ink); }
-
-  .deadlines {
-    padding-top: 12px;
-    border-top: 1px dashed rgba(96, 82, 63, 0.18);
-    margin-bottom: 14px;
-  }
-
-  .deadlines h4 {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-
-  .deadline-row { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; padding: 4px 0; }
-  .deadline-row span:first-child { color: var(--muted); }
-
-  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
-
-  .action-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 11px;
-    border-radius: 999px;
-    border: 1px solid rgba(96, 82, 63, 0.15);
-    background: #fff;
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    transition: background 0.12s ease, border-color 0.12s ease;
-  }
-
-  .action-btn:hover { background: #f4efe6; border-color: rgba(96, 82, 63, 0.28); }
-  .action-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .action-btn.primary:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
-  .action-btn.submit { background: var(--green); border-color: var(--green); color: #fff; }
-  .action-btn.submit:hover { background: #25573a; border-color: #25573a; }
-
-  .jvm-zoom-btn { display: none !important; }
-  .jvm-container svg { width: 100%; height: 100%; }
-
-  @media (max-width: 1180px) {
-    .app-shell { grid-template-columns: 1fr; }
-    .panel { position: static; max-height: none; }
-    #map { height: 620px; }
-  }
-
-  @media (max-width: 720px) {
-    :scope { padding: 10px; }
-    .map-toolbar, .panel-head, .panel-body { padding-left: 14px; padding-right: 14px; }
-    #map { height: 240px; border-radius: 14px; }
-    .map-stage { padding: 10px 10px 12px; }
-    .panel { max-height: 920px; }
-    .panel-body { flex: 1 1 auto; min-height: 0; }
-    .counts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .event-toggle { grid-template-columns: 1fr auto; }
-    .date-chip { grid-column: 1 / 2; margin-bottom: 8px; width: 64px; }
-    .event-meta { grid-column: 1 / 2; }
-    .detail-grid { grid-template-columns: 1fr; gap: 4px; }
-  }
-
-.eo-corner{position:absolute;top:14px;right:max(18px,calc(50% - 472px));z-index:20}.eo-corner .eo-attrib{display:inline-flex;align-items:center;gap:6px 10px;padding:6px 12px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:999px;font-size:12px;line-height:1.3;color:#1d2330;box-shadow:0 1px 4px rgba(0,0,0,.06)}.eo-corner img{display:block;height:20px;width:auto}@media (max-width:760px){.eo-corner{position:static;padding:10px 14px 0}.eo-corner .eo-attrib{flex-wrap:wrap}}}</style><div class="eo-corner"><div class="eo-attrib"><img src="images/90255fbe9a584358.webp" alt="Ethics Olympiad" width="477" height="84" loading="lazy"><span>Official Ethics Olympiad licensee</span></div></div>
-<div class="wrap">
-  <div class="app-shell">
-    <section class="map-card">
-      <div class="map-toolbar">
-        <div class="map-title">
-          <div class="eyebrow">MPI Global Events</div>
-          <h2>Event Calendar</h2>
-          <p>Pick a country on the map or search for it to see its events, with full details and direct links.</p>
-        </div>
-        <div class="country-search">
-          <label for="country-search">Search country</label>
-          <input id="country-search" type="text" list="country-list" placeholder="Start typing: Brazil, Kenya, Japan, France...">
-          <datalist id="country-list"><option value="Afghanistan"></option><option value="Albania"></option><option value="Algeria"></option><option value="Angola"></option><option value="Argentina"></option><option value="Armenia"></option><option value="Australia"></option><option value="Austria"></option><option value="Azerbaijan"></option><option value="Bahamas"></option><option value="Bahrain"></option><option value="Bangladesh"></option><option value="Belarus"></option><option value="Belgium"></option><option value="Belize"></option><option value="Benin"></option><option value="Bhutan"></option><option value="Bolivia"></option><option value="Bosnia and Herzegovina"></option><option value="Botswana"></option><option value="Brazil"></option><option value="Brunei"></option><option value="Bulgaria"></option><option value="Burkina Faso"></option><option value="Burundi"></option><option value="Cambodia"></option><option value="Cameroon"></option><option value="Canada"></option><option value="Cape Verde"></option><option value="Central African Republic"></option><option value="Chad"></option><option value="Chile"></option><option value="China"></option><option value="Colombia"></option><option value="Comoros"></option><option value="Congo"></option><option value="Costa Rica"></option><option value="Cote d'Ivoire"></option><option value="Croatia"></option><option value="Cuba"></option><option value="Cyprus"></option><option value="Czech Republic"></option><option value="Denmark"></option><option value="Djibouti"></option><option value="Dominican Republic"></option><option value="DR Congo"></option><option value="Ecuador"></option><option value="Egypt"></option><option value="El Salvador"></option><option value="Equatorial Guinea"></option><option value="Eritrea"></option><option value="Estonia"></option><option value="Eswatini"></option><option value="Ethiopia"></option><option value="Falkland Islands"></option><option value="Fiji"></option><option value="Finland"></option><option value="France"></option><option value="Gabon"></option><option value="Gambia"></option><option value="Georgia"></option><option value="Germany"></option><option value="Ghana"></option><option value="Greece"></option><option value="Greenland"></option><option value="Guatemala"></option><option value="Guinea"></option><option value="Guinea-Bissau"></option><option value="Guyana"></option><option value="Haiti"></option><option value="Honduras"></option><option value="Hungary"></option><option value="Iceland"></option><option value="India"></option><option value="Indonesia"></option><option value="Iran"></option><option value="Iraq"></option><option value="Ireland"></option><option value="Israel"></option><option value="Italy"></option><option value="Jamaica"></option><option value="Japan"></option><option value="Jordan"></option><option value="Kazakhstan"></option><option value="Kenya"></option><option value="Kosovo"></option><option value="Kuwait"></option><option value="Kyrgyzstan"></option><option value="Laos"></option><option value="Latvia"></option><option value="Lebanon"></option><option value="Lesotho"></option><option value="Liberia"></option><option value="Libya"></option><option value="Lithuania"></option><option value="Luxembourg"></option><option value="Madagascar"></option><option value="Malawi"></option><option value="Malaysia"></option><option value="Mali"></option><option value="Mauritania"></option><option value="Mexico"></option><option value="Moldova"></option><option value="Mongolia"></option><option value="Montenegro"></option><option value="Morocco"></option><option value="Mozambique"></option><option value="Myanmar"></option><option value="Namibia"></option><option value="Nepal"></option><option value="Netherlands"></option><option value="New Caledonia"></option><option value="New Zealand"></option><option value="Nicaragua"></option><option value="Niger"></option><option value="Nigeria"></option><option value="North Korea"></option><option value="North Macedonia"></option><option value="Norway"></option><option value="Oman"></option><option value="Pakistan"></option><option value="Palestine"></option><option value="Panama"></option><option value="Papua New Guinea"></option><option value="Paraguay"></option><option value="Peru"></option><option value="Philippines"></option><option value="Poland"></option><option value="Portugal"></option><option value="Puerto Rico"></option><option value="Qatar"></option><option value="Romania"></option><option value="Russia"></option><option value="Rwanda"></option><option value="Saudi Arabia"></option><option value="Senegal"></option><option value="Serbia"></option><option value="Sierra Leone"></option><option value="Slovakia"></option><option value="Slovenia"></option><option value="Solomon Islands"></option><option value="Somalia"></option><option value="South Africa"></option><option value="South Korea"></option><option value="South Sudan"></option><option value="Spain"></option><option value="Sri Lanka"></option><option value="Sudan"></option><option value="Suriname"></option><option value="Sweden"></option><option value="Switzerland"></option><option value="Syria"></option><option value="Taiwan"></option><option value="Tajikistan"></option><option value="Tanzania"></option><option value="Thailand"></option><option value="Timor-Leste"></option><option value="Togo"></option><option value="Trinidad and Tobago"></option><option value="Tunisia"></option><option value="Turkey"></option><option value="Turkmenistan"></option><option value="Uganda"></option><option value="Ukraine"></option><option value="United Arab Emirates"></option><option value="United Kingdom"></option><option value="United States"></option><option value="Uruguay"></option><option value="Uzbekistan"></option><option value="Vanuatu"></option><option value="Venezuela"></option><option value="Vietnam"></option><option value="Western Sahara"></option><option value="Yemen"></option><option value="Zambia"></option><option value="Zimbabwe"></option></datalist>
-        </div>
-      </div>
-      <div class="map-stage">
-        <div id="map" aria-label="Clickable world map"></div>
-        <div class="map-legend" id="map-legend">
-    <div class="legend-item">
-      <div class="legend-swatch" style="background:#8b1016"></div>
-      <span>Americas (North, Central &amp; South)</span>
-    </div>
-    <div class="legend-item">
-      <div class="legend-swatch" style="background:#3a6186"></div>
-      <span>Europe, UK &amp; Ireland</span>
-    </div>
-    <div class="legend-item">
-      <div class="legend-swatch" style="background:#2f7a55"></div>
-      <span>Africa &amp; Middle East</span>
-    </div>
-    <div class="legend-item">
-      <div class="legend-swatch" style="background:#2a7d7d"></div>
-      <span>East Asia</span>
-    </div>
-    <div class="legend-item">
-      <div class="legend-swatch" style="background:#7b5ea7"></div>
-      <span>South &amp; Southeast Asia</span>
-    </div>
-    <div class="legend-item">
-      <div class="legend-swatch" style="background:#b05a7a"></div>
-      <span>Australia &amp; New Zealand</span>
-    </div></div>
-        <div class="map-note">
-          <span>Click any country to see its event pathway.</span>
-          <span>The Winter Case Writing Prize opens in December, with submissions due 28 February 2027.</span>
-        </div>
-      </div>
-    </section>
-
-    <aside class="panel">
-      <div class="panel-head">
-        <div class="selected-country">
-          <div>
-            <div class="eyebrow">Selected Country</div>
-            <h2 id="selected-country-name">United States</h2>
-            <div class="region-pill" id="selected-country-region" style="background: rgba(139, 16, 22, 0.094); color: rgb(139, 16, 22); border-color: rgba(139, 16, 22, 0.25);">MPI grouping: Americas</div>
-          </div>
-        </div>
-        <p class="panel-intro" id="panel-intro">Events are grouped by the MPI region this country belongs to. The Winter Case Writing Prize opens in December (submissions due 28 February 2027).</p>
-        <div class="counts" id="counts">
-    <div class="count-card perfect"><strong>8</strong><span>Perfect fit</span><small>Best match for this country</small></div>
-    <div class="count-card open"><strong>0</strong><span>Still open</span><small>Eligible, but less convenient</small></div>
-    <div class="count-card qualifying"><strong>1</strong><span>Need qualification</span><small>You must qualify first</small></div>
-    <div class="count-card none"><strong>1</strong><span>Other regions</span><small>Run for another region</small></div></div>
-      </div>
-      <div class="panel-body" id="results-panel">
-
-    <section class="bucket perfect opened" data-bucket="perfect">
-      <button class="bucket-toggle" type="button" data-bucket-toggle="perfect">
-        <div class="bucket-left">
-          <div class="bucket-icon">✓</div>
-          <div>
-            <div class="bucket-title">Perfect for you</div>
-            <div class="bucket-sub">Eligible and especially workable from your country</div>
-          </div>
-        </div>
-        <div class="bucket-count">
-          <span>8 events</span>
-          <span class="bucket-chevron">›</span>
-        </div>
-      </button>
-      <div class="bucket-content">
-
-    <article class="event-card olympiad" data-event-id="ms-pan-atlantic-26">
-      <button class="event-toggle" type="button" data-event-toggle="ms-pan-atlantic-26">
-        <div class="date-chip">
-          <div class="month">NOV</div>
-          <span class="day">14</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">Ethics Olympiad</div>
-          <div class="title">Middle School Pan Atlantic Ethics Olympiad</div>
-          <div class="subline">Middle school Ethics Olympiad spanning both sides of the Atlantic.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Saturday, November 14, 2026</div>
-          <div class="label">Time</div><div class="value">10:00 AM ET</div>
-          <div class="label">Eligibility</div><div class="value">Middle school teams from Atlantic-facing regions</div>
-
-        </div>
-
-
-          <div class="deadlines">
-            <h4>Deadlines</h4>
-            <div class="deadline-row"><span>Early bird closes</span><strong>Sep 14, 2026 (60 days ago)</strong></div>
-            <div class="deadline-row"><span>Registration closes</span><strong>Oct 14, 2026 (30 days ago)</strong></div>
-          </div>
-        <div class="actions"><a href="https://www.tkethics.org/tournaments/middle-school-pan-atlantic-ethics-olympiad-2026" target="_blank" rel="noopener noreferrer" class="action-btn primary">Register ↗</a><a href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0" target="_blank" rel="noopener noreferrer" class="action-btn">Official invitation ↗</a><a href="https://form.jotform.com/260764995688077" target="_blank" rel="noopener noreferrer" class="action-btn">Fee waiver ↗</a></div>
-      </div>
-    </article>
-    <article class="event-card in-person" data-event-id="boston-showcase-26">
-      <button class="event-toggle" type="button" data-event-toggle="boston-showcase-26">
-        <div class="date-chip">
-          <div class="month">NOV</div>
-          <span class="day">17</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">In-Person</div>
-          <div class="title">Boston Debate Showcase: MIT faculty debate AI at Laugh Boston</div>
-          <div class="subline">MIT faculty, one stage. SuperDebate and Laugh Boston present an evening of live debate and conversation about artificial intelligence, with audience questions and a reception in the Seaport.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Tuesday, November 17, 2026</div>
-          <div class="label">Time</div><div class="value">Doors and reception 5:30 PM · program 6:00 PM · ends 9:30 PM ET</div>
-          <div class="label">Eligibility</div><div class="value">Open to the public. Laugh Boston, 425 Summer St, Boston (Westin Boston Seaport, next to the convention center).</div>
-
-        </div>
-        <div class="details"><p><strong>Tickets (only sold here):</strong> <a href="https://superdebate.org/events/boston-debate-showcase-2026" target="_blank" rel="noopener noreferrer">superdebate.org/events/boston-debate-showcase-2026</a></p><p><strong>Featured exchange: US–China AI competition.</strong> Where should the US draw the line between scientific cooperation with China and restrictions meant to protect national security? Yasheng Huang (Epoch Foundation Professor of International Management, MIT Sloan) takes on the hardest trade-off in AI policy.</p><p><strong>Also on the program:</strong> Manolis Kellis (Professor of Computer Science, MIT; MIT Computational Biology Group at CSAIL and the Broad Institute), who uses AI to understand and treat human disease.</p><p>One seat on stage is still open: Manolis Kellis's opponent is yet to be announced. Know who should take him on? Nominate them: <a href="mailto:astapleton@modusponensinstitute.com">astapleton@modusponensinstitute.com</a></p><p>Every session opens to the room, so bring your questions, and stay for the reception to keep arguing it out.</p><p>Registering on Luma alone doesn't reserve a seat. Tickets are sold at superdebate.org.</p><p>Presented by SuperDebate × Laugh Boston, hosted by John Connor, with Boston host Archie Stapleton and the Modus Ponens Institute.</p></div>
-
-        <div class="actions"><a href="https://superdebate.org/events/boston-debate-showcase-2026" target="_blank" rel="noopener noreferrer" class="action-btn primary">Get tickets ↗</a><a href="https://luma.com/veue4pbb" target="_blank" rel="noopener noreferrer" class="action-btn">Visit website ↗</a></div>
-      </div>
-    </article>
-    <article class="event-card tke" data-event-id="uwc-inv-26">
-      <button class="event-toggle" type="button" data-event-toggle="uwc-inv-26">
-        <div class="date-chip">
-          <div class="month">NOV</div>
-          <span class="day">21</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">TKEthics</div>
-          <div class="title">UWC Ethics Invitational 2026</div>
-          <div class="subline">A student-run online ethics tournament organised by the Model Philosophy Ethics Olympiad leadership team at UWCSEA Dover, in partnership with TKEthics. A regional qualifier: the top three teams advance directly to the TKEthics International Grand Finals.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Saturday, November 21, 2026</div>
-          <div class="label">Time</div><div class="value">Sat 21 Nov, 6:00 AM - 12:15 PM ET / 7:00 PM SGT - 1:15 AM SGT (Sun 22 Nov) / 10:00 PM AEDT - 4:15 AM AEDT. Online on Zoom.</div>
-          <div class="label">Eligibility</div><div class="value">High school teams from anywhere: 3-5 students, Grade 7 or above. No debate experience needed.</div>
-
-        </div>
-        <div class="details"><p><strong>Format:</strong> four live rounds on Zoom, two cases per round. Each case runs as an ethical presentation, collaborative commentary, a response and judges' questions. Teams are scored on careful, honest reasoning, not on winning an argument.</p><p><strong>Cases:</strong> <a href="files/uwc-ethics-invitational-2026-case-package.pdf" target="_blank" rel="noopener noreferrer">UWC Ethics Invitational 2026 case package (PDF)</a></p><p><strong>Registration and fee:</strong> through the event website ($203 SGD per team).</p></div>
-
-        <div class="actions"><a href="https://theredrangerd.github.io/UWC-Ethics-Invitational/#register" target="_blank" rel="noopener noreferrer" class="action-btn primary">Register ↗</a><a href="https://theredrangerd.github.io/UWC-Ethics-Invitational/" target="_blank" rel="noopener noreferrer" class="action-btn">Visit website ↗</a></div>
-      </div>
-    </article>
-    <article class="event-card ai-debates" data-event-id="gad-fall-26">
-      <button class="event-toggle" type="button" data-event-toggle="gad-fall-26">
-        <div class="date-chip">
-          <div class="month">DEC</div>
-          <span class="day">5</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">AI Debates</div>
-          <div class="title">Global AI Debates Fall 2026</div>
-          <div class="subline">Solo speeches and team essay-debates on AI ethics and governance, judged by experts from MIT, OpenAI, and Perplexity. $3,500 prize pool. Submissions due Nov 21; live finals Dec 5.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Saturday, December 5, 2026</div>
-          <div class="label">Time</div><div class="value">Live finals from 6:00 PM ET (Zoom)</div>
-          <div class="label">Eligibility</div><div class="value">Worldwide. Speech: ages 7-18, solo. Essay &amp; Debate: any age, teams of 2-5.</div>
-
-        </div>
-
-
-          <div class="deadlines">
-            <h4>Deadlines</h4>
-            <div class="deadline-row"><span>Early bird closes</span><strong>Jul 1, 2026 (135 days ago)</strong></div>
-            <div class="deadline-row"><span>Registration closes</span><strong>Nov 21, 2026 (in 8 days)</strong></div>
-          </div>
-        <div class="actions"><a href="https://www.tkethics.org/tournaments/global-ai-debates-fall-2026" target="_blank" rel="noopener noreferrer" class="action-btn primary">Register ↗</a><a href="https://globalaidebates.com" target="_blank" rel="noopener noreferrer" class="action-btn">Visit website ↗</a><a href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0" target="_blank" rel="noopener noreferrer" class="action-btn">Official invitation ↗</a><a href="https://form.jotform.com/260764995688077" target="_blank" rel="noopener noreferrer" class="action-btn">Fee waiver ↗</a></div>
-      </div>
-    </article>
-    <article class="event-card case-writing" data-event-id="case-writing-26">
-      <button class="event-toggle" type="button" data-event-toggle="case-writing-26">
-        <div class="date-chip">
-          <div class="month">FEB</div>
-          <span class="day">27</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">Case Writing</div>
-          <div class="title">Marc Sanders Case Writing Prize (Winter 2027)</div>
-          <div class="subline">Write a 300-600 word ethics case on technology or AI, with 3 discussion questions. Up to three winning cases go into the TKEthics Invitational case set, and the prize pools are shared among the winners and their schools.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Saturday, February 27, 2027</div>
-          <div class="label">Time</div><div class="value">Opens in December · submissions due Feb 27, 2027 · online</div>
-          <div class="label">Eligibility</div><div class="value">Worldwide, students aged 10-22</div>
-
-        </div>
-
-
-        <div class="actions"><a href="https://www.tkethics.org/tournaments/marc-sanders-case-writing-prize" target="_blank" rel="noopener noreferrer" class="action-btn primary">Event page ↗</a></div>
-      </div>
-    </article>
-    <article class="event-card tke" data-event-id="tke-spring-27">
-      <button class="event-toggle" type="button" data-event-toggle="tke-spring-27">
-        <div class="date-chip">
-          <div class="month">MAR</div>
-          <span class="day">6</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">TKEthics</div>
-          <div class="title">TKEthics Invitational Spring 2027</div>
-          <div class="subline">Spring TKE Invitational. Qualifier for the 2027 TKE Grand Final.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Saturday, March 6, 2027</div>
-          <div class="label">Time</div><div class="value">6:00 PM - 11:45 PM ET / 7:00 AM BJ</div>
-          <div class="label">Eligibility</div><div class="value">Worldwide, ages 13-18</div>
-
-        </div>
-
-
-          <div class="deadlines">
-            <h4>Deadlines</h4>
-            <div class="deadline-row"><span>Early bird closes</span><strong>Jan 6, 2027 (in 54 days)</strong></div>
-            <div class="deadline-row"><span>Registration closes</span><strong>Feb 6, 2027 (in 85 days)</strong></div>
-          </div>
-        <div class="actions"><a href="https://www.tkethics.org/tournaments/tkethics-invitational-spring-2027" target="_blank" rel="noopener noreferrer" class="action-btn primary">Register ↗</a><a href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0" target="_blank" rel="noopener noreferrer" class="action-btn">Official invitation ↗</a><a href="https://form.jotform.com/260764995688077" target="_blank" rel="noopener noreferrer" class="action-btn">Fee waiver ↗</a></div>
-      </div>
-    </article>
-    <article class="event-card olympiad" data-event-id="eo-pan-am-27">
-      <button class="event-toggle" type="button" data-event-toggle="eo-pan-am-27">
-        <div class="date-chip">
-          <div class="month">APR</div>
-          <span class="day">3</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">Ethics Olympiad</div>
-          <div class="title">Pan American Ethics Olympiad 2027</div>
-          <div class="subline">Regional Ethics Olympiad for schools across the Americas.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Saturday, April 3, 2027</div>
-          <div class="label">Time</div><div class="value">10:00 AM ET</div>
-          <div class="label">Eligibility</div><div class="value">All Americas school-based teams (USA, Canada, Central &amp; South America), ages 14-18</div>
-
-        </div>
-
-
-          <div class="deadlines">
-            <h4>Deadlines</h4>
-            <div class="deadline-row"><span>Early bird closes</span><strong>Feb 3, 2027 (in 82 days)</strong></div>
-            <div class="deadline-row"><span>Registration closes</span><strong>Mar 3, 2027 (in 110 days)</strong></div>
-          </div>
-        <div class="actions"><a href="https://www.tkethics.org/tournaments/pan-american-ethics-olympiad-2027" target="_blank" rel="noopener noreferrer" class="action-btn primary">Register ↗</a><a href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0" target="_blank" rel="noopener noreferrer" class="action-btn">Official invitation ↗</a><a href="https://form.jotform.com/260764995688077" target="_blank" rel="noopener noreferrer" class="action-btn">Fee waiver ↗</a></div>
-      </div>
-    </article>
-      </div>
-    </section>
-
-    <section class="bucket open" data-bucket="open">
-      <button class="bucket-toggle" type="button" data-bucket-toggle="open">
-        <div class="bucket-left">
-          <div class="bucket-icon">◐</div>
-          <div>
-            <div class="bucket-title">Open to you</div>
-            <div class="bucket-sub">Eligible, but the timing or travel burden is less ideal</div>
-          </div>
-        </div>
-        <div class="bucket-count">
-          <span>0 events</span>
-          <span class="bucket-chevron">›</span>
-        </div>
-      </button>
-      <div class="bucket-content">
-        <div class="empty">No events in this category for this country.</div>
-      </div>
-    </section>
-
-    <section class="bucket qualifying" data-bucket="qualifying">
-      <button class="bucket-toggle" type="button" data-bucket-toggle="qualifying">
-        <div class="bucket-left">
-          <div class="bucket-icon">★</div>
-          <div>
-            <div class="bucket-title">By qualification only</div>
-            <div class="bucket-sub">You would need to qualify through a feeder pathway</div>
-          </div>
-        </div>
-        <div class="bucket-count">
-          <span>1 event</span>
-          <span class="bucket-chevron">›</span>
-        </div>
-      </button>
-      <div class="bucket-content">
-
-    <article class="event-card tke" data-event-id="tke-grand-final-27">
-      <button class="event-toggle" type="button" data-event-toggle="tke-grand-final-27">
-        <div class="date-chip">
-          <div class="month">AUG</div>
-          <span class="day">28</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">TKEthics</div>
-          <div class="title">TKEthics Grand Final 2027</div>
-          <div class="subline">Culminating final for teams that qualified through 2026-27 TKE Invitationals.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Saturday, August 28, 2027</div>
-          <div class="label">Time</div><div class="value">6:00 PM ET / 6:00 AM BJ</div>
-          <div class="label">Eligibility</div><div class="value">Qualifying TKEthics teams only</div>
-
-        </div>
-
-
-        <div class="actions"><a href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0" target="_blank" rel="noopener noreferrer" class="action-btn">Official invitation ↗</a></div>
-      </div>
-    </article>
-      </div>
-    </section>
-
-    <section class="bucket none" data-bucket="none">
-      <button class="bucket-toggle" type="button" data-bucket-toggle="none">
-        <div class="bucket-left">
-          <div class="bucket-icon">○</div>
-          <div>
-            <div class="bucket-title">Run for another region</div>
-            <div class="bucket-sub">Meant for schools in another region. Not sure? Email us.</div>
-          </div>
-        </div>
-        <div class="bucket-count">
-          <span>1 event</span>
-          <span class="bucket-chevron">›</span>
-        </div>
-      </button>
-      <div class="bucket-content">
-
-    <article class="event-card olympiad" data-event-id="eo-eu-27">
-      <button class="event-toggle" type="button" data-event-toggle="eo-eu-27">
-        <div class="date-chip">
-          <div class="month">MAR</div>
-          <span class="day">18</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">Ethics Olympiad</div>
-          <div class="title">Senior European Ethics Olympiad 2027</div>
-          <div class="subline">Regional Ethics Olympiad for schools in the UK, Europe and Africa.</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">Thursday, March 18, 2027</div>
-          <div class="label">Time</div><div class="value">8:00 AM UK / 9:00 AM CET</div>
-          <div class="label">Eligibility</div><div class="value">UK, European and African school-based teams, ages 14-18</div>
-
-        </div>
-
-
-          <div class="deadlines">
-            <h4>Deadlines</h4>
-            <div class="deadline-row"><span>Early bird closes</span><strong>Jan 18, 2027 (in 66 days)</strong></div>
-            <div class="deadline-row"><span>Registration closes</span><strong>Feb 28, 2027 (in 107 days)</strong></div>
-          </div>
-        <div class="actions"><a href="https://www.tkethics.org/tournaments/2027-senior-european-ethics-olympiad-1782283791861" target="_blank" rel="noopener noreferrer" class="action-btn primary">Register ↗</a><a href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0" target="_blank" rel="noopener noreferrer" class="action-btn">Official invitation ↗</a><a href="https://form.jotform.com/260764995688077" target="_blank" rel="noopener noreferrer" class="action-btn">Fee waiver ↗</a></div>
-      </div>
-    </article>
-      </div>
-    </section></div>
-    </aside>
+</details>
+<details class="mpi-event" id="tke-fall-26" data-date="2026-11-07" data-kind="competition" data-regions="worldwide" data-min="13" data-max="18">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2026-11-07" aria-label="7 November 2026"><b>7</b><small>Nov</small><small>2026</small></time>
+    <span><span class="mpi-event-title">TKEthics Invitational Fall 2026</span><span class="mpi-event-meta">Worldwide, ages 13-18</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Same 6 cases as the Novice event plus 2 from the Case Writing Competition. Qualifier for the TKE Grand Final.</p><dl><dt>Time</dt><dd>6:00 PM - 12:15 AM ET / 7:00 AM Beijing time</dd><dt>Eligibility</dt><dd>Worldwide, ages 13-18</dd><dt>Registration deadline</dt><dd>Confirm on the organiser’s page.</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/tkethics-invitational-fall-2026">Organiser details <span aria-hidden="true">→</span></a></div>
   </div>
+</details>
+<details class="mpi-event" id="ms-pan-atlantic-26" data-date="2026-11-14" data-kind="competition" data-regions="americas europe africa">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2026-11-14" aria-label="14 November 2026"><b>14</b><small>Nov</small><small>2026</small></time>
+    <span><span class="mpi-event-title">Middle School Pan Atlantic Ethics Olympiad</span><span class="mpi-event-meta">Middle school teams from Atlantic-facing regions</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Middle school Ethics Olympiad spanning both sides of the Atlantic.</p><dl><dt>Time</dt><dd>10:00 AM ET</dd><dt>Eligibility</dt><dd>Middle school teams from Atlantic-facing regions</dd><dt>Registration deadline</dt><dd>Confirm on the organiser’s page.</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/middle-school-pan-atlantic-ethics-olympiad-2026">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="boston-showcase-26" data-date="2026-11-17" data-kind="in person" data-regions="worldwide">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2026-11-17" aria-label="17 November 2026"><b>17</b><small>Nov</small><small>2026</small></time>
+    <span><span class="mpi-event-title">Boston Debate Showcase: MIT faculty debate AI at Laugh Boston</span><span class="mpi-event-meta">Open to the public. Laugh Boston, 425 Summer St, Boston (Westin Boston Seaport, next to the convention center).</span></span>
+    <span class="mpi-event-type">In person</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>MIT faculty, one stage. SuperDebate and Laugh Boston present an evening of live debate and conversation about artificial intelligence, with audience questions and a reception in the Seaport.</p><dl><dt>Time</dt><dd>Doors and reception 5:30 PM · program 6:00 PM · ends 9:30 PM ET</dd><dt>Eligibility</dt><dd>Open to the public. Laugh Boston, 425 Summer St, Boston (Westin Boston Seaport, next to the convention center).</dd></dl>
+    <p><strong>Featured exchange: US–China AI competition.</strong> Where should the US draw the line between scientific cooperation with China and restrictions meant to protect national security? Yasheng Huang (Epoch Foundation Professor of International Management, MIT Sloan) takes on the hardest trade-off in AI policy.</p><p><strong>Also on the program:</strong> Manolis Kellis (Professor of Computer Science, MIT; MIT Computational Biology Group at CSAIL and the Broad Institute), who uses AI to understand and treat human disease.</p><p>One seat on stage is still open: Manolis Kellis's opponent is yet to be announced. Know who should take him on? Nominate them: <a href="mailto:astapleton@modusponensinstitute.com">astapleton@modusponensinstitute.com</a></p><p>Every session opens to the room, so bring your questions, and stay for the reception to keep arguing it out.</p><p>Presented by SuperDebate × Laugh Boston, hosted by John Connor, with Boston host Archie Stapleton and the Modus Ponens Institute.</p><div class="mpi-actions"><a class="mpi-text-link" href="https://superdebate.org/events/boston-debate-showcase-2026">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="uwc-inv-26" data-date="2026-11-21" data-kind="competition" data-regions="worldwide">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2026-11-21" aria-label="21 November 2026"><b>21</b><small>Nov</small><small>2026</small></time>
+    <span><span class="mpi-event-title">UWC Ethics Invitational 2026</span><span class="mpi-event-meta">Grade 7 and up · Worldwide · Online</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>A student-run online ethics tournament organised by the Model Philosophy Ethics Olympiad leadership team at UWCSEA Dover, in partnership with TKEthics. A regional qualifier: the top three teams advance directly to the TKEthics International Grand Finals.</p><dl><dt>Time</dt><dd>Sat 21 Nov, 6:00 AM - 12:15 PM ET / 7:00 PM SGT - 1:15 AM SGT (Sun 22 Nov) / 10:00 PM AEDT - 4:15 AM AEDT. Online on Zoom.</dd><dt>Eligibility</dt><dd>High school teams from anywhere: 3-5 students, Grade 7 or above. No debate experience needed.</dd></dl>
+    <p><strong>Format:</strong> four live rounds on Zoom, two cases per round. Each case runs as an ethical presentation, collaborative commentary, a response and judges' questions. Teams are scored on careful, honest reasoning, not on winning an argument.</p><p><strong>Cases:</strong> <a href="files/uwc-ethics-invitational-2026-case-package.pdf" rel="noopener noreferrer">UWC Ethics Invitational 2026 case package (PDF)</a></p><div class="mpi-actions"><a class="mpi-text-link" href="https://theredrangerd.github.io/UWC-Ethics-Invitational/#register">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="gad-fall-26" data-date="2026-12-05" data-kind="final" data-regions="worldwide">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2026-12-05" aria-label="5 December 2026"><b>5</b><small>Dec</small><small>2026</small></time>
+    <span><span class="mpi-event-title">Global AI Debates Fall 2026</span><span class="mpi-event-meta">Worldwide · Online finals</span></span>
+    <span class="mpi-event-type">Final</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Solo speeches and team essay-debates on AI ethics and governance, judged by experts from MIT, OpenAI, and Perplexity. Submissions due Nov 21; live finals Dec 5.</p><dl><dt>Time</dt><dd>Live finals from 6:00 PM ET (Zoom)</dd><dt>Eligibility</dt><dd>Worldwide. Speech: ages 7-18, solo. Essay &amp; Debate: any age, teams of 2-5.</dd><dt>Submission deadline</dt><dd>21 November 2026</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://globalaidebates.com">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="training-senior-27" data-date="2027-01-16" data-kind="training" data-regions="worldwide" data-min="14" data-max="18">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-01-16" aria-label="16 January 2027"><b>16</b><small>Jan</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Senior Training Day 2027</span><span class="mpi-event-meta">High school students, ages 14-18 (Grades 9-12) · Online</span></span>
+    <span class="mpi-event-type">Training</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>An online preparation day ahead of the spring Ethics Olympiads and the TKEthics Invitational: lectures plus judge-led breakout rooms where students discuss cases in small groups.</p><dl><dt>Time</dt><dd>Sat 16 Jan 2027, 9:00 AM ET, about 6 hours, online</dd><dt>Eligibility</dt><dd>High school students, ages 14-18 (Grades 9-12)</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/2027-senior-training-day-1795128408142">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="training-junior-27" data-date="2027-01-23" data-kind="training" data-regions="worldwide" data-min="9" data-max="11">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-01-23" aria-label="23 January 2027"><b>23</b><small>Jan</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Junior Training Day 2027</span><span class="mpi-event-meta">Junior teams, ages 9-11 · Online</span></span>
+    <span class="mpi-event-type">Training</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>An online preparation day ahead of the spring Junior Pan Atlantic Ethics Olympiad: lectures plus judge-led breakout rooms where students discuss cases in small groups.</p><dl><dt>Time</dt><dd>Sat 23 Jan 2027, 9:00 AM ET, about 6 hours, online. Runs alongside the Middle School Training Day.</dd><dt>Eligibility</dt><dd>Junior teams, ages 9-11</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/2027-junior-training-day-1795128615031">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="training-ms-27" data-date="2027-01-23" data-kind="training" data-regions="worldwide" data-min="10" data-max="14">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-01-23" aria-label="23 January 2027"><b>23</b><small>Jan</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Middle School Training Day 2027</span><span class="mpi-event-meta">Middle school teams, ages 10-14 · Online</span></span>
+    <span class="mpi-event-type">Training</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>An online preparation day ahead of the spring Middle School TKEthics Invitational: lectures plus judge-led breakout rooms where students discuss cases in small groups.</p><dl><dt>Time</dt><dd>Sat 23 Jan 2027, 9:00 AM ET, about 6 hours, online. Runs alongside the Junior Training Day.</dd><dt>Eligibility</dt><dd>Middle school teams, ages 10-14</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/2027-middle-school-training-day-1795128732570">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-ms-final-27" data-date="2027-02-17" data-kind="final" data-regions="worldwide">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-02-17" aria-label="17 February 2027"><b>17</b><small>Feb</small><small>2027</small></time>
+    <span><span class="mpi-event-title">International Middle School Ethics Olympiad Final 2027</span><span class="mpi-event-meta">School-based teams that qualified through a 2026 Middle School Ethics Olympiad, including our Pan Atlantic event · Online</span></span>
+    <span class="mpi-event-type">Final</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>The international final for middle school teams, run by the Ethics Olympiad. Medallists from the 2026 Pan Atlantic Middle School Ethics Olympiad qualify.</p><dl><dt>Time</dt><dd>Date set by the Ethics Olympiad; hosted from Australia, online</dd><dt>Eligibility</dt><dd>School-based teams that qualified through a 2026 Middle School Ethics Olympiad, including our Pan Atlantic event</dd><dt>Entry</dt><dd>By qualification</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://ethicsolympiad.org/">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="case-writing-26" data-date="2027-02-28" data-kind="case writing" data-regions="worldwide" data-min="10" data-max="22">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-02-28" aria-label="28 February 2027"><b>28</b><small>Feb</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Marc Sanders Case Writing Prize (Winter 2027)</span><span class="mpi-event-meta">Worldwide, students aged 10-22 · Online</span></span>
+    <span class="mpi-event-type">Case writing</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Write a 300–600 word ethics case on technology or AI and include three questions.</p><dl><dt>Time</dt><dd>Opens in December · submissions due Feb 28, 2027 · online</dd><dt>Eligibility</dt><dd>Worldwide, students aged 10-22</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="case-competition.html">Case Writing Prize <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="tke-spring-27" data-date="2027-03-06" data-kind="competition" data-regions="worldwide">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-03-06" aria-label="6 March 2027"><b>6</b><small>Mar</small><small>2027</small></time>
+    <span><span class="mpi-event-title">TKEthics Invitational Spring 2027</span><span class="mpi-event-meta">Worldwide · Confirm ages with the organiser</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Spring TKE Invitational. Qualifier for the 2027 TKE Grand Final.</p><dl><dt>Time</dt><dd>6:00 p.m. ET start. Confirm the end time on the organiser’s page.</dd><dt>Eligibility</dt><dd>Worldwide. Confirm age eligibility with the organiser.</dd><dt>Registration deadline</dt><dd>Confirm on the organiser’s page.</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/tkethics-invitational-spring-2027">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-eu-27" data-date="2027-03-18" data-kind="competition" data-regions="europe africa" data-min="14" data-max="18">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-03-18" aria-label="18 March 2027"><b>18</b><small>Mar</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Senior European Ethics Olympiad 2027</span><span class="mpi-event-meta">UK, European and African school-based teams, ages 14-18</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Regional Ethics Olympiad for schools in the UK, Europe and Africa.</p><dl><dt>Time</dt><dd>8:00 AM UK / 9:00 AM CET</dd><dt>Eligibility</dt><dd>UK, European and African school-based teams, ages 14-18</dd><dt>Listed registration deadline</dt><dd>28 February 2027</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/2027-senior-european-ethics-olympiad-1782283791861">Organiser details <span aria-hidden="true">→</span></a><a class="mpi-text-link" href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0">Official invitations</a></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-pan-am-27" data-date="2027-04-03" data-kind="competition" data-regions="americas" data-min="14" data-max="18">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-04-03" aria-label="3 April 2027"><b>3</b><small>Apr</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Pan American Ethics Olympiad 2027</span><span class="mpi-event-meta">All Americas school-based teams (USA, Canada, Central &amp; South America), ages 14-18</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Regional Ethics Olympiad for schools across the Americas.</p><dl><dt>Time</dt><dd>10:00 AM ET</dd><dt>Eligibility</dt><dd>All Americas school-based teams (USA, Canada, Central &amp; South America), ages 14-18</dd><dt>Registration deadline</dt><dd>Confirm on the organiser’s page.</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/pan-american-ethics-olympiad-2027">Organiser details <span aria-hidden="true">→</span></a><a class="mpi-text-link" href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0">Official invitations</a></div>
+  </div>
+</details>
+<details class="mpi-event" id="tke-ms-inv-27" data-date="2027-04-10" data-kind="competition" data-regions="worldwide" data-min="10" data-max="14">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-04-10" aria-label="10 April 2027"><b>10</b><small>Apr</small><small>2027</small></time>
+    <span><span class="mpi-event-title">TKEthics Middle School Invitational 2027</span><span class="mpi-event-meta">Middle school students, ages 10-14 · Online</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>For middle school students who want to compete in ethics, or just practise their critical thinking. Qualifier for the 2027 TKEthics International Grand Final.</p><dl><dt>Time</dt><dd>Sat 10 Apr 2027, 10:00 AM ET, about 6 hours, online</dd><dt>Eligibility</dt><dd>Middle school students, ages 10-14</dd><dt>Registration deadline</dt><dd>Confirm on the organiser’s page.</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/2027-tkethics-middle-school-invitational-1794751084906">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-junior-pan-atlantic-27" data-date="2027-04-17" data-kind="competition" data-regions="americas europe africa" data-min="9" data-max="11">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-04-17" aria-label="17 April 2027"><b>17</b><small>Apr</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Junior Pan Atlantic Ethics Olympiad 2027</span><span class="mpi-event-meta">Junior teams, ages 9-11, from Atlantic-facing regions · Online</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Junior Ethics Olympiad spanning both sides of the Atlantic.</p><dl><dt>Time</dt><dd>Sat 17 Apr 2027, 10:00 AM ET, online</dd><dt>Eligibility</dt><dd>Junior teams, ages 9-11, from Atlantic-facing regions</dd><dt>Registration deadline</dt><dd>Confirm on the organiser’s page.</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://www.tkethics.org/tournaments/2027-junior-pan-atlantic-ethics-olympiad-1793539194476">Organiser details <span aria-hidden="true">→</span></a><a class="mpi-text-link" href="https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0">Official invitations</a></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-senior-anz-27" data-date="2027-05-03" data-kind="competition" data-regions="oceania" data-min="15" data-max="18">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-05-03" aria-label="From 3 May 2027"><b>3</b><small>May</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Senior Ethics Olympiad 2027: Australia and New Zealand heats</span><span class="mpi-event-meta">School-based teams in Australia and New Zealand, ages 15-18, 1-2 teams per school · See dates by heat</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Run by the Ethics Olympiad. Several heats per state; many are already full, so register early.</p><dl><dt>Time</dt><dd>State and regional heats from Mon 3 May to Mon 31 May 2027</dd><dt>Eligibility</dt><dd>School-based teams in Australia and New Zealand, ages 15-18, 1-2 teams per school</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://ethicsolympiad.org/registration/ethics-olympiads/senior-2027/">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-senior-asia-27" data-date="2027-05-04" data-kind="competition" data-regions="eastasia southasia" data-min="15" data-max="18">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-05-04" aria-label="From 4 May 2027"><b>4</b><small>May</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Senior Ethics Olympiad 2027: Asia heats</span><span class="mpi-event-meta">School-based teams in Asia, ages 15-18, 1-2 teams per school · See dates by heat</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Run by the Ethics Olympiad in Australia. Pick the heat for your country; some dates fill up early.</p><dl><dt>Time</dt><dd>India and Singapore: Tue 4 May · China, Hong Kong and Japan: Wed 5 May · South Korea and South East Asia: Mon 31 May 2027</dd><dt>Eligibility</dt><dd>School-based teams in Asia, ages 15-18, 1-2 teams per school</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://ethicsolympiad.org/registration/ethics-olympiads/senior-2027/">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-junior-27" data-date="2027-06-08" data-kind="competition" data-regions="eastasia southasia oceania" data-min="9" data-max="11">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-06-08" aria-label="From 8 June 2027"><b>8</b><small>Jun</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Junior School Ethics Olympiad 2027</span><span class="mpi-event-meta">School-based teams, ages 9-11 · See dates by heat</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Run online by the Ethics Olympiad in Australia. Registration closes as each date fills.</p><dl><dt>Time</dt><dd>Online, about 4.5 hours. June dates (8-18 June) and September dates (7-15 September 2027)</dd><dt>Eligibility</dt><dd>School-based teams, ages 9-11</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://ethicsolympiad.org/registration/ethics-olympiads/junior-2027/">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="tke-grand-final-27" data-date="2027-08-28" data-kind="final" data-regions="worldwide">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-08-28" aria-label="28 August 2027"><b>28</b><small>Aug</small><small>2027</small></time>
+    <span><span class="mpi-event-title">TKEthics International Grand Final 2027</span><span class="mpi-event-meta">Qualifying TKEthics teams only</span></span>
+    <span class="mpi-event-type">Final</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Culminating final for teams that qualified through 2026-27 TKE Invitationals.</p><dl><dt>Time</dt><dd>6:00 PM ET / 6:00 AM Beijing time</dd><dt>Eligibility</dt><dd>Qualifying TKEthics teams only</dd><dt>Entry</dt><dd>By qualification</dd></dl>
+    <div class="mpi-actions"></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-ms-anz-27" data-date="2027-11-01" data-kind="competition" data-regions="oceania" data-min="11" data-max="14">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-11-01" aria-label="From 1 November 2027"><b>1</b><small>Nov</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Middle School Ethics Olympiad 2027: Australia and New Zealand heats</span><span class="mpi-event-meta">School-based teams in Australia and New Zealand, ages 11-14, 1-2 teams per school · See dates by heat</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Run by the Ethics Olympiad. Several heats per state; some are already full.</p><dl><dt>Time</dt><dd>State and regional heats from Mon 1 Nov to Tue 30 Nov 2027</dd><dt>Eligibility</dt><dd>School-based teams in Australia and New Zealand, ages 11-14, 1-2 teams per school</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://ethicsolympiad.org/registration/ethics-olympiads/middle-2027/">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
+<details class="mpi-event" id="eo-ms-asia-27" data-date="2027-11-10" data-kind="competition" data-regions="eastasia southasia" data-min="11" data-max="14">
+  <summary class="mpi-event-summary">
+    <time class="mpi-event-date" datetime="2027-11-10" aria-label="From 10 November 2027"><b>10</b><small>Nov</small><small>2027</small></time>
+    <span><span class="mpi-event-title">Middle School Ethics Olympiad 2027: Asia heats</span><span class="mpi-event-meta">School-based teams in Asia, ages 11-14, 1-2 teams per school · See dates by heat</span></span>
+    <span class="mpi-event-type">Competition</span><span class="mpi-disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="mpi-event-detail">
+    <p>Run by the Ethics Olympiad in Australia. Pick the heat for your country.</p><dl><dt>Time</dt><dd>China and Hong Kong: Wed 10 Nov · India and Singapore: Mon 15 Nov · South Korea and South East Asia: Wed 24 Nov 2027</dd><dt>Eligibility</dt><dd>School-based teams in Asia, ages 11-14, 1-2 teams per school</dd></dl>
+    <div class="mpi-actions"><a class="mpi-text-link" href="https://ethicsolympiad.org/registration/ethics-olympiads/middle-2027/">Organiser details <span aria-hidden="true">→</span></a></div>
+  </div>
+</details>
 </div>
+<p id="no-results" class="mpi-empty" hidden>No events match these filters. Try another age or region, or clear the filters.</p>
+      <p class="mpi-finder-note">The organiser’s page has the latest eligibility and registration information. Times are shown in the organiser’s time zone.</p><p id="more"><a href="tournaments.html">Compare the competition formats</a></p></section>
 
-<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/maps/world.js"></script>
-<script>(()=>{
-const LINKS = {
-  invitations: "https://drive.google.com/drive/u/0/folders/1ioVTdjYPPldP-5utmIaYTZONWkWr4Er0",
-  caseSubmit: "https://form.jotform.com/260773051827055",
-  feeWaiver: "https://form.jotform.com/260764995688077"
-};
-
-const TAGS = {
-  olympiad: "Ethics Olympiad",
-  tke: "TKEthics",
-  final: "Int'l Final",
-  "case-writing": "Case Writing",
-  "in-person": "In-Person",
-  "ai-debates": "AI Debates",
-  training: "Training Day"
-};
-
-// 6 collapsed regions — each one genuinely distinct in event eligibility
-const REGION_COLOURS = {
-  americas:  "#8b1016",
-  europe:    "#3a6186",
-  africa:    "#2f7a55",
-  eastasia:  "#2a7d7d",
-  southasia: "#7b5ea7",
-  oceania:   "#b05a7a"
-};
-
-const REGION_LABELS = {
-  americas:  "Americas (North, Central & South)",
-  europe:    "Europe, UK & Ireland",
-  africa:    "Africa & Middle East",
-  eastasia:  "East Asia",
-  southasia: "South & Southeast Asia",
-  oceania:   "Australia & New Zealand"
-};
-
-const mainEvents = [
-  { id:"training-senior-27", title:"Senior Training Day 2027", type:"training", date:"2027-01-16", time:"Sat 16 Jan 2027, 9:00 AM ET, about 6 hours, online", eligibility:"High school students, ages 14-18 (Grades 9-12)", description:"An online preparation day ahead of the spring Ethics Olympiads and the TKEthics Invitational: lectures plus judge-led breakout rooms where students discuss cases in small groups.", hasDeadlines:false, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-senior-training-day-1795128408142", showInvitation:false, showFeeWaiver:false },
-  { id:"training-junior-27", title:"Junior Training Day 2027", type:"training", date:"2027-01-23", time:"Sat 23 Jan 2027, 9:00 AM ET, about 6 hours, online. Runs alongside the Middle School Training Day.", eligibility:"Junior teams, ages 9-11", description:"An online preparation day ahead of the spring Junior Pan Atlantic Ethics Olympiad: lectures plus judge-led breakout rooms where students discuss cases in small groups.", hasDeadlines:false, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-junior-training-day-1795128615031", showInvitation:false, showFeeWaiver:false },
-  { id:"training-ms-27", title:"Middle School Training Day 2027", type:"training", date:"2027-01-23", time:"Sat 23 Jan 2027, 9:00 AM ET, about 6 hours, online. Runs alongside the Junior Training Day.", eligibility:"Middle school teams, ages 10-14", description:"An online preparation day ahead of the spring Middle School TKEthics Invitational: lectures plus judge-led breakout rooms where students discuss cases in small groups.", hasDeadlines:false, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-middle-school-training-day-1795128732570", showInvitation:false, showFeeWaiver:false },
-  { id:"tke-ms-inv-27", title:"TKEthics Middle School Invitational 2027", type:"tke", date:"2027-04-10", time:"Sat 10 Apr 2027, 10:00 AM ET, about 6 hours, online", eligibility:"Middle school students, ages 10-14", description:"For middle school students who want to compete in ethics, or just practise their critical thinking. Qualifier for the 2027 TKEthics International Grand Final.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-tkethics-middle-school-invitational-1794751084906" },
-  { id:"eo-junior-pan-atlantic-27", title:"Junior Pan Atlantic Ethics Olympiad 2027", type:"olympiad", date:"2027-04-17", time:"Sat 17 Apr 2027, 10:00 AM ET, online", eligibility:"Junior teams, ages 9-11, from Atlantic-facing regions", description:"Junior Ethics Olympiad spanning both sides of the Atlantic.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-junior-pan-atlantic-ethics-olympiad-1793539194476" },
-  { id:"case-writing-26", title:"Marc Sanders Case Writing Prize (Winter 2027)", type:"case-writing", date:"2027-02-28", time:"Opens in December · submissions due Feb 28, 2027 · online", eligibility:"Worldwide, students aged 10-22", description:"Write a 300-600 word ethics case on technology or AI, with 3 discussion questions. Up to three winning cases go into the TKEthics Invitational case set, and the prize pools are shared among the winners and their schools.", hasDeadlines:false, fees:"", openNow:false, submitLink:false, eventPage:"https://www.tkethics.org/tournaments/marc-sanders-case-writing-prize", showInvitation:false, showFeeWaiver:false },
-  { id:"arizona-26", title:"Arizona In-Person Tournament", type:"in-person", date:"2026-10-10", time:"Full-day Saturday event from 8:00 AM Arizona time. Optional Friday afternoon training session on Oct 9.", eligibility:"Grades 8-12. Open to anyone who can attend in person.", description:"MPI's in-person expansion pilot in Arizona: a full-day Saturday tournament with an optional training session the Friday before.", hasDeadlines:true, customDeadlines:{ earlyBird:"2026-09-18", regular:"2026-09-30" }, fees:"", registerLink:"https://www.tkethics.org/tournaments/arizona-in-person-tournament-2026" },
-  { id:"tke-fall-26", title:"TKEthics Invitational Fall 2026", type:"tke", date:"2026-11-07", time:"6:00 PM - 12:15 AM ET / 7:00 AM BJ", eligibility:"Worldwide, ages 13-18", description:"Same 6 cases as the Novice event plus 2 from the Case Writing Competition. Qualifier for the TKE Grand Final.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/tkethics-invitational-fall-2026" },
-  { id:"ms-pan-atlantic-26", title:"Middle School Pan Atlantic Ethics Olympiad", type:"olympiad", date:"2026-11-14", time:"10:00 AM ET", eligibility:"Middle school teams from Atlantic-facing regions", description:"Middle school Ethics Olympiad spanning both sides of the Atlantic.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/middle-school-pan-atlantic-ethics-olympiad-2026" },
-  { id:"uwc-inv-26", title:"UWC Ethics Invitational 2026", type:"tke", date:"2026-11-21", time:"Sat 21 Nov, 6:00 AM - 12:15 PM ET / 7:00 PM SGT - 1:15 AM SGT (Sun 22 Nov) / 10:00 PM AEDT - 4:15 AM AEDT. Online on Zoom.", eligibility:"High school teams from anywhere: 3-5 students, Grade 7 or above. No debate experience needed.", description:"A student-run online ethics tournament organised by the Model Philosophy Ethics Olympiad leadership team at UWCSEA Dover, in partnership with TKEthics. A regional qualifier: the top three teams advance directly to the TKEthics International Grand Finals.", details:["<strong>Format:</strong> four live rounds on Zoom, two cases per round. Each case runs as an ethical presentation, collaborative commentary, a response and judges' questions. Teams are scored on careful, honest reasoning, not on winning an argument.","<strong>Cases:</strong> <a href=\"files/uwc-ethics-invitational-2026-case-package.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">UWC Ethics Invitational 2026 case package (PDF)</a>","<strong>Registration and fee:</strong> through the event website ($203 SGD per team)."], hasDeadlines:false, fees:"", registerLink:"https://theredrangerd.github.io/UWC-Ethics-Invitational/#register", registerLabel:"Register ↗", websiteLink:"https://theredrangerd.github.io/UWC-Ethics-Invitational/", showInvitation:false, showFeeWaiver:false },
-  { id:"boston-showcase-26", title:"Boston Debate Showcase: MIT faculty debate AI at Laugh Boston", type:"in-person", date:"2026-11-17", time:"Doors and reception 5:30 PM · program 6:00 PM · ends 9:30 PM ET", eligibility:"Open to the public. Laugh Boston, 425 Summer St, Boston (Westin Boston Seaport, next to the convention center).", description:"MIT faculty, one stage. SuperDebate and Laugh Boston present an evening of live debate and conversation about artificial intelligence, with audience questions and a reception in the Seaport.", details:["<strong>Tickets (only sold here):</strong> <a href=\"https://superdebate.org/events/boston-debate-showcase-2026\" target=\"_blank\" rel=\"noopener noreferrer\">superdebate.org/events/boston-debate-showcase-2026</a>","<strong>Featured exchange: US–China AI competition.</strong> Where should the US draw the line between scientific cooperation with China and restrictions meant to protect national security? Yasheng Huang (Epoch Foundation Professor of International Management, MIT Sloan) takes on the hardest trade-off in AI policy.","<strong>Also on the program:</strong> Manolis Kellis (Professor of Computer Science, MIT; MIT Computational Biology Group at CSAIL and the Broad Institute), who uses AI to understand and treat human disease.","One seat on stage is still open: Manolis Kellis's opponent is yet to be announced. Know who should take him on? Nominate them: <a href=\"mailto:astapleton@modusponensinstitute.com\">astapleton@modusponensinstitute.com</a>","Every session opens to the room, so bring your questions, and stay for the reception to keep arguing it out.","Registering on Luma alone doesn't reserve a seat. Tickets are sold at superdebate.org.","Presented by SuperDebate × Laugh Boston, hosted by John Connor, with Boston host Archie Stapleton and the Modus Ponens Institute."], hasDeadlines:false, fees:"", registerLink:"https://superdebate.org/events/boston-debate-showcase-2026", registerLabel:"Get tickets ↗", websiteLink:"https://luma.com/veue4pbb", showInvitation:false, showFeeWaiver:false },
-  { id:"gad-fall-26", title:"Global AI Debates Fall 2026", type:"ai-debates", date:"2026-12-05", time:"Live finals from 6:00 PM ET (Zoom)", eligibility:"Worldwide. Speech: ages 7-18, solo. Essay & Debate: any age, teams of 2-5.", description:"Solo speeches and team essay-debates on AI ethics and governance, judged by experts from MIT, OpenAI, and Perplexity. $3,500 prize pool. Submissions due Nov 21; live finals Dec 5.", hasDeadlines:true, customDeadlines:{ earlyBird:"2026-07-01", regular:"2026-11-21" }, registerLink:"https://www.tkethics.org/tournaments/global-ai-debates-fall-2026", websiteLink:"https://globalaidebates.com", fees:"" },
-  { id:"tke-spring-27", title:"TKEthics Invitational Spring 2027", type:"tke", date:"2027-03-06", time:"6:00 PM - 11:45 PM ET / 7:00 AM BJ", eligibility:"Worldwide, ages 13-18", description:"Spring TKE Invitational. Qualifier for the 2027 TKE Grand Final.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/tkethics-invitational-spring-2027" },
-  { id:"eo-eu-27", title:"Senior European Ethics Olympiad 2027", type:"olympiad", date:"2027-03-18", time:"8:00 AM UK / 9:00 AM CET", eligibility:"UK, European and African school-based teams, ages 14-18", description:"Regional Ethics Olympiad for schools in the UK, Europe and Africa.", hasDeadlines:true, customDeadlines:{ earlyBird:"2027-01-18", regular:"2027-02-28" }, fees:"", registerLink:"https://www.tkethics.org/tournaments/2027-senior-european-ethics-olympiad-1782283791861" },
-  { id:"eo-pan-am-27", title:"Pan American Ethics Olympiad 2027", type:"olympiad", date:"2027-04-03", time:"10:00 AM ET", eligibility:"All Americas school-based teams (USA, Canada, Central & South America), ages 14-18", description:"Regional Ethics Olympiad for schools across the Americas.", hasDeadlines:true, fees:"", registerLink:"https://www.tkethics.org/tournaments/pan-american-ethics-olympiad-2027" },
-  { id:"tke-grand-final-27", title:"TKEthics International Grand Final 2027", type:"tke", date:"2027-08-28", time:"6:00 PM ET / 6:00 AM BJ", eligibility:"Qualifying TKEthics teams only", description:"Culminating final for teams that qualified through 2026-27 TKE Invitationals.", hasDeadlines:false, fees:"", showFeeWaiver:false },
-  { id:"eo-ms-final-27", title:"International Middle School Ethics Olympiad Final 2027", type:"olympiad", date:"2027-02-17", time:"Date set by the Ethics Olympiad; hosted from Australia, online", eligibility:"School-based teams that qualified through a 2026 Middle School Ethics Olympiad, including our Pan Atlantic event", description:"The international final for middle school teams, run by the Ethics Olympiad. Medallists from the 2026 Pan Atlantic Middle School Ethics Olympiad qualify.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
-  { id:"eo-senior-asia-27", title:"Senior Ethics Olympiad 2027: Asia heats", type:"olympiad", date:"2027-05-04", time:"India and Singapore: Tue 4 May · China, Hong Kong and Japan: Wed 5 May · South Korea and South East Asia: Mon 31 May 2027", eligibility:"School-based teams in Asia, ages 15-18, 1-2 teams per school", description:"Run by the Ethics Olympiad in Australia. Pick the heat for your country; some dates fill up early.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/senior-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
-  { id:"eo-senior-anz-27", title:"Senior Ethics Olympiad 2027: Australia and New Zealand heats", type:"olympiad", date:"2027-05-03", time:"State and regional heats from Mon 3 May to Mon 31 May 2027", eligibility:"School-based teams in Australia and New Zealand, ages 15-18, 1-2 teams per school", description:"Run by the Ethics Olympiad. Several heats per state; many are already full, so register early.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/senior-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
-  { id:"eo-junior-27", title:"Junior School Ethics Olympiad 2027", type:"olympiad", date:"2027-06-08", time:"Online, about 4.5 hours. June dates (8-18 June) and September dates (7-15 September 2027)", eligibility:"School-based teams, ages 9-11", description:"Run online by the Ethics Olympiad in Australia. Registration closes as each date fills.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/junior-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
-  { id:"eo-ms-asia-27", title:"Middle School Ethics Olympiad 2027: Asia heats", type:"olympiad", date:"2027-11-10", time:"China and Hong Kong: Wed 10 Nov · India and Singapore: Mon 15 Nov · South Korea and South East Asia: Wed 24 Nov 2027", eligibility:"School-based teams in Asia, ages 11-14, 1-2 teams per school", description:"Run by the Ethics Olympiad in Australia. Pick the heat for your country.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/middle-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false },
-  { id:"eo-ms-anz-27", title:"Middle School Ethics Olympiad 2027: Australia and New Zealand heats", type:"olympiad", date:"2027-11-01", time:"State and regional heats from Mon 1 Nov to Tue 30 Nov 2027", eligibility:"School-based teams in Australia and New Zealand, ages 11-14, 1-2 teams per school", description:"Run by the Ethics Olympiad. Several heats per state; some are already full.", hasDeadlines:false, fees:"Set by the Ethics Olympiad (see their registration page)", registerLink:"https://ethicsolympiad.org/registration/ethics-olympiads/middle-2027/", registerLabel:"Register on ethicsolympiad.org ↗", showInvitation:false, showFeeWaiver:false }
-];
-
-// 6 collapsed regions with genuinely distinct event buckets
-const regions = {
-  americas: {
-    name: "Americas",
-    perfect: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","eo-junior-pan-atlantic-27","uwc-inv-26","eo-pan-am-27","tke-fall-26","tke-spring-27","ms-pan-atlantic-26","case-writing-26","arizona-26","boston-showcase-26","gad-fall-26"],
-    open: [],
-    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-eu-27"]
-  },
-  europe: {
-    name: "Europe, UK & Ireland",
-    perfect: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","eo-junior-pan-atlantic-27","uwc-inv-26","eo-eu-27","ms-pan-atlantic-26","case-writing-26","gad-fall-26"],
-    open: ["tke-fall-26","tke-spring-27","arizona-26","boston-showcase-26"],
-    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-pan-am-27"]
-  },
-  africa: {
-    name: "Africa & Middle East",
-    perfect: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","eo-junior-pan-atlantic-27","uwc-inv-26","ms-pan-atlantic-26","eo-eu-27","case-writing-26","gad-fall-26"],
-    open: ["tke-fall-26","tke-spring-27","arizona-26","boston-showcase-26"],
-    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-pan-am-27"]
-  },
-  eastasia: {
-    name: "East Asia",
-    perfect: ["uwc-inv-26","case-writing-26","tke-fall-26","tke-spring-27","gad-fall-26","eo-senior-asia-27","eo-ms-asia-27"],
-    open: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","arizona-26","boston-showcase-26","eo-junior-27"],
-    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-junior-pan-atlantic-27","eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
-  },
-  southasia: {
-    name: "South & Southeast Asia",
-    perfect: ["uwc-inv-26","case-writing-26","gad-fall-26","eo-senior-asia-27","eo-ms-asia-27"],
-    open: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","tke-fall-26","tke-spring-27","arizona-26","boston-showcase-26","eo-junior-27"],
-    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-junior-pan-atlantic-27","eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
-  },
-  oceania: {
-    name: "Australia & New Zealand",
-    perfect: ["uwc-inv-26","case-writing-26","gad-fall-26","eo-senior-anz-27","eo-ms-anz-27","eo-junior-27"],
-    open: ["training-senior-27","training-junior-27","training-ms-27","tke-ms-inv-27","tke-fall-26","tke-spring-27","arizona-26","boston-showcase-26"],
-    qualifying: ["tke-grand-final-27","eo-ms-final-27"],
-    none: ["eo-junior-pan-atlantic-27","eo-pan-am-27","eo-eu-27","ms-pan-atlantic-26"]
-  }
-};
-
-const REGION_META = {
-  perfect:    { icon: "✓", title: "Perfect for you",       sub: "Eligible and especially workable from your country" },
-  open:       { icon: "◐", title: "Open to you",           sub: "Eligible, but the timing or travel burden is less ideal" },
-  qualifying: { icon: "★", title: "By qualification only", sub: "You would need to qualify through a feeder pathway" },
-  none:       { icon: "○", title: "Run for another region", sub: "Meant for schools in another region. Not sure? Email us." }
-};
-
-// Country groups — collapsed to 6
-const COUNTRY_GROUPS = {
-  americas: [
-    "AG","AR","AW","BB","BL","BM","BO","BQ","BR","BS","BZ","CA","CL","CO","CR","CU","CW","DM","DO","EC","FK",
-    "GD","GF","GL","GP","GT","GY","HN","HT","JM","KN","KY","LC","MF","MQ","MS","MX","NI","PA","PE","PR","PY",
-    "SR","SV","SX","TC","TT","US","UY","VC","VE","VG","VI"
-  ],
-  europe: [
-    "AD","AL","AM","AT","AZ","BA","BE","BG","BY","CH","CY","CZ","DE","DK","EE","ES","FI","FO","FR","GB","GE",
-    "GI","GR","HR","HU","IE","IS","IT","KG","KZ","LI","LT","LU","LV","MC","MD","ME","MK","MT","NL","NO","PL",
-    "PT","RO","RS","SE","SI","SK","SM","TJ","TM","UA","UZ","VA","XK"
-  ],
-  africa: [
-    "AE","AO","BF","BH","BI","BJ","BW","CD","CF","CG","CI","CM","CV","DJ","DZ","EG","EH","ER","ET","GA","GH",
-    "GM","GN","GQ","GW","IL","IQ","IR","JO","KE","KM","KW","LB","LR","LS","LY","MA","MG","ML","MR","MU","MW",
-    "MZ","NA","NE","NG","OM","PS","QA","RW","SA","SC","SD","SL","SN","SO","SS","ST","SY","SZ","TD","TG","TN",
-    "TR","TZ","UG","YE","ZA","ZM","ZW"
-  ],
-  eastasia: [
-    "CN","HK","JP","KP","KR","MN","MO","RU","TW"
-  ],
-  southasia: [
-    "AF","BD","BN","BT","ID","IN","KH","LA","LK","MM","MY","NP","PH","PK","SG","TH","TL","VN"
-  ],
-  oceania: [
-    "AU","FJ","NC","NZ","PG","SB","VU"
-  ]
-};
-
-const mainEventsById = new Map(mainEvents.map(ev => [ev.id, ev]));
-const DEFAULT_COUNTRY = "US";
-const TODAY = (() => { const d = new Date(); d.setHours(0,0,0,0); return d; })();
-
-const currentEventIds = new Set(
-  mainEvents.filter(ev => {
-    const [y,m,d] = ev.date.split("-").map(Number);
-    return new Date(y,m-1,d) >= TODAY;
-  }).map(ev => ev.id)
-);
-
-let expandedEventId = null;
-let selectedCountry = DEFAULT_COUNTRY;
-let map = null;
-let openBuckets = new Set(["perfect"]);
-const originalFills = {};
-
-const COUNTRY_NAMES = {
-  AF:"Afghanistan",AL:"Albania",DZ:"Algeria",AO:"Angola",AR:"Argentina",AM:"Armenia",AU:"Australia",AT:"Austria",AZ:"Azerbaijan",
-  BH:"Bahrain",BD:"Bangladesh",BY:"Belarus",BE:"Belgium",BZ:"Belize",BJ:"Benin",BT:"Bhutan",BO:"Bolivia",BA:"Bosnia and Herzegovina",BW:"Botswana",
-  BR:"Brazil",BN:"Brunei",BG:"Bulgaria",BF:"Burkina Faso",BI:"Burundi",KH:"Cambodia",CM:"Cameroon",CA:"Canada",CV:"Cape Verde",CF:"Central African Republic",
-  TD:"Chad",CL:"Chile",CN:"China",CO:"Colombia",KM:"Comoros",CD:"DR Congo",CG:"Congo",CR:"Costa Rica",CI:"Cote d'Ivoire",HR:"Croatia",
-  CU:"Cuba",CY:"Cyprus",CZ:"Czech Republic",DK:"Denmark",DJ:"Djibouti",DO:"Dominican Republic",EC:"Ecuador",EG:"Egypt",SV:"El Salvador",GQ:"Equatorial Guinea",
-  ER:"Eritrea",EE:"Estonia",SZ:"Eswatini",ET:"Ethiopia",FI:"Finland",FR:"France",GA:"Gabon",GM:"Gambia",GE:"Georgia",DE:"Germany",
-  GH:"Ghana",GR:"Greece",GL:"Greenland",GT:"Guatemala",GN:"Guinea",GW:"Guinea-Bissau",GY:"Guyana",HT:"Haiti",HN:"Honduras",HU:"Hungary",
-  IS:"Iceland",IN:"India",ID:"Indonesia",IR:"Iran",IQ:"Iraq",IE:"Ireland",IL:"Israel",IT:"Italy",JM:"Jamaica",JP:"Japan",
-  JO:"Jordan",KZ:"Kazakhstan",KE:"Kenya",XK:"Kosovo",KW:"Kuwait",KG:"Kyrgyzstan",LA:"Laos",LV:"Latvia",LB:"Lebanon",LS:"Lesotho",
-  LR:"Liberia",LY:"Libya",LT:"Lithuania",LU:"Luxembourg",MG:"Madagascar",MW:"Malawi",MY:"Malaysia",ML:"Mali",MR:"Mauritania",MX:"Mexico",
-  MD:"Moldova",MN:"Mongolia",ME:"Montenegro",MA:"Morocco",MZ:"Mozambique",MM:"Myanmar",NA:"Namibia",NP:"Nepal",NL:"Netherlands",NZ:"New Zealand",
-  NI:"Nicaragua",NE:"Niger",NG:"Nigeria",KP:"North Korea",MK:"North Macedonia",NO:"Norway",OM:"Oman",PK:"Pakistan",PA:"Panama",PG:"Papua New Guinea",
-  PY:"Paraguay",PE:"Peru",PH:"Philippines",PL:"Poland",PT:"Portugal",PR:"Puerto Rico",QA:"Qatar",RO:"Romania",RU:"Russia",RW:"Rwanda",
-  SA:"Saudi Arabia",SN:"Senegal",RS:"Serbia",SL:"Sierra Leone",SK:"Slovakia",SI:"Slovenia",SB:"Solomon Islands",SO:"Somalia",ZA:"South Africa",KR:"South Korea",
-  SS:"South Sudan",ES:"Spain",LK:"Sri Lanka",SD:"Sudan",SR:"Suriname",SE:"Sweden",CH:"Switzerland",SY:"Syria",TW:"Taiwan",TJ:"Tajikistan",
-  TZ:"Tanzania",TH:"Thailand",TL:"Timor-Leste",TG:"Togo",TN:"Tunisia",TR:"Turkey",TM:"Turkmenistan",UG:"Uganda",UA:"Ukraine",AE:"United Arab Emirates",
-  BS:"Bahamas",FK:"Falkland Islands",FJ:"Fiji",NC:"New Caledonia",PS:"Palestine",TT:"Trinidad and Tobago",VU:"Vanuatu",
-  GB:"United Kingdom",US:"United States",UY:"Uruguay",UZ:"Uzbekistan",VE:"Venezuela",VN:"Vietnam",EH:"Western Sahara",YE:"Yemen",ZM:"Zambia",ZW:"Zimbabwe"
-};
-
-function subtractMonths(dateStr, months) {
-  const [y,m,d] = dateStr.split("-").map(Number);
-  const dt = new Date(y,m-1,d);
-  dt.setMonth(dt.getMonth() - months);
-  return dt;
-}
-
-function parseDate(dateStr) {
-  const [y,m,d] = dateStr.split("-").map(Number);
-  return new Date(y,m-1,d);
-}
-
-function formatDateLong(dateStr) {
-  const [y,m,d] = dateStr.split("-").map(Number);
-  return new Date(y,m-1,d).toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"});
-}
-
-function formatDateShort(dateStr) {
-  const [y,m,d] = dateStr.split("-").map(Number);
-  return new Date(y,m-1,d).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
-}
-
-function relativeDateLabel(dateStr) {
-  const [y,m,d] = dateStr.split("-").map(Number);
-  const diff = Math.round((new Date(y,m-1,d) - TODAY) / 86400000);
-  if (diff === 0) return "today";
-  if (diff === 1) return "tomorrow";
-  if (diff > 1) return `in ${diff} days`;
-  if (diff === -1) return "yesterday";
-  return `${Math.abs(diff)} days ago`;
-}
-
-const EVENT_DEADLINES = {};
-mainEvents.forEach(ev => {
-  if (ev.hasDeadlines) {
-    EVENT_DEADLINES[ev.id] = ev.customDeadlines
-      ? { earlyBird: parseDate(ev.customDeadlines.earlyBird), regular: parseDate(ev.customDeadlines.regular) }
-      : { earlyBird: subtractMonths(ev.date, 2), regular: subtractMonths(ev.date, 1) };
-  }
-});
-
-function deadlineToString(dt) {
-  return `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,"0")}-${String(dt.getDate()).padStart(2,"0")}`;
-}
-
-function countryName(code) { return COUNTRY_NAMES[code] || code; }
-
-function regionKeyForCountry(code) {
-  for (const [key, codes] of Object.entries(COUNTRY_GROUPS)) {
-    if (codes.includes(code)) return key;
-  }
-  return "africa"; // fallback for unmapped territories
-}
-
-function buildRegionFills() {
-  const fills = {};
-  Object.entries(COUNTRY_GROUPS).forEach(([regionKey, codes]) => {
-    const colour = REGION_COLOURS[regionKey];
-    if (!colour) return;
-    codes.forEach(code => { fills[code] = colour; });
-  });
-  return fills;
-}
-
-function applyRegionColours(fills) {
-  const attempt = () => {
-    const paths = document.querySelectorAll("#map path[data-code]");
-    if (!paths.length) { setTimeout(attempt, 80); return; }
-    paths.forEach(path => {
-      const code = path.getAttribute("data-code");
-      const colour = fills[code];
-      if (colour) {
-        path.style.setProperty("fill", colour, "important");
-        originalFills[code] = colour;
-      }
-    });
-  };
-  attempt();
-}
-
-function buildLegend() {
-  document.getElementById("map-legend").innerHTML = Object.entries(REGION_LABELS).map(([key, label]) => `
-    <div class="legend-item">
-      <div class="legend-swatch" style="background:${REGION_COLOURS[key]}"></div>
-      <span>${label}</span>
-    </div>`).join("");
-}
-
-function actionsHtml(ev) {
-  let html = "";
-  if (ev.submitLink) html += `<a href="${LINKS.caseSubmit}" target="_blank" rel="noopener noreferrer" class="action-btn submit">Submit a case ↗</a>`;
-  if (ev.submitLink && ev.eventPage) html += `<a href="${ev.eventPage}" target="_blank" rel="noopener noreferrer" class="action-btn">Prize details ↗</a>`;
-  if (ev.registerLink) html += `<a href="${ev.registerLink}" target="_blank" rel="noopener noreferrer" class="action-btn primary">${ev.registerLabel||"Register ↗"}</a>`;
-  else if (ev.eventPage) html += `<a href="${ev.eventPage}" target="_blank" rel="noopener noreferrer" class="action-btn primary">Event page ↗</a>`;
-  if (ev.websiteLink) html += `<a href="${ev.websiteLink}" target="_blank" rel="noopener noreferrer" class="action-btn">Visit website ↗</a>`;
-  if (ev.showInvitation !== false) html += `<a href="${LINKS.invitations}" target="_blank" rel="noopener noreferrer" class="action-btn">Official invitation ↗</a>`;
-  if (ev.showFeeWaiver !== false && (ev.hasDeadlines || ev.submitLink)) html += `<a href="${LINKS.feeWaiver}" target="_blank" rel="noopener noreferrer" class="action-btn">Fee waiver ↗</a>`;
-  return html;
-}
-
-function eventCardHtml(eventId) {
-  const ev = mainEventsById.get(eventId);
-  if (!ev) return "";
-  const [year,month,day] = ev.date.split("-").map(Number);
-  const isExpanded = expandedEventId === ev.id;
-  const earlyBird = ev.hasDeadlines ? deadlineToString(EVENT_DEADLINES[ev.id].earlyBird) : null;
-  const regular   = ev.hasDeadlines ? deadlineToString(EVENT_DEADLINES[ev.id].regular)   : null;
-  return `
-    <article class="event-card ${ev.type}${isExpanded?" expanded":""}" data-event-id="${ev.id}">
-      <button class="event-toggle" type="button" data-event-toggle="${ev.id}">
-        <div class="date-chip">
-          <div class="month">${new Date(year,month-1,day).toLocaleDateString("en-US",{month:"short"}).toUpperCase()}</div>
-          <span class="day">${day}</span>
-        </div>
-        <div class="event-meta">
-          <div class="tag">${TAGS[ev.type]}${ev.openNow?" · Open now":""}</div>
-          <div class="title">${ev.title}</div>
-          <div class="subline">${ev.description}</div>
-        </div>
-        <div class="event-caret">›</div>
-      </button>
-      <div class="event-expand">
-        <div class="detail-grid">
-          <div class="label">Date</div><div class="value">${formatDateLong(ev.date)}</div>
-          <div class="label">Time</div><div class="value">${ev.time}</div>
-          <div class="label">Eligibility</div><div class="value">${ev.eligibility}</div>
-
-        </div>
-        ${ev.details ? `<div class="details">${ev.details.map(p=>`<p>${p}</p>`).join("")}</div>` : ""}
-        ${ev.hasDeadlines ? `
-          <div class="deadlines">
-            <h4>Deadlines</h4>
-            <div class="deadline-row"><span>Early bird closes</span><strong>${formatDateShort(earlyBird)} (${relativeDateLabel(earlyBird)})</strong></div>
-            <div class="deadline-row"><span>Registration closes</span><strong>${formatDateShort(regular)} (${relativeDateLabel(regular)})</strong></div>
-          </div>` : ""}
-        <div class="actions">${actionsHtml(ev)}</div>
-      </div>
-    </article>`;
-}
-
-function bucketHtml(key, ids) {
-  const meta = REGION_META[key];
-  const opened = openBuckets.has(key);
-  return `
-    <section class="bucket ${key}${opened?" opened":""}" data-bucket="${key}">
-      <button class="bucket-toggle" type="button" data-bucket-toggle="${key}">
-        <div class="bucket-left">
-          <div class="bucket-icon">${meta.icon}</div>
-          <div>
-            <div class="bucket-title">${meta.title}</div>
-            <div class="bucket-sub">${meta.sub}</div>
-          </div>
-        </div>
-        <div class="bucket-count">
-          <span>${ids.length} event${ids.length===1?"":"s"}</span>
-          <span class="bucket-chevron">›</span>
-        </div>
-      </button>
-      <div class="bucket-content">
-        ${ids.length ? ids.map(eventCardHtml).join("") : `<div class="empty">No events in this category for this country.</div>`}
-      </div>
-    </section>`;
-}
-
-function renderCounts(buckets) {
-  document.getElementById("counts").innerHTML = `
-    <div class="count-card perfect"><strong>${buckets.perfect.length}</strong><span>Perfect fit</span><small>Best match for this country</small></div>
-    <div class="count-card open"><strong>${buckets.open.length}</strong><span>Still open</span><small>Eligible, but less convenient</small></div>
-    <div class="count-card qualifying"><strong>${buckets.qualifying.length}</strong><span>Need qualification</span><small>You must qualify first</small></div>
-    <div class="count-card none"><strong>${buckets.none.length}</strong><span>Other regions</span><small>Run for another region</small></div>`;
-}
-
-function attachPanelEvents() {
-  document.querySelectorAll("[data-bucket-toggle]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const bucket = btn.closest(".bucket");
-      const key = bucket.dataset.bucket;
-      bucket.classList.toggle("opened");
-      if (bucket.classList.contains("opened")) openBuckets.add(key);
-      else openBuckets.delete(key);
-    });
-  });
-  document.querySelectorAll("[data-event-toggle]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const card = btn.closest(".event-card");
-      const id = card.dataset.eventId;
-      expandedEventId = expandedEventId === id ? null : id;
-      renderSelection(selectedCountry);
-    });
-  });
-}
-
-const eventDateById = new Map(mainEvents.map(ev => [ev.id, ev.date]));
-
-function dropPast(ids) {
-  return ids
-    .filter(id => currentEventIds.has(id))
-    .sort((a,b) => (eventDateById.get(a)||"").localeCompare(eventDateById.get(b)||""));
-}
-
-function renderSelection(countryCode) {
-  const countryChanged = countryCode !== selectedCountry;
-  selectedCountry = countryCode;
-  if (countryChanged) openBuckets = new Set(["perfect"]);
-
-  const name = countryName(countryCode);
-  const regionKey = regionKeyForCountry(countryCode);
-  const regionData = regions[regionKey];
-  const regionColour = REGION_COLOURS[regionKey] || "#8b1016";
-
-  const buckets = {
-    perfect:    dropPast(regionData.perfect),
-    open:       dropPast(regionData.open),
-    qualifying: dropPast(regionData.qualifying),
-    none:       dropPast(regionData.none)
-  };
-
-  document.getElementById("selected-country-name").textContent = name;
-  document.getElementById("selected-country-region").textContent = `MPI grouping: ${regionData.name}`;
-
-  const pill = document.getElementById("selected-country-region");
-  pill.style.background  = `${regionColour}18`;
-  pill.style.color       = regionColour;
-  pill.style.borderColor = `${regionColour}40`;
-
-  document.getElementById("panel-intro").textContent = "Events are grouped by the MPI region this country belongs to. The Winter Case Writing Prize opens in December (submissions due 28 February 2027).";
-
-  renderCounts(buckets);
-  document.getElementById("results-panel").innerHTML = `
-    ${bucketHtml("perfect",    buckets.perfect)}
-    ${bucketHtml("open",       buckets.open)}
-    ${bucketHtml("qualifying", buckets.qualifying)}
-    ${bucketHtml("none",       buckets.none)}`;
-  attachPanelEvents();
-
-  // Highlight selected country directly on SVG
-  document.querySelectorAll("#map path[data-code]").forEach(path => {
-    const code = path.getAttribute("data-code");
-    if (code === countryCode) {
-      path.classList.add("is-selected");
-      path.style.setProperty("fill", regionColour, "important");
-    } else {
-      path.classList.remove("is-selected");
-      if (originalFills[code]) path.style.setProperty("fill", originalFills[code], "important");
-      path.setAttribute("stroke", "#b0a08a");
-      path.setAttribute("stroke-width", "0.6");
-    }
-  });
-}
-
-function buildCountrySearch() {
-  const dataList = document.getElementById("country-list");
-  const entries = Object.entries(COUNTRY_NAMES).sort((a,b) => a[1].localeCompare(b[1]));
-  dataList.innerHTML = entries.map(([,name]) => `<option value="${name}"></option>`).join("");
-  const search = document.getElementById("country-search");
-  search.addEventListener("change", () => {
-    const value = search.value.trim().toLowerCase();
-    const found = entries.find(([,name]) => name.toLowerCase() === value);
-    if (found) renderSelection(found[0]);
-  });
-}
-
-function initMap() {
-  document.getElementById("map").innerHTML = "";
-  map = new jsVectorMap({
-    selector: "#map",
-    map: "world",
-    backgroundColor: "transparent",
-    zoomButtons: false,
-    zoomOnScroll: false,
-    zoomMax: 1,
-    zoomMin: 1,
-    draggable: false,
-    regionStyle: {
-      initial:  { fill: "#d8cdb8", stroke: "#b0a08a", strokeWidth: 0.6 },
-      hover:    { fillOpacity: 1 },
-      selected: { fill: "#d8cdb8" }
-    },
-    onRegionClick(event, code) {
-      renderSelection(code);
-    }
-  });
-
-  applyRegionColours(buildRegionFills());
-}
-
-function renderAllEvents() {
-  const box = document.getElementById("ec-list");
-  if (!box) return;
-  const evs = mainEvents.filter(ev => currentEventIds.has(ev.id)).sort((a,b) => a.date.localeCompare(b.date));
-  box.innerHTML = evs.map(ev => {
-    const [y,m,d] = ev.date.split("-").map(Number);
-    const short = new Date(y,m-1,d).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
-    const acts = actionsHtml(ev).replace(/class="action-btn primary"/g,'class="primary"').replace(/class="action-btn[^"]*"/g,'');
-    return `<details class="ec-item"><summary><span class="ec-date">${short}</span><span><span class="ec-title">${ev.title}</span><span class="ec-who">${ev.eligibility}</span></span><span class="ec-caret" aria-hidden="true">›</span></summary>
-      <div class="ec-body"><p>${ev.description}</p><p><b>When:</b> ${ev.time}</p>${acts ? `<div class="ec-acts">${acts}</div>` : ""}</div></details>`;
-  }).join("") || "<p>No upcoming events listed right now.</p>";
-}
-
-buildCountrySearch();
-buildLegend();
-if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderAllEvents); else renderAllEvents();
-initMap();
-renderSelection(DEFAULT_COUNTRY);
-})();</script>
-
-<div class="jvm-tooltip"></div></section>
-
-<section class="rv-sec" id="all-events">
-  <div class="rv-wrap">
-    <div class="rv-sec-head rv-left"><h2 class="rv-h2">All upcoming events</h2><p class="rv-lede">Every event in date order. Tap one for times, who can enter and how to register.</p></div>
-    <div class="ec-list" id="ec-list"></div>
-  </div>
-</section>
-<section class="rv-sec rv-tint ec-more" id="more">
-  <div class="rv-wrap">
-    <div class="rv-sec-head rv-left"><span class="rv-eyebrow">Before you register</span><h2 class="rv-h2">Prepare and fund your team</h2></div>
-    <div class="rv-mini-grid">
-      <a class="rv-mini" href="tournaments.html"><span class="rv-type">Competitions</span><h4>Which competition is right for you?</h4><p>Ethics Olympiads, TKEthics Invitationals and Global AI Debates, side by side.</p><span class="rv-cta">Compare <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="rv-mini" href="resources.html"><span class="rv-type">Free</span><h4>Resources</h4><p>The competitor handbook, a free lecture, a 10-class course and the match timer.</p><span class="rv-cta">Start preparing <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="rv-mini" href="fund-your-team.html"><span class="rv-type">Fees</span><h4>Fund your team</h4><p>Find grants and raise money for registration and travel.</p><span class="rv-cta">Find funding <span aria-hidden="true">&rarr;</span></span></a>
-    </div>
-  </div>
-</section>
-</main><footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><img src="images/bcc7608efd78f765.webp" width="182" height="78" alt="Modus Ponens Institute"><p>Teaching Philosophy for the<br>sake of the Good Life.</p><div class="nl-foot" style="margin-top:20px"><button type="button" class="nl-foot-btn" onclick="var p=document.getElementById('mpi-nl-pop');if(p){p.hidden=false}else{location.href='newsletters.html'}" style="font:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:8px;border:1px solid #1a1a1a;background:#fff;color:#1a1a1a;cursor:pointer">Join our mailing list</button></div></div><div><h2>Company</h2><a href="history.html">History</a><a href="about-us.html">Our Team</a><a href="newsletters.html">Newsletters</a><a href="https://docs.google.com/document/d/19aWILn3d85i4kiVeqa0KE8-RaS7xJmCTWE7jdJz13CQ/edit?usp=sharing">Work with us</a><a href="support-us.html">Donate</a></div><div><h2>Support</h2><a href="classes-tutoring.html">Classes/Tutoring</a><a href="about-6.html">Debate Coaching</a><a href="event-calendar.html">Event Calendar</a><a href="resources.html">Tournament Resources</a></div><div><h2>Learn More</h2><a href="past-results.html">Past Results</a><a href="case-sets.html">Case Sets</a></div></div><img class="footer-sponsor" src="images/a8dc21a8e426916f.webp" width="330" height="70" loading="lazy" alt="Marc Sanders Foundation"><p class="copyright">©2026 by Modus Ponens Institute.</p></footer><script>(()=>{const b=document.querySelector('.menu-toggle'),n=document.querySelector('.site-navigation');b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',open);n.classList.toggle('is-open',open)});document.querySelectorAll('.sub-toggle').forEach(b=>b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',open);b.closest('li').classList.toggle('expanded',open)}))})();</script><div id="mpi-nl-pop" class="mpi-nl-pop" hidden role="dialog" aria-modal="true" aria-label="Join our mailing list">
-<div class="mpi-nl-box"><button type="button" class="mpi-nl-x" aria-label="Close">&times;</button>
-<div style="text-align:left" class="sender-form-field" data-sender-form-id="b2klZM"></div></div></div>
-<style>.mpi-nl-pop{position:fixed;inset:0;background:rgba(20,20,30,.55);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px}
-.mpi-nl-pop[hidden]{display:none}.mpi-nl-box{background:#fff;border-radius:14px;max-width:460px;width:100%;padding:28px 24px 20px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25);max-height:90vh;overflow:auto}
-.mpi-nl-box h2{margin:0 0 6px;font-size:1.5rem}.mpi-nl-box p{margin:0 0 12px;color:#444}
-.mpi-nl-x{position:absolute;top:8px;right:12px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:#555}</style>
-<script>(function(){var K='mpiNlPop',D=14*864e5,p=document.getElementById('mpi-nl-pop');if(!p)return;
-function seen(){try{return Date.now()-(+localStorage.getItem(K)||0)<D}catch(e){return false}}
-function mark(){try{localStorage.setItem(K,Date.now())}catch(e){}}
-function show(){if(seen()||!p.hidden)return;p.hidden=false;mark();document.removeEventListener('mouseout',exit)}
-function hide(){p.hidden=true}
-function exit(e){if(!e.relatedTarget&&e.clientY<10)show()}
-p.addEventListener('click',function(e){if(e.target===p||e.target.classList.contains('mpi-nl-x'))hide()});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});
-if(!seen()){setTimeout(show,5000);document.addEventListener('mouseout',exit)}})();</script>
+</main>
+<footer class="mpi-site-footer"><div class="mpi-wrap mpi-footer-main">
+<div><strong>Modus Ponens Institute</strong><p>Official Ethics Olympiad licensee.</p></div>
+<ul><li><a href="about-us.html">Our Team</a></li><li><a href="judges.html">Judge with us</a></li><li><a href="contact-us.html">Contact</a></li></ul>
+<ul><li><a href="newsletters.html">Get MPI newsletters</a></li><li><a href="fund-your-team.html">Fund Your Team</a></li><li><a href="past-results.html">Past Results</a></li></ul>
+</div></footer>
 </body></html>
