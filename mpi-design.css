@@ -276,3 +276,13 @@ figcaption { color: var(--muted); font-size: .78rem; margin-top: .75rem; }
 @media (max-width: 435px) {
   .mpi-design .mpi-event-row, .mpi-design .mpi-event-summary { grid-template-columns: 62px minmax(0, 1fr); }
 }
+
+/* Coach quotes */
+.mpi-quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(20px, 3vw, 40px); }
+.mpi-quote { margin: 0; padding: 20px 0; border-top: 1px solid var(--line); }
+.mpi-quote blockquote { margin: 0 0 .75rem; }
+.mpi-quote blockquote p { margin: 0; font-family: var(--serif); font-size: 1.12rem; line-height: 1.5; color: var(--ink); }
+.mpi-quote figcaption { color: var(--muted); font-size: .9rem; }
+.mpi-quote-lead { grid-column: 1 / -1; }
+.mpi-quote-lead blockquote p { font-size: clamp(1.25rem, 2.2vw, 1.6rem); max-width: 46em; }
+@media (max-width: 760px) { .mpi-quotes { grid-template-columns: 1fr; } }
