@@ -51,6 +51,18 @@ sender('c4e6f63fa28992')
 </script>
 <script>if(/(^|\.)modusponensinstitute\.com$/.test(location.hostname)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id=G-JLTK4SM9ZF';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-JLTK4SM9ZF');}</script>
 <link rel="stylesheet" href="mpi-design.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/css/jsvectormap.min.css">
+<style id="cal-map-css">
+.cal-map{margin:8px 0 22px;border:1px solid var(--line,#e3e5ea);border-radius:14px;padding:14px 14px 10px;background:#fff}
+#cal-map{height:clamp(240px,42vw,460px)}
+#cal-map path[data-code]{cursor:pointer;transition:opacity .15s}
+#cal-map path[data-code]:hover{opacity:.8}
+.cal-map-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:8px;font:400 13px/1.4 Inter,sans-serif;color:#444}
+.cal-map-legend span{display:inline-flex;align-items:center;gap:6px}
+.cal-map-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.cal-map-hint{font:400 13px/1.4 Inter,sans-serif;color:#666;margin:0 0 6px}
+.jvm-tooltip{font:500 13px/1.3 Inter,sans-serif}
+</style>
 <script src="mpi-design.js" defer></script>
 </head><body class="mpi-design mpi-modern"><a class="mpi-skip" href="#main">Skip to content</a>
 <header class="mpi-header"><div class="mpi-wrap mpi-header-inner">
@@ -66,6 +78,7 @@ sender('c4e6f63fa28992')
       <p class="mpi-lede">Choose your school’s country and a student age. Open an event for times, eligibility and registration.</p>
     </div>
     <section class="mpi-wrap mpi-finder" id="calendar" aria-labelledby="events-heading">
+      <div class="cal-map"><p class="cal-map-hint">Click your country on the map, or search below.</p><div id="cal-map" aria-label="Clickable world map: choose your school's country"></div><div class="cal-map-legend" id="cal-map-legend"></div></div>
       <form class="mpi-filters" aria-label="Filter events">
         <label>School country
           <input type="search" id="country-search" name="country" list="country-list" placeholder="Search countries" autocomplete="off">
@@ -567,4 +580,29 @@ sender('c4e6f63fa28992')
 <ul><li><a href="about-us.html">Our Team</a></li><li><a href="judges.html">Judge with us</a></li><li><a href="contact-us.html">Contact</a></li><li><a href="tournament-day.html">Tournament Day</a></li></ul>
 <ul><li><a href="newsletters.html">Get MPI newsletters</a></li><li><a href="fund-your-team.html">Fund Your Team</a></li><li><a href="past-results.html">Past Results</a></li></ul>
 </div></footer>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/maps/world.js"></script>
+<script>
+(function(){
+  var COLORS={americas:'#8b1a1a',europe:'#4f6d8f',africa:'#2f7d5b',eastasia:'#2a8a8a',southasia:'#7a5aa6',oceania:'#c0587e'};
+  var LABELS={americas:'Americas',europe:'Europe and UK',africa:'Africa and Middle East',southasia:'South Asia',eastasia:'East Asia and South East Asia',oceania:'Australia and New Zealand'};
+  var ALIAS={'united states of america':'united states','dem. rep. congo':'dr congo','dominican rep.':'dominican republic','central african rep.':'central african republic','bosnia and herz.':'bosnia and herzegovina','s. sudan':'south sudan','eq. guinea':'equatorial guinea','czech rep.':'czech republic','czechia':'czech republic','dem. rep. korea':'north korea','korea':'south korea','lao pdr':'laos','w. sahara':'western sahara','solomon is.':'solomon islands','falkland is.':'','fr. s. antarctic lands':'','n. cyprus':'cyprus','somaliland':'somalia','c\u00f4te d\'ivoire':'cote d\'ivoire','swaziland':'eswatini','macedonia':'north macedonia','trinidad and tobago':'trinidad & tobago','antigua and barbuda':'antigua & barbuda'};
+  function norm(t){return (t||'').toLowerCase().replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();}
+  var input=document.getElementById('country-search'); if(!input||!window.jsVectorMap) return;
+  var opts=Array.from(input.list.options).map(function(o){return {name:o.value,key:norm(o.value),region:o.dataset.region};});
+  function findOpt(mapName){var k=norm(mapName); if(ALIAS[k]!==undefined) k=ALIAS[k]; if(!k) return null;
+    return opts.find(function(o){return o.key===k;})||opts.find(function(o){return o.key.replace(/&/g,'and')===k.replace(/&/g,'and');})||opts.find(function(o){return o.key.indexOf(k)===0||k.indexOf(o.key)===0;})||null;}
+  var map=new jsVectorMap({selector:'#cal-map',map:'world',backgroundColor:'transparent',zoomButtons:false,zoomOnScroll:false,draggable:false,
+    regionStyle:{initial:{fill:'#d8d4cc',stroke:'#ffffff',strokeWidth:0.5},hover:{fillOpacity:1},selected:{fill:'#111'}},
+    onRegionClick:function(e,code){var o=findOpt(map._mapData.paths[code].name); if(!o) return; input.value=o.name; input.dispatchEvent(new Event('input',{bubbles:true})); highlight(code); var c=document.getElementById('calendar'); if(c) c.scrollIntoView({behavior:'smooth',block:'start'});}});
+  var codeByName={};
+  function paint(){Object.keys(map._mapData.paths).forEach(function(code){var o=findOpt(map._mapData.paths[code].name); var el=document.querySelector('#cal-map path[data-code="'+code+'"]'); if(o){codeByName[o.key]=code; if(el&&COLORS[o.region]) el.style.setProperty('fill',COLORS[o.region],'important');}});}
+  function fit(){try{map.updateSize();}catch(e){} paint();}
+  paint(); setTimeout(fit,50); setTimeout(fit,600); window.addEventListener('load',fit); window.addEventListener('resize',function(){clearTimeout(fit._t); fit._t=setTimeout(fit,150);});
+  if(window.ResizeObserver){new ResizeObserver(function(){clearTimeout(fit._r); fit._r=setTimeout(fit,100);}).observe(document.getElementById('cal-map'));}
+  function highlight(code){document.querySelectorAll('#cal-map path[data-code]').forEach(function(p){var on=p.dataset.code===code; p.style.setProperty('stroke',on?'#111':'#ffffff'); p.style.setProperty('stroke-width',on?'2':'0.5'); p.style.setProperty('opacity',code&&!on?'0.55':'1');});}
+  input.addEventListener('input',function(){var o=opts.find(function(x){return x.key===norm(input.value);}); highlight(o&&codeByName[o.key]?codeByName[o.key]:null);});
+  var lg=document.getElementById('cal-map-legend'); lg.innerHTML=Object.keys(LABELS).map(function(k){return '<span><i style="background:'+COLORS[k]+'"></i>'+LABELS[k]+'</span>';}).join('');
+})();
+</script>
 </body></html>
