@@ -1,5 +1,12 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Ethics Tournaments</title><meta name="description" content="Explore Ethics Olympiads and TKEthics Invitationals for students. View upcoming events and entry details."><link rel="canonical" href="https://www.modusponensinstitute.com/tournaments"><meta property="og:title" content="Ethics Tournaments"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="r2.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Inter:wght@400;500;600;700&family=Quicksand:wght@400;500;600&family=Poppins:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="native.css"><link rel="stylesheet" href="rv.css">
 <style id="ts">
+.ts-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.ts-group{display:flex;flex-direction:column}
+.ts-note{font:600 13.5px/1.45 Inter,sans-serif;color:var(--rust);margin:0 0 10px}
+.ts-final-link{display:block;text-decoration:none}
+.ts-final-link:hover{box-shadow:0 12px 30px rgba(15,17,21,.18)}
+.ts-final-more{display:inline-block;margin-top:8px;font:600 13px/1.4 Inter,sans-serif;color:#F08A6C}
+@media (max-width:900px){.ts-groups{grid-template-columns:1fr}}
 .ts-streams{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
 .ts-stream{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--rule);border-radius:14px;padding:24px;text-decoration:none;color:inherit}
 .ts-stream:hover{border-color:#cfc6b2;box-shadow:0 12px 30px rgba(15,17,21,.08)}
@@ -133,7 +140,7 @@ sender('c4e6f63fa28992')
 <header class="mpi-header"><div class="mpi-wrap mpi-header-inner">
 <a class="mpi-brand" href="index.html"><img src="images/mpi-logo-header.png" width="560" height="203" alt="Modus Ponens Institute home"></a>
 <button class="mpi-menu-toggle" type="button" aria-controls="mpi-nav" aria-expanded="false">Menu</button>
-<nav class="mpi-site-nav" id="mpi-nav" aria-label="Main navigation"><a href="tournaments.html" aria-current="page">Ethics Competitions</a><a href="resources.html">Resources</a><a href="case-competition.html">Case Writing Prize</a><a href="classes-tutoring.html">Classes</a><a href="about-us.html">About</a><a href="event-calendar.html" class="mpi-button">Find an event</a></nav>
+<nav class="mpi-site-nav" id="mpi-nav" aria-label="Main navigation"><a href="tournaments.html" aria-current="page">Ethics Competitions</a><a href="resources.html">Resources</a><a href="case-competition.html">Case Writing Prize</a><a href="classes-tutoring.html">Classes</a><a href="about-us.html">About</a><a href="event-calendar.html" class="mpi-button">Register now</a></nav>
 </div></header>
 <main id="main" tabindex="-1">
 <section class="rv-hero">
@@ -164,33 +171,40 @@ sender('c4e6f63fa28992')
       <h2 class="rv-h2">Ethics Olympiads</h2>
       <p class="rv-sub">Run in partnership with the Ethics Olympiad, based in Australia. MPI is an official licensee. Ethics Olympiads are for school-based teams only.</p>
     </div>
-    <div class="ts-cols">
-      <div class="ts-col">
-        <h3>Senior Ethics Olympiad</h3>
-        <p class="ts-col-meta">High school &middot; Ages 14&ndash;18</p>
-        <ul class="ts-events" role="list">
-          <li class="ts-event"><span class="ts-date">18 Mar 2027</span><div class="ts-event-body"><h4>Senior European Ethics Olympiad</h4><p>School-based teams from the UK, Europe and Africa &middot; Online</p><div class="ts-act"><a class="rv-btn" href="https://www.tkethics.org/tournaments/2027-senior-european-ethics-olympiad-1782283791861" target="_blank" rel="noopener">Register</a></div></div></li>
-          <li class="ts-event"><span class="ts-date">3 Apr 2027</span><div class="ts-event-body"><h4>Pan American Ethics Olympiad</h4><p>School-based teams from across the Americas &middot; Online</p><div class="ts-act"><a class="rv-btn" href="https://www.tkethics.org/tournaments/pan-american-ethics-olympiad-2027" target="_blank" rel="noopener">Register</a></div></div></li>
-        </ul>
+    <div class="ts-groups">
+      <div class="ts-group">
+        <div class="ts-col">
+          <h3>Junior Ethics Olympiad</h3>
+          <p class="ts-col-meta">Ages 9&ndash;11</p>
+          <p class="ts-note">Standalone event &middot; three heats &middot; no international final</p>
+          <ul class="ts-events" role="list">
+            <li class="ts-event"><span class="ts-date">17 Apr 2027</span><div class="ts-event-body"><h4>Junior Pan Atlantic Ethics Olympiad</h4><p>Junior teams from Atlantic-facing regions &middot; Online</p><div class="ts-act"><a class="rv-btn" href="https://www.tkethics.org/tournaments/2027-junior-pan-atlantic-ethics-olympiad-1793539194476" target="_blank" rel="noopener">Register</a></div></div></li>
+          </ul>
+        </div>
       </div>
-      <div class="ts-col">
-        <h3>Middle School Ethics Olympiad</h3>
-        <p class="ts-col-meta">Middle school &middot; Ages 11&ndash;14</p>
-        <ul class="ts-events" role="list">
-          <li class="ts-event ts-past"><span class="ts-date">14 Nov 2026</span><div class="ts-event-body"><h4>Middle School Pan Atlantic Ethics Olympiad</h4><p>School-based teams from Atlantic-facing regions &middot; Online</p><div class="ts-act"><span class="tn-held">Held</span> <a class="ts-text" href="https://www.tkethics.org/tournaments/middle-school-pan-atlantic-ethics-olympiad-2026" target="_blank" rel="noopener">Event page <span aria-hidden="true">&rarr;</span></a></div></div></li>
-        </ul>
+      <div class="ts-group">
+        <div class="ts-col">
+          <h3>Middle School Ethics Olympiad</h3>
+          <p class="ts-col-meta">Middle school &middot; Ages 11&ndash;14</p>
+          <ul class="ts-events" role="list">
+            <li class="ts-event"><span class="ts-date">2027</span><div class="ts-event-body"><h4>Middle School Pan Atlantic Ethics Olympiad</h4><p>School-based teams from Atlantic-facing regions &middot; Online &middot; 2027 dates coming soon</p></div></li>
+          </ul>
+        </div>
+        <span class="tn-arrow ts-arrow" aria-hidden="true"></span>
+        <a class="tn-final ts-final-link" href="https://ethicsolympiad.org/international-final/" target="_blank" rel="noopener"><span class="rv-kind">International final</span><h4>International Middle School Ethics Olympiad Final</h4><p>17 February 2027 &middot; Online from Australia &middot; Qualified teams only</p><span class="ts-final-more">About the final <span aria-hidden="true">&rarr;</span></span></a>
       </div>
-    </div>
-    <div class="ts-arrows" aria-hidden="true"><span class="tn-arrow"></span><span class="tn-arrow"></span></div>
-    <div class="ts-cols">
-      <div class="tn-final"><span class="rv-kind">International final</span><h4>International Senior Ethics Olympiad Final</h4><p>2027 &middot; Online from Australia &middot; Date to be announced &middot; Qualified teams only</p></div>
-      <div class="tn-final"><span class="rv-kind">International final</span><h4>International Middle School Ethics Olympiad Final</h4><p>17 February 2027 &middot; Online from Australia &middot; Qualified teams only</p></div>
-    </div>
-    <div class="ts-junior">
-      <h3>For younger students</h3>
-      <ul class="ts-events" role="list">
-        <li class="ts-event"><span class="ts-date">17 Apr 2027</span><div class="ts-event-body"><h4>Junior Pan Atlantic Ethics Olympiad</h4><p>Junior teams, ages 9&ndash;11, from Atlantic-facing regions &middot; Online</p><div class="ts-act"><a class="rv-btn" href="https://www.tkethics.org/tournaments/2027-junior-pan-atlantic-ethics-olympiad-1793539194476" target="_blank" rel="noopener">Register</a></div></div></li>
-      </ul>
+      <div class="ts-group">
+        <div class="ts-col">
+          <h3>Senior Ethics Olympiad</h3>
+          <p class="ts-col-meta">High school &middot; Ages 14&ndash;18</p>
+          <ul class="ts-events" role="list">
+            <li class="ts-event"><span class="ts-date">18 Mar 2027</span><div class="ts-event-body"><h4>Senior European Ethics Olympiad</h4><p>School-based teams from the UK, Europe and Africa &middot; Online</p><div class="ts-act"><a class="rv-btn" href="https://www.tkethics.org/tournaments/2027-senior-european-ethics-olympiad-1782283791861" target="_blank" rel="noopener">Register</a></div></div></li>
+            <li class="ts-event"><span class="ts-date">3 Apr 2027</span><div class="ts-event-body"><h4>Pan American Ethics Olympiad</h4><p>School-based teams from across the Americas &middot; Online</p><div class="ts-act"><a class="rv-btn" href="https://www.tkethics.org/tournaments/pan-american-ethics-olympiad-2027" target="_blank" rel="noopener">Register</a></div></div></li>
+          </ul>
+        </div>
+        <span class="tn-arrow ts-arrow" aria-hidden="true"></span>
+        <a class="tn-final ts-final-link" href="https://ethicsolympiad.org/international-final/" target="_blank" rel="noopener"><span class="rv-kind">International final</span><h4>International Senior Ethics Olympiad Final</h4><p>2027 &middot; Online from Australia &middot; Date to be announced &middot; Qualified teams only</p><span class="ts-final-more">About the final <span aria-hidden="true">&rarr;</span></span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -198,6 +212,7 @@ sender('c4e6f63fa28992')
 <section class="rv-sec ts-sec" id="tkethics">
   <div class="rv-wrap">
     <div class="ts-head">
+      <img class="ts-logo" src="images/e4adb309c288568c.webp" alt="TKEthics" width="213" height="120" loading="lazy" style="height:56px">
       <h2 class="rv-h2">TKEthics Invitationals</h2>
       <p class="rv-sub">Run with TKEthics, a nonprofit. Open to school-based and non-school-based teams from anywhere in the world. Teams can form across schools, cities or countries, and the cases focus on technology and AI.</p>
     </div>
@@ -206,8 +221,6 @@ sender('c4e6f63fa28992')
         <h3>Invitationals</h3>
         <p class="ts-col-meta">Ages 10&ndash;18 &middot; Worldwide</p>
         <ul class="ts-events" role="list">
-          <li class="ts-event ts-past"><span class="ts-date">7 Nov 2026</span><div class="ts-event-body"><h4>TKEthics Fall Invitational</h4><p>Worldwide, ages 13&ndash;18 &middot; Online</p><div class="ts-act"><span class="tn-held">Held</span> <a class="ts-text" href="https://www.tkethics.org/tournaments/tkethics-invitational-fall-2026" target="_blank" rel="noopener">Event page <span aria-hidden="true">&rarr;</span></a></div></div></li>
-          <li class="ts-event ts-past"><span class="ts-date">21 Nov 2026</span><div class="ts-event-body"><h4>UWC Ethics Invitational</h4><p>Student-run qualifier at UWCSEA Dover, in partnership with TKEthics &middot; Online</p><div class="ts-act"><span class="tn-held">Held</span></div></div></li>
           <li class="ts-event"><span class="ts-date">6 Mar 2027</span><div class="ts-event-body"><h4>TKEthics Spring Invitational</h4><p>Teams of 3&ndash;5, ages 10&ndash;18, from anywhere &middot; Online</p><div class="ts-act"><a class="rv-btn" href="https://www.tkethics.org/register/tkethics-invitational-spring-2027" target="_blank" rel="noopener">Register</a></div></div></li>
         </ul>
       </div>
@@ -221,77 +234,15 @@ sender('c4e6f63fa28992')
     </div>
     <div class="ts-arrows ts-arrows-one" aria-hidden="true"><span class="tn-arrow"></span></div>
     <div class="tn-final ts-final-wide"><span class="rv-kind">International final</span><h4>TKEthics International Grand Final</h4><p>28 August 2027 &middot; Online &middot; Teams that qualified through the 2026&ndash;27 TKEthics Invitationals</p></div>
-    <p class="ts-foot"><a class="ts-text" href="event-calendar.html">See every event in the calendar <span aria-hidden="true">&rarr;</span></a> <a class="ts-text" href="past-results.html">See past results <span aria-hidden="true">&rarr;</span></a></p>
+    <p class="ts-foot"><a class="rv-btn rv-btn-ghost" href="past-results.html">Past results</a> <a class="ts-text" href="event-calendar.html">See every event in the calendar <span aria-hidden="true">&rarr;</span></a></p>
   </div>
 </section>
-<span id="new"></span>
-<section class="rv-sec" id="how-a-heat-works">
-  <div class="rv-wrap rv-feature">
-    <div class="tn-format">
-      <img src="images/tournaments/match-format.webp" alt="Diagram of the Ethics Olympiad match format" loading="lazy">
-    </div>
-    <div class="rv-feature-body">
 
-      <h2 class="rv-h2">How a heat works</h2>
-      <p>Each heat is a structured dialogue between two teams on a case, not a debate. Both teams present, comment on each other and answer the judges&rsquo; questions, and judges reward careful, honest reasoning over point-scoring.</p>
-      <ul class="rv-checks">
-        <li><b>Presentation:</b> your team&rsquo;s answer to the case question</li>
-        <li><b>Commentary:</b> engage with the other team&rsquo;s answer</li>
-        <li><b>Response:</b> reply to the commentary</li>
-        <li><b>Judges&rsquo; questions:</b> think on your feet</li>
-      </ul>
-      <div class="rv-btns">
-        <a class="rv-btn" href="resources.html#handbook">Read the competitor handbook</a>
-        <a class="rv-btn rv-btn-ghost" href="resources.html#videos">Watch a real round</a>
-        <a class="rv-btn rv-btn-ghost" href="resources.html#timer">Open the match timer</a>
-        <a class="rv-btn rv-btn-ghost" href="tournament-day.html">Tournament Day: judges&rsquo; round tool</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="rv-sec" id="more">
-  <div class="rv-wrap">
-    <div class="rv-sec-head rv-left">
-
-      <h2 class="rv-h2">In person and in writing</h2>
-    </div>
-    <div class="tn-more-grid">
-      <a class="rv-path" href="https://www.tkethics.org/tournaments/arizona-in-person-tournament-2026" target="_blank" rel="noopener">
-        <div class="rv-path-img"><img src="images/tournaments/in-person.webp" alt="Students and judges at a TKEthics event" loading="lazy"></div>
-        <div class="rv-path-body">
-          <span class="rv-tag">In person &middot; Each fall</span>
-          <h3>TKEthics Arizona Regional</h3>
-          <p>The one in-person event of the year, at Arizona College Prep, Chandler. Marc Sanders scholarships are available for Title 1 and low-resource schools. The 2026 regional was held on 10 October.</p>
-          <span class="rv-cta">2026 details <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
-      <a class="rv-path" href="https://www.tkethics.org/tournaments/marc-sanders-case-writing-prize-2026" target="_blank" rel="noopener">
-        <div class="rv-path-img tn-type-cover"><span>Write the case.</span></div>
-        <div class="rv-path-body">
-          <span class="rv-tag">Writing prize</span>
-          <h3>Marc Sanders Case Writing Prize</h3>
-          <p>Submissions for 2026 are closed, with more than 80 entries. The winning cases become the final two cases of the TKEthics Fall Invitational case set. Details of the next competition are coming soon.</p>
-          <span class="rv-cta">Prize details <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-<section class="rv-sec tn-close">
-  <div class="rv-wrap tn-close-inner">
-    <h2 class="rv-h2">Want help getting ready?</h2>
-    <p class="rv-sub">Free preparation materials, or classes and coaching for your team.</p>
-    <div class="rv-btns tn-center">
-      <a class="rv-btn" href="resources.html">Free resources</a>
-      <a class="rv-btn rv-btn-ghost" href="classes-tutoring.html">Classes &amp; tutoring</a>
-    </div>
-  </div>
-</section>
 
 </main>
 <footer class="mpi-site-footer"><div class="mpi-wrap mpi-footer-main">
 <div><strong>Modus Ponens Institute</strong><p>Official Ethics Olympiad licensee.</p></div>
-<ul><li><a href="about-us.html">Our Team</a></li><li><a href="judges.html">Judge with us</a></li><li><a href="contact-us.html">Contact</a></li><li><a href="tournament-day.html">Tournament Day</a></li></ul>
+<ul><li><a href="about-us.html">Our Team</a></li><li><a href="judges.html">Judge with us</a></li><li><a href="contact-us.html">Contact</a></li></ul>
 <ul><li><a href="newsletters.html">Get MPI newsletters</a></li><li><a href="fund-your-team.html">Fund Your Team</a></li><li><a href="past-results.html">Past Results</a></li></ul>
 </div></footer>
 </body></html>

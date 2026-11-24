@@ -18,7 +18,7 @@ PUBLIC_DIRS = {
     "images", "plans-pricing", "post", "pricing-plans", "profile", "service-page",
 }
 PUBLIC_TYPES = {".html", ".css", ".js", ".jpg", ".jpeg", ".png", ".webp", ".svg", ".pdf", ".ico"}
-PRIVATE_SEARCH = {"404.html", "tournament-day.html"}
+PRIVATE_SEARCH = {"404.html", "tournament-day.html", "tournament-day-tool.html"}
 EXTERNAL_REDIRECTS = {
     "copy-of-olympiads.html": "https://globalaidebates.com/",
     "globalaidebates.html": "https://globalaidebates.com/",
