@@ -110,7 +110,7 @@ if (upcoming) {
     .then((body) => {
       const calendar = new DOMParser().parseFromString(body, "text/html");
       const events = Array.from(calendar.querySelectorAll(".mpi-event"))
-        .filter((event) => event.dataset.date >= today && (upcoming.dataset.upNext === "competition" ? event.dataset.kind === "competition" : event.dataset.kind !== "case writing"))
+        .filter((event) => event.dataset.date >= today && !event.id.startsWith("gad-") && (upcoming.dataset.upNext === "competition" ? event.dataset.kind === "competition" : event.dataset.kind !== "case writing"))
         .slice(0, 3);
       if (!events.length) return;
       const rows = events.map((event) => {
