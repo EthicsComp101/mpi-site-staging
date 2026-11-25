@@ -136,6 +136,27 @@ sender('c4e6f63fa28992')
 <script>if(/(^|\.)modusponensinstitute\.com$/.test(location.hostname)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id=G-JLTK4SM9ZF';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-JLTK4SM9ZF');document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a,button,[role=button],summary');if(!a)return;var t=(a.innerText||a.getAttribute('aria-label')||a.title||'').replace(/\s+/g,' ').trim().slice(0,100);var s=a.closest('section,header,footer,nav');gtag('event','mpi_click',{click_text:t||'(no text)',click_url:a.href||'',click_area:s?(s.id||(s.className&&String(s.className).split(' ')[0])||s.tagName.toLowerCase()):'page'});},true);}</script>
 <link rel="stylesheet" href="mpi-design.css">
 <script src="mpi-design.js" defer></script>
+<style id="ts-split-css">
+.ts-tabs{display:none}
+@media (min-width:1000px){
+ .ts-split{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule)}
+ .ts-split>.ts-sec{border-top:0}
+ .ts-split>#tkethics{border-left:1px solid var(--rule)}
+ .ts-split .rv-wrap{padding-left:clamp(20px,3vw,44px);padding-right:clamp(20px,3vw,44px)}
+ .ts-split .ts-groups,.ts-split .ts-cols,.ts-split .ts-arrows{grid-template-columns:1fr}
+ .ts-split .ts-arrows .tn-arrow+.tn-arrow{display:none}
+ .ts-split .ts-logo{height:44px!important;width:auto;object-fit:contain;object-position:left center}
+ .ts-split .ts-head{min-height:0}
+}
+@media (max-width:999px){
+ .ts-tabs{display:flex;gap:8px;position:sticky;top:0;z-index:5;background:#fff;padding:12px 16px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+ .ts-tabs button{flex:1;font:600 14px/1.2 Inter,sans-serif;padding:12px 10px;border:1px solid var(--rule);border-radius:999px;background:#fff;color:var(--ink);cursor:pointer}
+ .ts-tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+ .ts-split.ts-tabbed>.ts-sec[hidden]{display:none}
+ .ts-split>.ts-sec{border-top:0}
+}
+.ts-split-foot{padding-top:8px;padding-bottom:48px}
+</style>
 </head><body class="mpi-design"><a class="mpi-skip" href="#main">Skip to content</a>
 <header class="mpi-header"><div class="mpi-wrap mpi-header-inner">
 <a class="mpi-brand" href="index.html"><img src="images/mpi-logo-header.png" width="560" height="203" alt="Modus Ponens Institute home"></a>
@@ -165,6 +186,8 @@ sender('c4e6f63fa28992')
 </section>
 
 <span id="open"></span><span id="choose"></span><span id="qualify"></span><span id="finals"></span>
+<div class="ts-split" id="compare">
+<div class="ts-tabs" role="tablist" aria-label="Choose a competition"><button type="button" role="tab" id="tab-olympiads" aria-controls="olympiads" aria-selected="true">Ethics Olympiads</button><button type="button" role="tab" id="tab-tkethics" aria-controls="tkethics" aria-selected="false">TKEthics</button></div>
 <section class="rv-sec ts-sec" id="olympiads">
   <div class="rv-wrap">
     <div class="ts-head">
@@ -235,9 +258,13 @@ sender('c4e6f63fa28992')
     </div>
     <div class="ts-arrows ts-arrows-one" aria-hidden="true"><span class="tn-arrow"></span></div>
     <div class="tn-final ts-final-wide"><span class="rv-kind">International final</span><h4>TKEthics International Grand Final</h4><p>28 August 2027 &middot; Online &middot; Teams that qualified through the 2026&ndash;27 TKEthics Invitationals</p></div>
-    <p class="ts-foot"><a class="rv-btn rv-btn-ghost" href="past-results.html">Past results</a> <a class="ts-text" href="event-calendar.html">See every event in the calendar <span aria-hidden="true">&rarr;</span></a></p>
   </div>
 </section>
+</div>
+<div class="rv-wrap ts-split-foot">
+    <p class="ts-foot"><a class="rv-btn rv-btn-ghost" href="past-results.html">Past results</a> <a class="ts-text" href="event-calendar.html">See every event in the calendar <span aria-hidden="true">&rarr;</span></a></p>
+</div>
+
 
 
 </main>
@@ -246,4 +273,15 @@ sender('c4e6f63fa28992')
 <ul><li><a href="about-us.html">Our Team</a></li><li><a href="judges.html">Judge with us</a></li><li><a href="contact-us.html">Contact</a></li></ul>
 <ul><li><a href="newsletters.html">Get MPI newsletters</a></li><li><a href="fund-your-team.html">Fund Your Team</a></li><li><a href="past-results.html">Past Results</a></li></ul>
 </div></footer>
+<script>
+(function(){var w=document.getElementById('compare');if(!w)return;var mq=window.matchMedia('(max-width:999px)');
+var tabs=w.querySelectorAll('.ts-tabs [role=tab]');
+function show(id,scroll){tabs.forEach(function(t){var on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on);var sec=document.getElementById(t.getAttribute('aria-controls'));if(mq.matches){sec.hidden=!on}else{sec.hidden=false}});if(scroll&&mq.matches){w.scrollIntoView({block:'start'})}}
+function apply(){if(mq.matches){w.classList.add('ts-tabbed');var cur=w.querySelector('[aria-selected=true]');show(cur?cur.getAttribute('aria-controls'):'olympiads',false)}else{w.classList.remove('ts-tabbed');w.querySelectorAll('.ts-sec').forEach(function(x){x.hidden=false})}}
+tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('aria-controls'),false)})});
+function fromHash(){var h=location.hash.slice(1);if(h==='olympiads'||h==='tkethics'){show(h,true)}}
+window.addEventListener('hashchange',fromHash);
+(mq.addEventListener?mq.addEventListener('change',apply):mq.addListener(apply));apply();fromHash();
+})();
+</script>
 </body></html>
