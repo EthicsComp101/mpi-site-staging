@@ -7,6 +7,36 @@
 .ts-final-link:hover{box-shadow:0 12px 30px rgba(15,17,21,.18)}
 .ts-final-more{display:inline-block;margin-top:8px;font:600 13px/1.4 Inter,sans-serif;color:#F08A6C}
 @media (max-width:900px){.ts-groups{grid-template-columns:1fr}}
+.ts-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin:4px 0 26px}
+.ts-cta .mpi-button{font-size:17px;padding:16px 30px}
+.ts-cta .ts-cta-alt{background:#fff;color:var(--ink);border:1px solid var(--ink)}.ts-cta .ts-cta-alt:hover{background:var(--ink);color:#fff}
+.ff-hint{font:400 14px/1.4 Inter,sans-serif;color:var(--mute);margin:-12px 0 16px}
+.ff-opt[aria-pressed="true"]{border-color:var(--rust);background:#fbf1ee;box-shadow:inset 0 0 0 1px var(--rust)}
+.ff-opt[aria-pressed="true"]::after{content:"\2713";float:right;color:var(--rust);font-weight:700}
+.ff-next{margin-top:18px}.ff-next[disabled]{opacity:.4;cursor:not-allowed}
+.ts-cta-note{font:400 15px/1.5 Inter,sans-serif;color:var(--ink2)}
+.ts-cta-note a{color:var(--ink);font-weight:600}
+.ff{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:34px 36px;max-width:760px;margin:0 auto}
+.ff-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;font:500 12px/1.4 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.ff-back{background:none;border:0;padding:0;font:inherit;letter-spacing:inherit;text-transform:inherit;color:var(--ink);cursor:pointer;text-decoration:underline}
+.ff-bar{height:3px;background:var(--rule);border-radius:2px;margin-bottom:26px;overflow:hidden}
+.ff-bar span{display:block;height:100%;background:var(--rust);transition:width .25s}
+.ff-q{font:400 clamp(24px,2.6vw,30px)/1.2 Newsreader,Georgia,serif;color:var(--ink);margin:0 0 20px}
+.ff-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ff-opt{text-align:left;background:#fff;border:1px solid #cfc8b8;border-radius:6px;padding:16px 18px;cursor:pointer;font:600 16px/1.3 Inter,sans-serif;color:var(--ink);transition:border-color .15s,background .15s}
+.ff-opt small{display:block;font-weight:400;font-size:14px;color:var(--ink2);margin-top:4px}
+.ff-opt:hover,.ff-opt:focus-visible{border-color:var(--ink);background:var(--tint)}
+.ff-res h3{font:400 clamp(24px,2.6vw,30px)/1.2 Newsreader,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.ff-sum{font:400 15px/1.55 Inter,sans-serif;color:var(--ink2);margin:0 0 20px}
+.ff-card{border:1px solid var(--rule);border-left:4px solid var(--rust);border-radius:6px;padding:20px 22px;margin-bottom:12px}
+.ff-card.ff-alt{border-left-color:var(--ink2)}
+.ff-kind{font:500 11px/1.4 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
+.ff-alt .ff-kind{color:var(--ink2)}
+.ff-card h4{font:600 18px/1.3 Inter,sans-serif;color:var(--ink);margin:6px 0 4px}
+.ff-card p{font:400 15px/1.55 Inter,sans-serif;color:var(--ink2);margin:0 0 14px}
+.ff-note{font:400 14px/1.55 Inter,sans-serif;color:var(--ink2);margin:16px 0 0}
+.ff-again{margin-top:18px}
+@media(max-width:640px){.ff{padding:24px 18px}.ff-opts{grid-template-columns:1fr}.ts-cta .mpi-button{flex:1 1 100%;text-align:center}}
 .ts-streams{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
 .ts-stream{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--rule);border-radius:14px;padding:24px;text-decoration:none;color:inherit}
 .ts-stream:hover{border-color:#cfc6b2;box-shadow:0 12px 30px rgba(15,17,21,.08)}
@@ -147,6 +177,7 @@ sender('c4e6f63fa28992')
   <div class="rv-wrap">
     <div class="tn-badge"><img src="images/90255fbe9a584358.webp" alt="Ethics Olympiad" width="477" height="84"><span>Official Ethics Olympiad licensee</span></div>
     <h1 class="rv-h1">Ethics Competitions</h1>
+    <div class="ts-cta"><a class="mpi-button" href="event-calendar.html">Register now</a><a class="mpi-button ts-cta-alt" href="#find">Find your event</a><span class="ts-cta-note">New to this? Three quick questions show which event suits your team.</span></div>
     <p class="rv-lede">We run two kinds of ethics competitions in the same format. In both, teams of three to five students discuss real ethical cases in a live, moderated dialogue in front of judges.</p>
     <div class="ts-streams">
       <a class="ts-stream" href="#olympiads">
@@ -163,6 +194,84 @@ sender('c4e6f63fa28992')
     <p class="ts-foot" style="margin-top:22px"><a class="ts-text" href="past-results.html">See past results and winners <span aria-hidden="true">&rarr;</span></a></p>
   </div>
 </section>
+
+<section class="rv-sec rv-tint" id="find" aria-labelledby="find-h">
+  <div class="rv-wrap">
+    <div class="rv-sec-head">
+      <h2 class="rv-h2" id="find-h">Find the right competition</h2>
+      <p class="rv-sub">Three questions, then you'll see which events your team can enter and where to register.</p>
+    </div>
+    <div class="ff" id="ff" aria-live="polite">
+      <noscript><p class="ff-sum">See every event and register on the <a href="event-calendar.html">event calendar</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+var EV={
+ jpa:{n:'Junior Pan Atlantic Ethics Olympiad',d:'17 April 2027',w:'Ethics Olympiad for school teams, ages 9 to 11, from Atlantic-facing regions. Online.',u:'https://www.tkethics.org/tournaments/2027-junior-pan-atlantic-ethics-olympiad-1793539194476'},
+ mspa:{n:'Middle School Pan Atlantic Ethics Olympiad',d:'2027, dates coming soon',w:'Ethics Olympiad for school teams, ages 11 to 14. Top teams qualify for the International Middle School Ethics Olympiad Final.',u:'',more:'#olympiads'},
+ seo:{n:'Senior European Ethics Olympiad',d:'18 March 2027',w:'Ethics Olympiad for school teams, ages 14 to 18, from the UK, Europe and Africa. Top teams qualify for the International Senior Ethics Olympiad Final.',u:'https://www.tkethics.org/tournaments/2027-senior-european-ethics-olympiad-1782283791861'},
+ pae:{n:'Pan American Ethics Olympiad',d:'3 April 2027',w:'Ethics Olympiad for school teams, ages 14 to 18, from across the Americas. Top teams qualify for the International Senior Ethics Olympiad Final.',u:'https://www.tkethics.org/tournaments/pan-american-ethics-olympiad-2027'},
+ tks:{n:'TKEthics Spring Invitational',d:'6 March 2027',w:'Open to any team of 3 to 5 students aged 10 to 18, from anywhere. School and non-school teams welcome. Top teams qualify for the TKEthics International Grand Final.',u:'https://www.tkethics.org/register/tkethics-invitational-spring-2027'},
+ tkm:{n:'TKEthics Middle School Invitational',d:'10 April 2027',w:'Open to any team of middle school students aged 10 to 14, from anywhere. School and non-school teams welcome.',u:'https://www.tkethics.org/tournaments/2027-tkethics-middle-school-invitational-1794751084906'}
+};
+var Q=[
+ {k:'age',q:'How old are your students?',o:[['j','9 to 11','Upper primary or elementary'],['m','11 to 14','Middle school'],['s','14 to 18','High school']]},
+ {k:'team',q:'What kind of team is it?',o:[['school','A school team','All students from the same school'],['open','Another kind of team','A club, homeschool group, friends, or students from different schools']]},
+ {k:'where',q:'Where are your students based?',o:[['am','The Americas','North, Central or South America'],['eu','UK, Europe or Africa',''],['ap','Asia or the Pacific','Including Australia and New Zealand'],['ot','Somewhere else','']]}
+];
+var L={j:'9 to 11',m:'11 to 14',s:'14 to 18',am:'the Americas',eu:'the UK, Europe or Africa',ap:'Asia or the Pacific',ot:'elsewhere'};
+var A={},step=0,box=document.getElementById('ff');
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function one(a,team,w){var sch=team==='school',atl=(w==='am'||w==='eu');
+ if(sch&&a==='j'&&atl)return{b:['jpa'],x:[]};
+ if(sch&&a==='m'&&atl)return{b:['mspa','tkm'],x:['tks']};
+ if(sch&&a==='s'&&w==='am')return{b:['pae'],x:['tks']};
+ if(sch&&a==='s'&&w==='eu')return{b:['seo'],x:['tks']};
+ if(a==='m')return{b:['tkm'],x:['tks']};
+ return{b:['tks'],x:[]};}
+function pick(){var best=[],alt=[],notes={};
+ A.age.forEach(function(a){A.team.forEach(function(t){A.where.forEach(function(w){
+  var r=one(a,t,w);r.b.forEach(function(i){if(best.indexOf(i)<0)best.push(i);});r.x.forEach(function(i){if(alt.indexOf(i)<0)alt.push(i);});
+  if(a==='j'&&r.b[0]==='tks')notes.age=1;
+  if(t==='school'&&w==='ap')notes.ap=1;
+ });});});
+ var order=['jpa','mspa','seo','pae','tkm','tks'],srt=function(x,y){return order.indexOf(x)-order.indexOf(y)};
+ best.sort(srt);alt=alt.filter(function(i){return best.indexOf(i)<0}).sort(srt);
+ return{best:best,alt:alt,notes:notes};}
+function card(id,kind,cls){var e=EV[id];
+ var btn=e.u?'<a class="rv-btn" href="'+e.u+'" target="_blank" rel="noopener">Register for this event</a>':'<a class="rv-btn rv-btn-ghost" href="'+e.more+'">More about this event</a>';
+ return '<div class="ff-card'+(cls||'')+'"><span class="ff-kind">'+kind+'</span><h4>'+esc(e.n)+'</h4><p><strong>'+esc(e.d)+'</strong>. '+esc(e.w)+'</p>'+btn+'</div>';}
+function list(v){v=v.map(function(x){return L[x]});return v.length<2?v[0]:v.slice(0,-1).join(', ')+' and '+v[v.length-1];}
+function render(){
+ var h;
+ if(step<Q.length){var q=Q[step],sel=A[q.k]||[];
+  h='<div class="ff-top"><span>Question '+(step+1)+' of '+Q.length+'</span>'+(step?'<button type="button" class="ff-back">&larr; Back</button>':'')+'</div><div class="ff-bar"><span style="width:'+(step/Q.length*100)+'%"></span></div><p class="ff-q">'+q.q+'</p><p class="ff-hint">Choose all that apply.</p><div class="ff-opts">';
+  q.o.forEach(function(o){h+='<button type="button" class="ff-opt" aria-pressed="'+(sel.indexOf(o[0])>-1)+'" data-v="'+o[0]+'">'+o[1]+(o[2]?'<small>'+o[2]+'</small>':'')+'</button>';});
+  h+='</div><button type="button" class="rv-btn ff-next"'+(sel.length?'':' disabled')+'>'+(step===Q.length-1?'Show my events':'Next')+' &rarr;</button>';
+ }else{var r=pick(),ts=A.team.length>1?'teams':(A.team[0]==='school'?'a school team':'a team');
+  h='<div class="ff-top"><span>Your results</span><button type="button" class="ff-back">&larr; Back</button></div><div class="ff-bar"><span style="width:100%"></span></div><div class="ff-res"><h3>'+(r.best.length>1?'Your best matches':'Your best match')+'</h3><p class="ff-sum">For '+ts+' of students aged '+list(A.age)+', based in '+list(A.where)+'. All events are online, for teams of 3 to 5 students.</p>';
+  r.best.forEach(function(id){h+=card(id,'Recommended');});
+  r.alt.forEach(function(id){h+=card(id,'Also open to you',' ff-alt');});
+  if(r.notes.age)h+='<p class="ff-note">TKEthics Invitationals are open to students aged 10 and over.</p>';
+  if(r.notes.ap)h+='<p class="ff-note">Schools in Australia and New Zealand can also enter Ethics Olympiads run directly by the <a href="https://ethicsolympiad.org/" target="_blank" rel="noopener">Ethics Olympiad</a>.</p>';
+  h+='<p class="ff-note">If cost is a barrier, <a href="https://form.jotform.com/260764995688077" target="_blank" rel="noopener">apply for a fee waiver</a> or see how to <a href="fund-your-team.html">fund your team</a>. Questions? <a href="contact-us.html">Contact us</a>, or <a href="event-calendar.html">see every event in the calendar</a>.</p><div class="ff-again"><button type="button" class="ff-back ff-restart">Start again</button></div></div>';
+  if(window.gtag)gtag('event','finder_result',{finder_age:A.age.join(','),finder_team:A.team.join(','),finder_where:A.where.join(','),finder_best:r.best.join(',')});
+ }
+ box.innerHTML=h;
+}
+function focusFirst(){var f=box.querySelector('.ff-opt,.ff-res h3');if(f){if(!f.matches('button'))f.setAttribute('tabindex','-1');f.focus({preventScroll:true});}}
+box.addEventListener('click',function(e){
+ var o=e.target.closest('.ff-opt'),n=e.target.closest('.ff-next'),b=e.target.closest('.ff-back');
+ if(o){var k=Q[step].k,v=o.getAttribute('data-v'),sel=A[k]=A[k]||[],i=sel.indexOf(v);if(i>-1)sel.splice(i,1);else sel.push(v);
+  o.setAttribute('aria-pressed',i<0);box.querySelector('.ff-next').disabled=!sel.length;}
+ else if(n&&!n.disabled){step++;render();focusFirst();}
+ else if(b){if(b.classList.contains('ff-restart')){A={};step=0;}else{step=Math.max(0,step-1);}render();focusFirst();}
+});
+render();
+})();
+</script>
 
 <span id="open"></span><span id="choose"></span><span id="qualify"></span><span id="finals"></span>
 <section class="rv-sec ts-sec" id="olympiads">

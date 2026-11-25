@@ -155,3 +155,4 @@ main{overflow-x:clip}
 @media (max-width:640px){.rv-compete{padding:22px 20px}.rv-compete-actions{width:100%}}
 
 @media (max-width:640px){.rv-type,.pa-role,.rv-tag{font-size:12px!important}}
+.rv-compete .rv-fee{display:block;margin-top:10px;font-size:15px}.rv-compete .rv-fee a{color:var(--ink);font-weight:600}
