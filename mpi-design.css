@@ -223,6 +223,10 @@ figcaption { color: var(--muted); font-size: .78rem; margin-top: .75rem; }
 .mpi-design .rv-hero :is(.rv-btns, .rv-jump) { justify-content: flex-start; }
 .mpi-design .rv-dark, .mpi-design .rv-dark :is(.rv-h2, .rv-sub, .rv-lede) { color: var(--ink); }
 .mpi-design .rv-dark .rv-btn-ghost { color: var(--rust); border-color: var(--rust); }
+.mpi-design .rv-dark p { color: #3A3D44; }
+.mpi-design .rv-dark a[style*="#fff"], .mpi-design .rv-dark p a { color: var(--rust) !important; text-decoration: underline; }
+.mpi-design .rv-dark .rv-btn-light { background: var(--ink); color: #fff; border-color: var(--ink); }
+.mpi-design .rv-dark .rv-btn-light:hover { background: var(--rust); border-color: var(--rust); color: #fff; }
 .mpi-design .rv-btn { border-radius: 4px; box-shadow: none; }
 .mpi-design .rv-btn:focus-visible, .mpi-design [role="button"]:focus-visible { outline: 3px solid #275c93; outline-offset: 4px; }
 .mpi-design .rv-path, .mpi-design .rv-mini, .mpi-design .cs-card,
