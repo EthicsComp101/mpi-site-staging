@@ -43,6 +43,15 @@
 .ts-stream h2{font:550 26px/1.15 Newsreader,Georgia,serif;margin:0;color:var(--ink)}
 .ts-stream p{font:400 15.5px/1.6 Inter,sans-serif;color:var(--ink2);margin:0 0 6px;flex:1}
 .ts-stream .rv-btn{align-self:flex-start}
+.ts-stream{border-top-width:5px}
+.ts-stream-eo{border-top-color:#C8412B;background:#FDF6F4}
+.ts-stream-tk{border-top-color:#4B4485;background:#F6F5FB}
+.ts-stream-logo{height:40px;width:auto;align-self:flex-start;margin-bottom:4px}
+.ts-stream-eo .rv-btn{background:#C8412B;border-color:#C8412B}
+.ts-stream-tk .rv-btn{background:#4B4485;border-color:#4B4485}
+.ts-stream-eo:hover{border-color:#e6b9b0;border-top-color:#C8412B}
+.ts-stream-tk:hover{border-color:#c4c0e0;border-top-color:#4B4485}
+
 .ts-sec{border-top:1px solid var(--rule);background:#fff}
 .ts-head{max-width:760px;margin:0 0 28px}
 .ts-head .rv-sub{margin:10px 0 0}
@@ -180,12 +189,14 @@ sender('c4e6f63fa28992')
     <div class="ts-cta"><a class="mpi-button" href="event-calendar.html">Register now</a><a class="mpi-button ts-cta-alt" href="#find">Find your event</a><span class="ts-cta-note">New to this? Three quick questions show which event suits your team.</span></div>
     <p class="rv-lede">We run two kinds of ethics competitions in the same format. In both, teams of three to five students discuss real ethical cases in a live, moderated dialogue in front of judges.</p>
     <div class="ts-streams">
-      <a class="ts-stream" href="#olympiads">
+      <a class="ts-stream ts-stream-eo" href="#olympiads">
+        <img class="ts-stream-logo" src="images/90255fbe9a584358.webp" alt="" width="477" height="84">
         <h2>Ethics Olympiads</h2>
         <p>For school-based teams. Run in partnership with the Ethics Olympiad, based in Australia. Top teams qualify for the international Ethics Olympiad finals.</p>
         <span class="rv-btn">Learn about the Ethics Olympiads</span>
       </a>
-      <a class="ts-stream" href="#tkethics">
+      <a class="ts-stream ts-stream-tk" href="#tkethics">
+        <img class="ts-stream-logo" src="images/tkethics-logo.svg" alt="" width="213" height="110">
         <h2>TKEthics Invitationals</h2>
         <p>For school-based or non-school-based teams from anywhere in the world. Run with the TKEthics nonprofit, with cases focused on technology and AI. Top teams qualify for the TKEthics International Grand Final.</p>
         <span class="rv-btn">Learn about the TKEthics Invitationals</span>
